@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de fertilidad</title>
+    <script src="../assets/js/calculos/fertilidad.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div id="principal" class="container">
+        <div id="banner"> Cálculo de la fertilidad del suelo</div>
+        <div class="row fila">
+            <div id="" class="col-md-6 col-lg-6">
+                <div class="horizonte">Horizonte 1</div>
+                <form>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ph" >Ph: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="ph" id="ph" value="7.08" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="SAl" class="control-label col-md-2">SAl: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="SAl" id="SAl" value="0" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="cic" class="control-label col-sm-2">cic:</label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="cic" id="cic" value="23.46" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="calcio" class="control-label col-md-2">Cálcio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="calcio" id="calcio" value="13.74" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="potasio" class="control-label col-md-2">Potásio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="potasio" id="potasio" value="0.38" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group1">
+                        <div class="col-md-2 col-lg-2"><label for="sodio" class="control-label col-md-2">Sodio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="sodio" id="sodio" value="1.21" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ClimaCarbono" class="control-label col-md-2">Clima carbono: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="text" name="ClimaCarbono" id="ClimaCarbono" value="FRIO" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="CarbonoOrganico">Cárbono orgánico: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="CarbonoOrganico" id="CarbonoOrganico" value="1.78" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="magnesio" class="control-label col-md-2">Mágnesio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="magnesio" id="magnesio" value="6.74" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="fosforo" class="control-label col-md-2">Fósforo: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="fosforo" id="fosforo" value="0" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="DensidadAparente">Densidad Aparente: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="DensidadAparente" id="DensidadAparente" value="1.16" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ConductividadElectrica">Conductividad Eléctrica: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="ConductividadElectrica" id="ConductividadElectrica" value="0.37" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="Horizonte2" class="col-md-6 col-lg-6">
+                <div class="horizonte">Horizonte 2</div>
+                <form>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ph" >Ph: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="ph2" id="ph2" value="7.08" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="SAl" class="control-label col-md-2">SAl: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="SAl2" id="SAl2" value="0" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="cic" class="control-label col-sm-2">cic:</label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="cic2" id="cic2" value="23.46" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="calcio" class="control-label col-md-2">Cálcio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="calcio2" id="calcio2" value="13.74" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="potasio" class="control-label col-md-2">Potásio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="potasio2" id="potasio2" value="0.38" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group1">
+                        <div class="col-md-2 col-lg-2"><label for="sodio" class="control-label col-md-2">Sodio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="sodio2" id="sodio2" value="1.21" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ClimaCarbono" class="control-label col-md-2">Clima carbono: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="text" name="ClimaCarbono2" id="ClimaCarbono2" value="MEDIO" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="CarbonoOrganico">Cárbono orgánico: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="CarbonoOrganico2" id="CarbonoOrganico2" value="1.78" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="magnesio" class="control-label col-md-2">Mágnesio: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="magnesio2" id="magnesio2" value="6.74" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="fosforo" class="control-label col-md-2">Fósforo: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="fosforo2" id="fosforo2" value="86" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="DensidadAparente">Densidad Aparente: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="DensidadAparente2" id="DensidadAparente2" value="1.16" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                    <div class="row target1 form-group">
+                        <div class="col-md-2 col-lg-2"><label for="ConductividadElectrica">Conductividad Eléctrica: </label></div>
+                        <div class="col-md-10 col-lg-10"><input type="number" name="ConductividadElectrica2" id="ConductividadElectrica2" value="0.37" class="form-control col-md-10 inputtext"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row fila">
+            <div id="idboton" class="col-md-3 col-lg-3"></div>
+                <input type="button" value="Calcular" class="btn btn-primary w-50" onclick="calcular()">
+            </div>
+            <div id="resultado">
+                <a href="">guardar resulado en otra hoja</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calcular(){
+            //calculo_fertilidad (ph,SAL,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono)
+            //var ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
+            //var CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+
+            //var ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
+            //var CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+            const K= 0.285;
+             //Calculo del Horizonte 1
+            ph=document.getElementById('ph').value
+            SAl=document.getElementById('SAl').value
+            cic=document.getElementById('cic').value
+            calcio=document.getElementById('calcio').value
+            potasio=document.getElementById('potasio').value
+            sodio=document.getElementById('sodio').value
+            ClimaCarbono=document.getElementById('ClimaCarbono').value
+            CarbonoOrganico=document.getElementById('CarbonoOrganico').value
+            magnesio=document.getElementById('magnesio').value
+            fosforo=document.getElementById('fosforo').value
+            DensidadAparente=document.getElementById('DensidadAparente').value
+            ConductividadElectrica=document.getElementById('ConductividadElectrica').value
+
+            F1=calculo_fertilidad (ph,SAl,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono)
+
+            //Calculo del horizonte 1
+            //ph=7.08, SAl=0, cic=23.46, calcio=0,potasio=0.38,sodio=1.21,ClimaCarbono="FRIO";
+            // CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+            ph=document.getElementById('ph2').value
+            SAl=document.getElementById('SAl2').value
+            cic=document.getElementById('cic2').value
+            calcio=document.getElementById('calcio2').value
+            potasio=document.getElementById('potasio2').value
+            sodio=document.getElementById('sodio2').value
+            ClimaCarbono=document.getElementById('ClimaCarbono2').value
+            CarbonoOrganico=document.getElementById('CarbonoOrganico2').value
+            magnesio=document.getElementById('magnesio2').value
+            fosforo=document.getElementById('fosforo2').value
+            DensidadAparente=document.getElementById('DensidadAparente2').value
+            ConductividadElectrica=document.getElementById('ConductividadElectrica2').value
+
+            F2=calculo_fertilidad (ph,SAl,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono) 
+            //para suelos salinos página 32
+            FT=(0.7*F1)+(0.3*F2)*K;
+            FT=parseFloat(FT).toFixed(2);
+            r="El horizonte 1 es: "+F1+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            r=r+"El horizonte 2 es: "+F2+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            //grado de fertilidad pag 30
+            r=r+"La Fertilidad total es: "+FT;
+            result=document.getElementById('resultado');
+            result.innerHTML=r;
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activar/Desactivar Animaciones</title>
+    <style>
+        /* Estilos para el div que se tambalea */
+        .tambaleo {
+            perspective: 1000px; /* Proporciona profundidad al efecto 3D */
+        }
+        .tamb1{
+            animation: tambaleoAnim;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 2px;
+            transform-origin: center top;
+        }
+        .tamb2{
+            animation: tambaleoAnim2;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(13, 0, 255);
+            margin: 2px;
+            transform-origin: center left;
+        }
+
+        /* Animación de tambaleo utilizando keyframes */
+        @keyframes tambaleoAnim {
+            0%, 100% {
+                transform: rotateZ(10deg);
+            }
+            60% {
+                transform: rotateZ(10deg) translateZ(9px); /* Movimiento 3D hacia atrás */
+            }
+            40% {
+                transform: rotateZ(2deg) translateX(80px); /* Movimiento 3D hacia atrás */
+            }
+            20% {
+                transform: rotateZ(1deg) translateZ(2px); /* Movimiento 3D hacia atrás */
+            }
+        }
+
+        /* Otra animación de tambaleo utilizando keyframes */
+        @keyframes tambaleoAnim2 {
+            0%, 100% {
+                transform: rotateZ(0deg);
+            }
+            60% {
+                transform: rotateZ(3deg) translateZ(-9px); /* Movimiento 3D hacia atrás */
+            }
+            40% {
+                transform: rotateZ(-2deg) translateZ(-8px); /* Movimiento 3D hacia atrás */
+            }
+            20% {
+                transform: rotateX(-1deg) translateX(-2px); /* Movimiento 3D hacia atrás */
+            }
+        }
+
+        /* Clase para animación inactiva */
+        .animacion-inactiva {
+            animation: none !important;
+        }
+
+        /* Clase para activar la animación */
+        .animacion-activada {
+            animation: tambaleoAnim 2s infinite alternate ease-in-out;
+        }
+
+        /* Clase para activar la segunda animación */
+        .animacion-activada2 {
+            animation: tambaleoAnim2 2s infinite alternate ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="tambaleo tamb1 animacion-inactiva" id="tambaleo1"></div>
+    <div class="tambaleo tamb2 animacion-inactiva" id="tambaleo2"></div>
+
+    <button id="toggleButton">Activar / Desactivar Animaciones</button>
+
+    <script>
+        var toggleButton = document.getElementById('toggleButton');
+        var isAnimating = false;
+
+        toggleButton.addEventListener('click', function() {
+            var tambaleoElements = document.querySelectorAll('.tambaleo');
+            if (!isAnimating) {
+                tambaleoElements.forEach(function(element) {
+                    element.classList.remove('animacion-inactiva');
+                    element.classList.add('animacion-activada', 'animacion-activada2');
+                });
+                isAnimating = true;
+            } else {
+                tambaleoElements.forEach(function(element) {
+                    element.classList.remove('animacion-activada', 'animacion-activada2');
+                    element.classList.add('animacion-inactiva');
+                });
+                isAnimating = false;
+            }
+        });
+    </script>
+</body>
+</html>

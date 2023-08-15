@@ -1,0 +1,599 @@
+<!--
+=========================================================
+* Material Kit 2 - v3.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/logo_maiz.png">
+  <link rel="icon" type="image/png" href="../assets/img/logo_maiz.png">
+  <title>
+    Paso 1 - Análisis del terreno
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../assets/css/menu_global.css">
+</head>
+
+<body class="blog-author" style="background-image: url('../assets/img/fondos\ \(1\).jpg'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
+  <!-- <video src="../assets/video/video (3).mp4" autoplay="true" muted="true" loop="true" poster="../assets/img/fotosmaiz\ \(1\).jpg"></video>
+  <style>video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+  }</style> -->
+
+  <!-- Navbar -->
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav
+          class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid px-0">
+            <img class="" src="../assets/img/logo_maiz.png" width="35px" alt="">
+            <a class="navbar-brand font-weight-bolder ms-sm-2" href="../index.html" rel="tooltip" title="PLANEA TU CULTIVO DE MAIZ" data-placement="bottom">
+              PLANEA TU CULTIVO DE MAIZ
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuPages" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md">home</i>
+                    Inicio
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown dropdown-hover ">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md"></i>
+                    Instructivos
+                    <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+                    <div class="d-none d-lg-block">
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Videos</h6>
+                              <!-- <span class="text-sm">See all sections</span> -->
+                            </div>
+                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <!-- <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="../sections/page-sections/hero-sections.html">
+                            Page Headers
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="../sections/page-sections/features.html">
+                            Features
+                          </a>
+                        </div> -->
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Documentos</h6>
+                              <!-- <span class="text-sm">See all navigations</span> -->
+                            </div>
+                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Flujograma</h6>
+                              <!-- <span class="text-sm">See all navigations</span> -->
+                            </div>
+                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+
+                    <div class="d-lg-none">
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Videos</h6>
+                              <!-- <span class="text-sm">See all sections</span> -->
+                            </div>
+                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <!-- <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                            <a class="dropdown-item ps-3 border-radius-md mb-1" href="../sections/page-sections/hero-sections.html">
+                              Page Headers
+                            </a>
+                            <a class="dropdown-item ps-3 border-radius-md mb-1" href="../sections/page-sections/features.html">
+                              Features
+                            </a>
+                          </div> -->
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Documentos</h6>
+                              <!-- <span class="text-sm">See all navigations</span> -->
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Flujograma</h6>
+                              <!-- <span class="text-sm">See all navigations</span> -->
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+
+                  </ul>
+                </li>
+
+                <li class="nav-item ms-lg-auto">
+                  <a class="nav-link nav-link-icon me-2" href="paso1.html">
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" title="go">Planear</p>
+                  </a>
+                </li>
+                <li class="nav-item my-auto ms-3 ms-lg-0">
+
+                  <a href="login.html" class="btn btn-sm  bg-gradient-success  mb-0 me-1 mt-2 mt-md-0">Ingresar</a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </div>
+  <!-- fin Navbar -->
+
+  <section class="section" style="z-index: 9999;">
+    <div class="global-content">
+      <div class="toggle-btn">
+        <i class='bx bx-plus'></i>
+      </div>
+      <span style="--i:1;">
+        <a href="#"><i class='bx bxs-home'></i></a>
+      </span>
+      <span style="--i:2;">
+        <a href="#"><i class='bx bxs-camera'></i></a>
+      </span>
+      <span style="--i:3;">
+        <a href="#"><i class='bx bxs-alarm'></i></a>
+      </span>
+      <span style="--i:4;">
+        <a href="#"><i class='bx bxs-map'></i></a>
+      </span>
+      <span style="--i:5;">
+        <a href="#"><i class='bx bxs-cog'></i></a>
+      </span>
+    </div>
+  </section>
+
+  <div class="card1 card-body  mx-3 mx-md-8 mt-8 mb-4">
+
+    <!-- CARD -->
+    <section class="row mb-4 card opacity-9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 mx-auto border-radius-lg">
+            <div class="row">
+              <h4 class="text-center mt-3 animate-text" id="animate-text1">ANÁLISIS DEL TERRENO.</h4>
+              <!-- Estilos de animacion de texto -->
+              <style>
+
+                .animate-text {
+                letter-spacing: 0.075rem;
+                }
+
+                /*Para Planear el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
+                .animate-text::after {
+                content: "|";
+                font-size: 1.6rem;
+                font-family: "Inconsolata", monospace;
+                animation-name: parpadeo;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                }
+                .zoom {
+                animation: zoom 8s 0s;
+                }
+
+                /*Esta animación imita el parpadeo del cursor del teclado*/
+                @keyframes parpadeo {
+                0% {
+                    opacity: 1;
+                }
+                20% {
+                    opacity: 1;
+                }
+                25% {
+                    opacity: 0;
+                }
+                90% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+                }
+
+              </style>
+              <!-- Escript de animacion de texto -->
+              <script>
+                //Primero capturamos el elemento del DOM con el id que definimos en el html
+                const text1 = document.getElementById("animate-text1");
+                let str = text1.innerHTML;
+                text1.innerHTML = "";
+
+                //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
+                const speed = 25;
+                let i = 0;
+
+                //Esta función recorre todos los caracteres nuestro texto
+                const typeWriter = () => {
+                if (i < str.length) {
+                    text1.innerHTML += str.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+                };
+
+                //Acá ejecutamos la función
+                setTimeout(typeWriter, speed);
+
+              </script>
+
+              <div class="col-xl-6 col-md-5 px-5 z-index-2 position-relative">
+                <div class="row ">
+                  <div class="input-group input-group-static py-3">
+                    <form onsubmit="return false;" class="col-md-7">
+                      <label for="hectareas">Cuantas hectáreas desea sembrar?</label>
+                      <input type="number" id="hectareas" value="3" class="form-control" placeholder="Digite la cantidad por metros²" min="0" step="0.5" required>
+                      <button class="btn bg-gradient-success float-lg-end mt-n5" onclick="calcularHerramientas()">Calcular</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-5 px-5 position-relative ">
+                <div class="row mb-3">
+                  <div class="input-group input-group-static py-3">
+                    <label for="studyPrice">Digite el Valor de la cotización</label>
+                    <input type="number" class="form-control" placeholder="Digite el precio" id="studyPrice" min="0"
+                      step="0.01" required>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row mb-2 card opacity-9">
+      <div class="container-fluid">
+        <div class="row mb-3">
+          <h4 class="text-center mt-3 ">SUGERENCIA DE HERRAMIENTAS PARA EL ANALISIS.</h4>
+          <div id="resultado">
+            <div class="container">
+              <div class="col-14 row" id="herramientas-lista">
+                <!-- sugerencias -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-3 opacity-9">
+
+      <!-- inventario -->
+      <div class="row me-4 col-md-3 card" style="float: left;">
+        <div class="row my-2 ms-3">
+          <div class="col-md-12">
+            <style>
+              /* Estilos adicionales para mejorar la apariencia */
+              table {
+                border-collapse: collapse;
+                width: 100%;
+              }
+
+              th,
+              td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+              }
+            </style>
+            <h2>Inventario</h2>
+            <form id="productForm">
+              <div class="col-md-11">
+                <div class="input-group input-group-static">
+                  <label for="transactionType">Tipo de transacción:</label>
+                  <select id="transactionType" onchange="changeForm()"
+                    class="form-select form-select-lg mb-2 form-control" aria-label=".form-select-lg example">
+                    <option> selecciona </option>
+                    <option value="alquilar">Alquiler</option>
+                    <option value="comprar">Comprar</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="alquilerForm" style="display: none;">
+                <h4>ALQUILER</h4>
+
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="productNameAlquiler">Nombre del producto:</label>
+                  <input type="text" class="form-control" id="productNameAlquiler" placeholder="Digite nombre" required>
+                </div>
+
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="quantityAlquiler">Cantidad:</label>
+                  <input type="number" class="form-control" id="quantityAlquiler" min="1" placeholder="Digite" required>
+                </div>
+
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="pricePerUnitAlquiler">Precio por unidad:</label>
+                  <input type="number" class="form-control" placeholder="Digite" id="pricePerUnitAlquiler" min="0"
+                    step="0.01" required>
+                </div>
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="rentalTime">Tiempo de alquiler:</label>
+                  <input type="text" class="form-control" placeholder="Digite" id="rentalTime" required>
+                </div>
+                <button type="button" class="btn bg-gradient-success pt-2" onclick="addProduct()">Agregar
+                  producto</button>
+              </div>
+
+              <div id="comprarForm" style="display: none;">
+                <h4>COMPRAR</h4>
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="productNameComprar">Nombre del producto:</label>
+                  <input type="text" class="form-control" placeholder="Digite" id="productNameComprar" required>
+                </div>
+
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="quantityComprar">Cantidad:</label>
+                  <input type="number" class="form-control" placeholder="Digite" id="quantityComprar" min="1" required>
+                </div>
+
+                <div class="input-group input-group-static w-90 mb-2">
+                  <label for="pricePerUnitComprar">Precio por unidad:</label>
+                  <input type="number" class="form-control" placeholder="Digite" id="pricePerUnitComprar" min="0"
+                    step="0.01" required>
+                </div>
+
+                <button type="button" class="btn bg-gradient-success pt-2" onclick="addProduct()">Agregar producto</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- tabla -->
+      <div class="row card">
+        <div class="row">
+          <div class="ms-3 mt-2 col-md-12">
+            <h3>Listado de productos</h3>
+            <table id="productTable">
+              <thead>
+                <tr>
+                  <th>Nombre del producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio por unidad</th>
+                  <th>Tipo de transacción</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">
+                    <strong  class="float-lg-end me-3">
+                      <h4 class="mx-auto">Total:</h4>
+                    </strong></td>
+                  <td id="totalAmount">0</td>
+                </tr>
+              </tfoot>
+            </table>
+            <h1></h1>
+            <br>
+          </div>
+        </div>
+
+      </div>
+      <!-- separador -->
+    </section>
+
+    <!-- paginacion -->
+    <div class="row card text-center mt-4 page-header opacity-9"
+      style=" width: 20rem; min-width: 20rem; height: 50px; min-height: 50px; position: sticky; left: 40.6%; bottom: 5px; z-index: 100;">
+      <div class="col-12 mx-auto " style="padding-top: 7px;">
+
+        <a href="../index.html">
+          <button class="btn btn-outline-danger btn-icon btn-sm" type="button">
+            <div class="d-flex align-items-center">
+              abandonar
+            </div>
+          </button>
+        </a>
+
+        <button class="btn bg-gradient-success btn-icon btn-sm" type="button">
+          <div class="d-flex align-items-center">
+            Paso 1
+          </div>
+        </button>
+
+        <a href="paso2.html">
+          <button class="btn btn-outline-success btn-icon  btn-sm" type="button">
+            <div class="d-flex align-items-center">
+              Siguiente
+            </div>
+          </button>
+        </a>
+
+      </div>
+    </div>
+    <!-- paginacion -->
+
+    <!-- END CARD -->
+  </div>
+
+
+
+  <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <footer class="footer card bg-white opacity-9 mx-3 mx-md-8">
+    <div class="container">
+      <div class="mt-4 row">
+        <div class="col-md-3 ms-auto">
+          <div>
+            <a href="index.html">
+              <img src="../assets/img/logo_maiz.png" class="mb-4" alt="main_logo" style="width:40px; margin-left:32px">
+            </a>
+            <h5 class="font-weight-bolder mb-4"><span class="text-dark font-weight-bold"><span class="text-success">Planea</span> tu cultivo <br> de maiz</span></h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-6 mb-4">
+          <div>
+            <h6 class="text-sm">Contacto</h6>
+            <ul class="flex-column ms-n3 nav">
+              <li class="nav-item">
+                <a class="nav-link">
+                  Centro Biotecnológico del Caribe (CBC).
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  Km 7 via la paz
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  Valledupar - Cesar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-6 mb-4">
+          <div>
+            <h6 class="text-sm">Paginas</h6>
+            <ul class="flex-column ms-n3 nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/muestras.html">
+                  Planear
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  Instructivos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6 mb-4 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="text-sm text-success">Eres usuario o administrador</h6>
+          <a href="{{ route('login') }}" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">Iniciar
+            Sesion</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/inventario.js"></script>
+  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="../assets/js/sugerencias/sug_analisis.js"></script>
+  <script src="../assets/js/menu_global.js"></script>
+</body>
+
+</html>

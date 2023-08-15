@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botón para Controlar Video y Animación</title>
+	<style>
+
+		/* Estilos para el div que se tambalea */
+		.tambaleo {
+		  animation: none;
+		  transform-origin: center top;
+		  perspective: 1000px; /* Proporciona profundidad al efecto 3D */
+		}
+  
+		/* Animación de tambaleo utilizando keyframes */
+		@keyframes tambaleoAnim {
+			0%, 100% {
+				transform: rotateZ(0deg);
+			}
+			60% {
+				transform: rotateZ(-1deg) translateZ(7px); /* Movimiento 3D hacia atrás */
+			}
+
+			40% {
+				transform: rotateY(1deg) translateY(2px); /* Movimiento 3D hacia atrás */
+			}
+		  
+			25% {
+				transform: rotateZ(1deg) translateZ(2px); /* Movimiento 3D hacia atrás */
+			}
+			
+		  
+		   
+		}
+		
+	  </style>
+</head>
+<body>
+    <button id="botonControl">Controlar Video y Animación</button>
+    <br>
+    <video id="miVideo" controls width="640" height="360">
+        <source src="../../assets/img/video (1).mp4" type="video/mp4">
+        Tu navegador no admite la etiqueta de video.
+    </video>
+	<div id="animate-text1" class="animate-text bg-danger card w-100 h-100">hola</div>
+
+    <script>
+        const botonControl = document.getElementById('botonControl');
+        const miVideo = document.getElementById('miVideo');
+        const animateText = document.getElementById('animate-text1');
+        let animationActive = false;
+
+        botonControl.addEventListener('click', () => {
+            if (miVideo.paused) {
+                miVideo.play();
+            } else {
+                miVideo.pause();
+            }
+
+            if (animationActive) {
+                animateText.classList.remove('zoom');
+            } else {
+                animateText.classList.add('zoom');
+            }
+
+            animationActive = !animationActive;
+        });
+    </script>
+</body>
+</html>

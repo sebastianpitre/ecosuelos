@@ -1,0 +1,21 @@
+<!-- Página 2: otra_pagina.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Resultado</title>
+</head>
+<body>
+    <label for="resultado">Resultado:</label>
+    <input type="text" id="resultado" readonly>
+    
+    <script>
+        // Obtener el resultado almacenado en el localStorage
+        var resultado = window.localStorage.getItem("resultado");
+        
+        // Mostrar el resultado en el campo de entrada
+        document.getElementById("resultado").value = resultado;
+    </script>
+</body>
+</html>

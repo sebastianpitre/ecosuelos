@@ -1,0 +1,23 @@
+<!-- Página 1: index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Resultado</title>
+    <script>
+        function generarResultado() {
+            // Tu lógica para generar el resultado
+            var resultado = "hola";
+            
+            // Mostrar el resultado en el input en la otra página
+            window.localStorage.setItem("resultado", resultado);
+            window.location.href = "otra_pagina.html";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="generarResultado()">Generar Resultado</button>
+</body>
+<script src="../assets/js/calculos/calculo_fertil.js"></script>
+</html>

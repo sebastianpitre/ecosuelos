@@ -1,0 +1,639 @@
+<!--
+=========================================================
+* Material Kit 2 - v3.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/logo_maiz.png">
+  <link rel="icon" type="image/png" href="../../assets/img/logo_maiz.png">
+  <title>
+    Cálculo de fertilidad
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  <link rel="stylesheet" href="../../style.css">
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../../assets/css/menu_global.css">
+  
+</head>
+
+<body class="blog-author " style="background-image: url('../../assets/img/fondobg.png                                            '); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
+  <video id="miVideo" src="../../assets/img/video (1).mp4" class="tambaleo" autoplay="true" muted="true" loop="true" poster="../assets/img/fotosmaiz\ \(1\).jpg"></video>
+  <style>
+    video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 104%;
+    min-height: 110%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+  }
+</style>
+
+  <!-- Navbar -->
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav
+          class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid px-0">
+            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../index.html" rel="tooltip"
+              title="Designed and Coded by Creative Tim" data-placement="bottom">
+              <span class="text-xxl">ECOsuelos</span>
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a href="../../index.html" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md">home</i>
+                    Inicio
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a href="../../suelo.html" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md"> </i>
+                    Suelo
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a href="../../clases.html" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md"> </i>
+                    Clases
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a href="../../subclases.html" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md"> </i>
+                    Subclases
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md"> </i>
+                    Grupo de Capacidad
+                    <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg"
+                    aria-labelledby="dropdownMenuDocs">
+                    <div class="d-none d-lg-block">
+                      <ul class="list-group">
+                        <li class="nav-item list-group-item border-0 p-0">
+                          <a href="../../grupo1.html" class="dropdown-item py-2 ps-3 border-radius-md"
+                            href="../../ https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit ">
+                            <h6
+                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                              Grupo 1</h6>
+                            <!-- <span class="text-sm">All about overview, quick start, license and contents</span> -->
+                          </a>
+                        </li>
+                        <li class="nav-item list-group-item border-0 p-0">
+                          <a href="../../grupo2.html" class="dropdown-item py-2 ps-3 border-radius-md"
+                            href="../../ https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit ">
+                            <h6
+                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                              Grupo 2</h6>
+                            <!-- <span class="text-sm">All about overview, quick start, license and contents</span> -->
+                          </a>
+                        </li>
+                        <li class="nav-item list-group-item border-0 p-0">
+                          <a href="../../grupo3.html" class="dropdown-item py-2 ps-3 border-radius-md"
+                            href="../../ https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit ">
+                            <h6
+                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                              Grupo 3</h6>
+                            <!-- <span class="text-sm">All about overview, quick start, license and contents</span> -->
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </ul>
+                </li>
+                <li class="nav-item ms-lg-auto">
+                  <a class="nav-link nav-link-icon me-2" href="../..//pages/calcular.html">
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                      data-bs-placement="bottom" title="Calcular">Calcular Proceso</p>
+                  </a>
+                </li>
+                <li class="nav-item my-auto ms-3 ms-lg-0">
+
+                  <a href="https://www.creative-tim.com/product/material-kit-pro"
+                    class="btn btn-sm  bg-gradient-success  mb-0 me-1 mt-2 mt-md-0">Ingresar</a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </div>
+  <!-- fin Navbar -->
+
+  <div class="card1 card-body mx-3 mx-md-8 mt-8 mb-4">
+
+    <!-- CARD -->
+
+
+    <section class="row mb-4 card opacity-9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 mx-auto border-radius-lg">
+            <div class="row">
+              <h3 class="text-center mt-2 animate-text" id="animate-text1">Cálculo de la fertilidad del suelo.</h4>
+              <!-- <div class="container">
+                <div class="ms-n12 mt-n3 w-9" style="background-color: #cccccc;height: 25px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>  
+                <div class="me-n12 mt-n3 w-9" style="background-color: #cccccc;height: 25px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+              </div> -->
+              <div class="form-check form-switch mt-n5 d-flex align-items-center is-filled">
+                <input class="form-check-input" type="checkbox" id="toggleButton" >
+                <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">Modo Drone</label>
+              </div>
+                
+              <!-- Estilos de animacion de texto -->
+              <style>
+                .animate-text {
+                  letter-spacing: 0.075rem;
+                }
+
+                /*Para Planear el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
+                .animate-text::after {
+                  content: "|";
+                  font-size: 1.6rem;
+                  font-family: "Inconsolata", monospace;
+                  animation-name: parpadeo;
+                  animation-duration: 1s;
+                  animation-timing-function: linear;
+                  animation-iteration-count: infinite;
+                }
+
+                .zoom {
+                  animation: zoom 8s 0s;
+                }
+
+                /*Esta animación imita el parpadeo del cursor del teclado*/
+                @keyframes parpadeo {
+                  0% {
+                    opacity: 1;
+                  }
+
+                  20% {
+                    opacity: 1;
+                  }
+
+                  25% {
+                    opacity: 0;
+                  }
+
+                  90% {
+                    opacity: 0;
+                  }
+
+                  100% {
+                    opacity: 1;
+                  }
+                }
+              </style>
+              <!-- Escript de animacion de texto -->
+              <script>
+                //Primero capturamos el elemento del DOM con el id que definimos en el html
+                const text1 = document.getElementById("animate-text1");
+                let str = text1.innerHTML;
+                text1.innerHTML = "";
+
+                //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
+                const speed = 25;
+                let i = 0;
+
+                //Esta función recorre todos los caracteres nuestro texto
+                const typeWriter = () => {
+                  if (i < str.length) {
+                    text1.innerHTML += str.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                  }
+                };
+
+                //Acá ejecutamos la función
+                setTimeout(typeWriter, speed);
+
+              </script>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+
+    <section class="row mb-4 ">
+      <div class="row col-md-12 justify-content-center">
+
+        <!-- CARD NUMERO 1 -->
+        <div class="tambaleo col-lg-6 me-4  p-5 card opacity-9">
+          <div class="container">
+            <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
+            <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+          </div>
+          <h3 class=" text-center">Horizonte 1</h2>
+          <div class=" container">
+            <div class="row">
+
+              <div class="col-6">
+                <label for="ph" class="text-dark mb-n3 ms-n1 font-weight-bold">Ph</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="ph" id="ph" value="" placeholder="Digite" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="SAl" class="text-dark mb-n3 ms-n1 font-weight-bold">SAl</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="SAl" id="SAl" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="cic" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">cic</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="cic" id="cic" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="calcio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cálcio</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="calcio" id="calcio" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="potasio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Potásio</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="potasio" id="potasio" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="sodio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Sodio</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="sodio" id="sodio" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="ClimaCarbono" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Clima carbono</label>
+                <div class="input-group input-group-static">
+                  <input type="text" name="ClimaCarbono" id="ClimaCarbono" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="CarbonoOrganico" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cárbono orgánico:</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="CarbonoOrganico" id="CarbonoOrganico" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="magnesio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Mágnesio</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="magnesio" id="magnesio" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="fosforo" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Fósforo</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="fosforo" id="fosforo" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="DensidadAparente" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Densidad Aparente</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="DensidadAparente" id="DensidadAparente" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              <div class="col-6">
+                <label for="ConductividadElectrica" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Conductividad Eléctrica</label>
+                <div class="input-group input-group-static">
+                  <input type="number" name="ConductividadElectrica" id="ConductividadElectrica" value="" class="form-control mt-n2">
+                </div>
+              </div>
+              <!-- .......... -->
+              
+
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD NUMERO 2 -->
+        <div class="tambaleo col-lg-6 me-n4 p-5 card opacity-9">
+          <div class="container">
+            <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
+            <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+          </div>
+          <h3 class=" text-center">Horizonte 2</h2>
+            <div class="container">
+              <div class="row">
+  
+                <div class="col-6">
+                  <label for="ph" class="text-dark mb-n3 ms-n1 font-weight-bold">Ph</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="ph2" id="ph2" value="" placeholder="Digite" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="SAl" class="text-dark mb-n3 ms-n1 font-weight-bold">SAl</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="SAl2" id="SAl2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="cic" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">cic</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="cic2" id="cic2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="calcio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cálcio</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="calcio2" id="calcio2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="potasio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Potásio</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="potasio2" id="potasio2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="sodio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Sodio</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="sodio2" id="sodio2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="ClimaCarbono" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Clima carbono</label>
+                  <div class="input-group input-group-static">
+                    <input type="text" name="ClimaCarbono2" id="ClimaCarbono2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="CarbonoOrganico" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cárbono orgánico:</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="CarbonoOrganico2" id="CarbonoOrganico2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="magnesio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Mágnesio</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="magnesio2" id="magnesio2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="fosforo" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Fósforo</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="fosforo2" id="fosforo2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="DensidadAparente" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Densidad Aparente</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="DensidadAparente2" id="DensidadAparente2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                <div class="col-6">
+                  <label for="ConductividadElectrica" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Conductividad Eléctrica</label>
+                  <div class="input-group input-group-static">
+                    <input type="number" name="ConductividadElectrica2" id="ConductividadElectrica2" value="" class="form-control mt-n2">
+                  </div>
+                </div>
+                <!-- .......... -->
+                
+  
+              </div>
+            </div>
+        </div>
+        <!-- estilo de animacion de tambaleo -->
+        <style>
+
+          /* Estilos para el div que se tambalea */
+          .tambaleo {
+            animation: none;
+            transform-origin: center top;
+            perspective: 1000px; /* Proporciona profundidad al efecto 3D */
+          }
+    
+          /* Animación de tambaleo utilizando keyframes */
+          @keyframes tambaleoAnim {
+              0%, 100% {
+                  transform: rotateZ(0deg);
+              }
+              60% {
+                  transform: rotateZ(-1deg) translateZ(7px); /* Movimiento 3D hacia atrás */
+              }
+
+              40% {
+                  transform: rotateY(1deg) translateY(2px); /* Movimiento 3D hacia atrás */
+              }
+            
+              25% {
+                  transform: rotateZ(1deg) translateZ(2px); /* Movimiento 3D hacia atrás */
+              }
+              
+            
+             
+          }
+          
+        </style>
+
+      </div>
+    </section>
+
+    <section class="tambaleo row mb-4 card opacity-9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 mx-auto border-radius-lg">
+            <div class="row">
+              <h3 class="text-center mt-2 ">Resultado de la fertilidad del suelo.</h4>
+            </div>
+
+            
+            <div id="resultado" class="justify-content-center text-center" >
+              <div class="row fila">
+                <div id="idboton">
+                  <input type="button" value="Calcular" class="btn bg-gradient-success w-50 justify-content-center" onclick="calcularFT()">
+
+                </div>
+              </div>
+            </div>
+            <div id="exportarBtn" class="justify-content-center text-center mt-3" style="display: none;">
+              <input type="button" value="Calcular cambios" class="btn btn-outline-success w-60" onclick="calcularFT()">
+              <a href="../calcular.html"><button class="btn bg-gradient-success w-50" onclick="exportarResultado()">Realizado</button></a>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>  
+    
+    <!-- END CARD -->
+  </div>
+
+
+
+  <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <footer class="footer card bg-white opacity-9 mx-3 mx-md-8">
+    <div class="container">
+      <div class="mt-4 row">
+        <div class="col-md-3 ms-auto">
+          <div>
+            <a href="../../index.html">
+              <img src="../../assets/img/logo_maiz.png" class="mb-4" alt="main_logo"
+                style="width:40px; margin-left:32px">
+            </a>
+            <h5 class="font-weight-bolder mb-4"><span class="text-dark font-weight-bold"><span
+                  class="text-success">Planea</span> tu cultivo <br> de maiz</span></h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-6 mb-4">
+          <div>
+            <h6 class="text-sm">Contacto</h6>
+            <ul class="flex-column ms-n3 nav">
+              <li class="nav-item">
+                <a class="nav-link">
+                  Centro Biotecnológico del Caribe (CBC).
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  Km 7 via la paz
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  Valledupar - Cesar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-6 mb-4">
+          <div>
+            <h6 class="text-sm">Paginas</h6>
+            <ul class="flex-column ms-n3 nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">
+                  Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../pages/muestras.html">
+                  Planear
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../">
+                  Instructivos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6 mb-4 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="text-sm text-success">Eres usuario o administrador</h6>
+          <a href="../../{{ route('login') }}" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">Iniciar
+            Sesion</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/js/inventario.js"></script>
+  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="../../assets/js/sugerencias/sug_analisis.js"></script>
+  <script src="../../assets/js/menu_global.js"></script>
+
+  <!-- FUNCIONES CALCULO -->
+
+  <script src="../../assets/js/calculos/fertilidad.js"></script>
+  <script src="../../assets/js/animaciones/tambaleo.js"></script>
+  <script src="../../assets/js/localstorage/localstorage.js"></script>
+
+</body>
+
+</html>
