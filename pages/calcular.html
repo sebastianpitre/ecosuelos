@@ -257,73 +257,150 @@
 
               </script>
 
-              <div class="col-lg-3 mt-5">
+              <!-- <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold">Pendiente</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
+                </div>
+              </div> -->
+
+              <div class="col-lg-3 mt-5">
+                <label class="text-dark font-weight-bold">Erosion <span class="text-dark opacity-6">(Grado)</span></label>
+                <div class="row">
+                  <div class="col input-group input-group-static">
+                    <input type="text" class="form-control" id="clase" placeholder="clase">
+                  </div>
+                  <div class="col input-group input-group-static">
+                    <input type="number" class="form-control" id="porcentaje" placeholder="porcentaje" oninput="calcularTipo()">
+                  </div>
+                  <div class="col input-group input-group-static">
+                    <input type="text" class="form-control" id="tipo" placeholder="tipo" readonly>
+                  </div>
                 </div>
               </div>
+
+              <script>
+                function calcularTipo() {
+                  const porcentaje = parseFloat(document.getElementById("porcentaje").value);
+                  let tipo = "";
+                
+                  if (porcentaje >= 0 && porcentaje <= 1) {
+                    tipo = "A nivel";
+                  } else if (porcentaje <= 3) {
+                    tipo = "Plana";
+                  } else if (porcentaje <= 7) {
+                    tipo = "Ligeramente inclinada";
+                  } else if (porcentaje <= 12) {
+                    tipo = "Moderadamente inclinada";
+                  } else if (porcentaje <= 25) {
+                    tipo = "Fuertemente inclinada";
+                  } else if (porcentaje <= 50) {
+                    tipo = "Ligeramente escarpada";
+                  } else if (porcentaje <= 75) {
+                    tipo = "Moderadamente escarpada";
+                  } else {
+                    tipo = "Fuertemente escarpada";
+                  }
+                
+                  document.getElementById("tipo").value = tipo;
+                }
+                </script>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
-                <label class="text-dark font-weight-bold"> Erosion</label>
-                <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                <label class="text-dark font-weight-bold">Erosion <span class="text-dark opacity-6">(Grado)</span></label>
+                <div class="row">
+                    <div class="col input-group input-group-static">
+                        <input type="number" class="form-control" id="parametroErosion" placeholder="Digite grado">
+                    </div>
+                    <div class="col input-group input-group-static">
+                        <input type="text" class="form-control" id="variacionErosion" placeholder="Variación" readonly>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <script>
+              // Obtener referencias a los elementos por su ID
+              const parametroErosion = document.getElementById("parametroErosion");
+              const variacionErosion = document.getElementById("variacionErosion");
+
+              // Agregar evento input al campo de parametro
+              parametroErosion.addEventListener("input", function () {
+                const parametro = parseFloat(parametroErosion.value);
+
+                let resultado = "";
+                if (!isNaN(parametro)) {
+                  if (parametro == 0) {
+                      resultado = "Sin erosión";
+                  } else if (parametro >= 1 && parametro < 5) {
+                      resultado = "Ligera";
+                  } else if (parametro >= 5 && parametro < 10) {
+                      resultado = "Moderada";
+                  } else if (parametro >= 10 && parametro < 15) {
+                      resultado = "Severa";
+                  } else {
+                      resultado = "Sin clasificación";
+                  }
+                } 
+
+                variacionErosion.value = resultado;
+              });
+
+            </script>
+            
+
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold"> Movimiento de masa</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold">Drenaje natural</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Inundaciones</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Encharcamientos</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold"> Profundidad efectiva</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold"> Textura</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Pedregosidad superficial</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold"> Afloramiento rocoso</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
@@ -332,7 +409,7 @@
                   <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-success">open_in_new</i></a></span>
                 </label>
                 <div class="input-group form-group input-group-static">
-                    <input type="number" id="resultadoFertilidad" class="form-control text-success " placeholder="Pendiente" aria-label="Pendiente" readonly>
+                    <input type="number" id="resultadoFertilidad" class="form-control text-success " placeholder="complete este campo" aria-label="complete este campo" readonly>
                 </div>
                 <script>
                   // Obtiene el resultado almacenado en el localStorage
@@ -354,63 +431,63 @@
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold"> Contenido de sales</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold">Contenido de sodio(Na)</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold"> Sales y sodio(Na)</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Ca/Mg</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold"> Saturacion de aluminio</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Distribucion de lluvia</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 ms-6 mt-5">
                 <label class="text-dark font-weight-bold">Pisos termicos</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 me-6 mt-5">
                 <label class="text-dark font-weight-bold">Condicion de humedad</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
               <div class="col-lg-3 mt-5">
                 <label class="text-dark font-weight-bold">Temperatura heladera</label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="Pendiente" aria-label="Pendiente">
+                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
@@ -425,6 +502,7 @@
                 </div>
               </div>
 
+              
               <div class="col-12 mt-2 p-4 text-center">
                 <button class="btn btn-success" type="submit">Calcular proceso</button>
               </div>      

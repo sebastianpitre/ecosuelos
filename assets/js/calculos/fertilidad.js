@@ -211,7 +211,7 @@ if (ph<=5.5){
 
   // Función para cargar los datos guardados en el almacenamiento local
   function cargarDatosGuardados() {
-    const inputs = document.querySelectorAll('input[type="number"], input[type="text"]');
+    const inputs = document.querySelectorAll('input[type="number"], input[type="text"], select');
     inputs.forEach(input => {
       const savedValue = localStorage.getItem(input.id);
       if (savedValue !== null) {
@@ -222,11 +222,12 @@ if (ph<=5.5){
 
   // Función para guardar los datos en el almacenamiento local
   function guardarDatos() {
-    const inputs = document.querySelectorAll('input[type="number"], input[type="text"]');
+    const inputs = document.querySelectorAll('input[type="number"], input[type="text"], select');
     inputs.forEach(input => {
       localStorage.setItem(input.id, input.value);
     });
   }
+  
 //------------------ CALCULAR FERTILIDAD -------------------------------------------------------------------------------------------//
   function calcularFT(){
     //calculo_fertilidad (ph,SAL,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono)
@@ -272,10 +273,10 @@ if (ph<=5.5){
     //para suelos salinos página 32
     FT=(0.7*F1)+(0.3*F2)*K;
     FT=parseFloat(FT).toFixed(2);
-    r=" El horizonte 1 es: <b><span style='color: #4CAF50 ;font-size:20px ;'>" + F1 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-    r=r+"El horizonte 2 es: <b><span style='color: #4CAF50 ;font-size:20px ;'>" + F2 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    r=" El horizonte 1 es: <b><span style='color: #4CAF50 ;font-size:25px ;'>" + F1 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    r=r+"El horizonte 2 es: <b><span style='color: #4CAF50 ;font-size:25px ;'>" + F2 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     //grado de fertilidad pag 30
-    r=r+"La Fertilidad total es: <b><span style='color: red;font-size:20px ;'>" + FT + "</b></span>";
+    r=r+"La Fertilidad total es: <b><span style='color: red;font-size:25px ;'>" + FT + "</b></span>";
     result=document.getElementById('resultado');
     result.innerHTML=r;
     localStorage.setItem("resultadoFT", FT);
