@@ -131,7 +131,7 @@
     border-radius: 8px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
     background-color: #5B8C51;
-    transition: .5s step-start;
+    transition: .5s ;
 }
 
 .service-item .service-img {
