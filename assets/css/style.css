@@ -124,6 +124,14 @@
     position: relative;
     border-radius: 8px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    background: rgba(0, 0, 0, .4);
+}
+.service-item:hover {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    background-color: #5B8C51;
+    transition: .5s;
 }
 
 .service-item .service-img {
@@ -146,7 +154,7 @@
     border-radius: 10px;
 }
 
-.service-item .service-img::before {
+.service-item .img-fluid::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -158,7 +166,7 @@
     z-index: 1;
 }
 
-.service-item .service-img::after {
+.service-item .img-fluid::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -191,11 +199,12 @@
 .service-item .service-text h5,
 .service-item .service-text p {
     transition: .5s;
+    color: #ffffff;
 }
 
 .service-item:hover .service-text h5,
 .service-item:hover .service-text p {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .service-item .service-text .btn {
