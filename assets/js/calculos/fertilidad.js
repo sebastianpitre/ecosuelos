@@ -29,10 +29,10 @@ ConductividadElectrica=0.37 mS/cm (deciSiemens/centimetros)
 */
 
 function calculo_fertilidad (ph,SAl,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono){
-//var ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
-//var CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
-var BasesTotales,PorcentajeSaturacion;
-var PorcentajeSaturacionSodio;
+//let ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
+//let CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+let BasesTotales,PorcentajeSaturacion;
+let PorcentajeSaturacionSodio;
 const PesoAtomicoSodio=(23/10);
 
 //document.write(ph);
@@ -50,7 +50,7 @@ ConductividadElectrica=ConductividadElectrica/1000;
 PorcentajeSaturacionSodio=sodio/(cic*100);
 
 /////calificacion del ph/////
-var puntajeph=0;
+let puntajeph=0;
 if (ph<=4.5 || ph>=8.5)
     puntajeph=1;
 else if((ph>=4.6 && ph<=5.0) || (ph>=7.9 && ph<=8.4 ))
@@ -64,7 +64,7 @@ else
     puntajeph=5;
 
 /////calificacion SAl se mide si ph<=5.5/////
-var puntajeSAl=0;
+let puntajeSAl=0;
 if (ph<=5.5){
     if (SAl>60)
         puntajeSAl=1;
@@ -79,7 +79,7 @@ if (ph<=5.5){
         puntajeSAl=5;
 }
 /////calificacion cic/////
-    var puntajecic=0;
+    let puntajecic=0;
     if (cic<5)
         puntajecic=1;
     else if(cic>=5 && cic<=10) 
@@ -93,7 +93,7 @@ if (ph<=5.5){
         puntajecic=5;
     
     /////calificacion BasesTotales/////
-    var puntajebt=0;
+    let puntajebt=0;
     if (BasesTotales<4)
         puntajebt=0.5;
     else if(BasesTotales>=4 && BasesTotales<=8) 
@@ -107,7 +107,7 @@ if (ph<=5.5){
         puntajebt=2.5;
 
     /////calificacion Porcentaje de saturación/////
-    var puntajePorcentajeSaturacion=0;
+    let puntajePorcentajeSaturacion=0;
     if (PorcentajeSaturacion<10)
         puntajePorcentajeSaturacion=0.5;
     else if(PorcentajeSaturacion>=10 && PorcentajeSaturacion<=35) 
@@ -165,7 +165,7 @@ if (ph<=5.5){
     }
 
     /////calificacion fosforo/////
-    var puntajefosforo=0;
+    let puntajefosforo=0;
     if (fosforo<10)
         puntajefosforo=1;
     else if(fosforo>=10 && fosforo<=20) 
@@ -179,7 +179,7 @@ if (ph<=5.5){
         puntajefosforo=5;
 
     /////calificacion potasio/////
-    var puntajepotasio=0;
+    let puntajepotasio=0;
     if (potasio<0.1)
         puntajepotasio=1;
     else if(potasio>=0.1 && potasio<=0.2) 
@@ -231,11 +231,11 @@ if (ph<=5.5){
 //------------------ CALCULAR FERTILIDAD -------------------------------------------------------------------------------------------//
   function calcularFT(){
     //calculo_fertilidad (ph,SAL,cic,calcio,potasio,sodio,CarbonoOrganico,ConductividadElectrica,ClimaCarbono)
-    //var ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
-    //var CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+    //let ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
+    //let CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
 
-    //var ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
-    //var CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
+    //let ph=7.08, SAl=0, cic=23.46, calcio=13.74,potasio=0.38,sodio=1.21,ClimaCarbono="MEDIO";
+    //let CarbonoOrganico=1.78,magnesio=6.74,fosforo=86,DensidadAparente=1.16,ConductividadElectrica=0.37;
     const K= 0.285;
       //Calculo del Horizonte 1
     ph=document.getElementById('ph').value
@@ -282,7 +282,7 @@ if (ph<=5.5){
     localStorage.setItem("resultadoFT", FT);
 
     // Mostrar el botón "Exportar"
-    var exportarBtn = document.getElementById('exportarBtn');
+    let exportarBtn = document.getElementById('exportarBtn');
     exportarBtn.style.display = "block";
 
     // Guardar los datos antes de calcular LOCALSTORAGE
