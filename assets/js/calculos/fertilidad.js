@@ -121,7 +121,7 @@ if (ph<=5.5){
         puntajePorcentajeSaturacion=2.5;
     
     /////calificacion carbono orgánico/////
-    var puntajeCarbonoOrganico=0;
+    let puntajeCarbonoOrganico=0;
     if (ClimaCarbono=="CALIDO"){
         if (CarbonoOrganico<0.2)
             puntajeCarbonoOrganico=1;
