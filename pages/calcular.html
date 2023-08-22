@@ -257,11 +257,19 @@
               </div> -->
 
               <div class="col-lg-3 mt-5">
-                <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(Grado)</span></label>
+                <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
                 <div class="row">
-                  <div class="col input-group input-group-static">
+                  <!-- <div class="col input-group input-group-static">
                     <input type="text" class="form-control" id="clase" placeholder="clase">
-                  </div>
+                  </div> -->
+
+                    <div class="col input-group input-group-static">
+                      <select id="transactionType" class="form-select form-select-sm form-control" id="clase" placeholder="clase">
+                        <option> </option>
+                        <option value="simple">Simple</option>
+                        <option value="compleja">Compleja</option>
+                      </select>
+                    </div>
                   <div class="col input-group input-group-static">
                     <input type="number" class="form-control" id="porcentaje" placeholder="porcentaje" oninput="calcularTipo()">
                   </div>
@@ -367,11 +375,11 @@
                   <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
-              <!-- .......... -->
+              <!-- .....Realizada..... -->
               <div class="col-lg-3 mt-5">
-                <label class="text-dark font-weight-bold"> Profundidad efectiva</label>
+                <label class="text-dark font-weight-bold"> Profundidad efectiva <span class="text-dark opacity-6">(cm)</span></label>
                 <div class="input-group input-group-static">
-                  <input type="number" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
+                  <input type="number" class="form-control" value="75" placeholder="Medida en cm" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
