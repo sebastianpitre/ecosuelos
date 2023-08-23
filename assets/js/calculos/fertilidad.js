@@ -206,8 +206,9 @@ if (ph<=5.5){
     // document.write("La Fertilidad total es:",FT);
 
 
-//------------------ LOCALSTORAGE -------------------------------------------------------------------------------------------//
 }
+
+//------------------ LOCALSTORAGE -------------------------------------------------------------------------------------------//
 
   // Función para cargar los datos guardados en el almacenamiento local
   function cargarDatosGuardados() {
@@ -279,6 +280,7 @@ if (ph<=5.5){
     r=r+"La Fertilidad total es: <b><span style='color: red;font-size:25px ;'>" + FT + "</b></span>";
     result=document.getElementById('resultado');
     result.innerHTML=r;
+    
     localStorage.setItem("resultadoFT", FT);
 
     // Mostrar el botón "Exportar"
@@ -288,8 +290,6 @@ if (ph<=5.5){
     // Guardar los datos antes de calcular LOCALSTORAGE
     guardarDatos();
 }
-
-    
 
   // Ejecutar al cargar  la página LOCALSTORAJE
   window.onload = function () {

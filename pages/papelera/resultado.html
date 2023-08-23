@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado Piso Térmico</title>
+</head>
+<body>
+    <h2>Resultado del Piso Térmico</h2>
+    
+    <input type="text" id="resultadoPisosTermicos" readonly>
+
+    <script>
+        // Recuperar el resultado almacenado en localStorage
+        const pisoTermico = localStorage.getItem('pisoTermico');
+
+        // Mostrar el resultado en la página
+        const resultadoPisosTermicos = document.getElementById('resultadoPisosTermicos');
+        resultadoPisosTermicos.value = decodeURIComponent(pisoTermico);
+    </script>
+</body>
+</html>

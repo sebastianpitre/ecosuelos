@@ -1,67 +1,114 @@
-/********** Template CSS **********/
-:root {
-    --primary: #5B8C51;
-    --secondary: #EDDD5E;
-    --light: #F7F7F7;
-    --dark: #404A3D;
-      
-}
-
-
-/*** Header ***/
-.carousel-caption {
+/* Agrega esta regla para activar la animación en el modal */
+.animacion_modal {
+    animation: despliegueModal 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  /* Define la animación */
+  @keyframes despliegueModal {
+    0% {
+      transform: scaleY(0) translateY(-100%);
+      opacity: 3;
+    }
+    50% {
+      transform: scaleY(1.1) translateY(10%);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scaleY(1) translateY(0);
+      opacity: 6;
+    }
+  }
+/* Estilos para el modal */
+.modal_calculo {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, .1);
-    z-index: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 3rem;
-    background-color: var(--primary);
-    border: 10px solid var(--primary);
-}
-
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    z-index: 9998 ;
+  }
+  
+  .modal-content_calculo {
+    position: absolute;
     
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    animation: cubic-bezier(0.215, 0.610, 0.355, 1);
+    z-index: 9999;
+  
+  }
+  
+  .close_calculo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    animation: cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+  }
+  
+  /* Estilos para el iframe */
+  .iframe_calculo {
+    border-radius: 5px;
+    width: 100%;
+    height: 65vh;
+  }
+
+
+
+/* ANIMACION DE TEXTO */
+
+  .animate-text {
+    letter-spacing: 0.075rem;
+  }
+
+  /*Para Planear el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
+  .animate-text::after {
+    content: "|";
+    font-size: 1.6rem;
+    font-family: "Inconsolata", monospace;
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .zoom {
+    animation: zoom 8s 0s;
+  }
+
+  /*Esta animación imita el parpadeo del cursor del teclado*/
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
     }
-}
 
-.page-header {
-    background: url(../img/ft.3.webp) center center no-repeat;
-    background-size: cover;
-}
+    20% {
+      opacity: 1;
+    }
 
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--light);
-}
+    25% {
+      opacity: 0;
+    }
 
-.page-header .breadcrumb-item,
-.page-header .breadcrumb-item a {
-    font-size: 18px;
-    color: var(--light);
-}
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
 
 
 /*** Section Title ***/
@@ -346,32 +393,3 @@
 }
 
 
-/*** Footer ***/
-.footer {
-    color: #B0B9AE;
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #B0B9AE;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
-}

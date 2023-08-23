@@ -64,3 +64,28 @@
     
 })(jQuery);
 
+
+
+// ----------------------------- TEXTO ANIMADO ---------------------------------------------------------
+
+//Primero capturamos el elemento del DOM con el id que definimos en el html
+const text1 = document.getElementById("animate-text1");
+let str = text1.innerHTML;
+text1.innerHTML = "";
+
+//Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
+const speed = 25;
+let i = 0;
+
+//Esta función recorre todos los caracteres nuestro texto
+const typeWriter = () => {
+  if (i < str.length) {
+    text1.innerHTML += str.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+};
+
+//Acá ejecutamos la función
+setTimeout(typeWriter, speed);
+
