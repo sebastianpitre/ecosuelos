@@ -188,11 +188,11 @@
     <section class="row mb-4 card opacity-9">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-10 mx-auto border-radius-lg">
-            <div class="row justify-content-center">
+          <div class="col-10 mx-auto ms-auto border-radius-lg">
+            <div class="row justify-content-center ">
               <h4 class="text-center mt-5 animate-text" id="animate-text1">Ingrese la caracteristicas del suelo.</h4>
 
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
                 <div class="row">
                     <div class="col input-group input-group-static">
@@ -238,7 +238,7 @@
                 }
               </script>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Erosion <span class="text-dark opacity-6">(Grado)</span></label>
                 <div class="row">
                     <div class="col input-group input-group-static">
@@ -248,95 +248,94 @@
                         <input type="text" class="form-control" id="variacionErosion" placeholder="Variación" readonly>
                     </div>
                 </div>
-            </div>
-            <script>
-              // Obtener referencias a los elementos por su ID
-              const parametroErosion = document.getElementById("parametroErosion");
-              const variacionErosion = document.getElementById("variacionErosion");
+              </div>
+              <script>
+                // Obtener referencias a los elementos por su ID
+                const parametroErosion = document.getElementById("parametroErosion");
+                const variacionErosion = document.getElementById("variacionErosion");
 
-              // Agregar evento input al campo de parametro
-              parametroErosion.addEventListener("input", function () {
-                const parametro = parseFloat(parametroErosion.value);
+                // Agregar evento input al campo de parametro
+                parametroErosion.addEventListener("input", function () {
+                  const parametro = parseFloat(parametroErosion.value);
 
-                let resultado = "";
-                if (!isNaN(parametro)) {
-                  if (parametro == 0) {
-                      resultado = "Sin erosión";
-                  } else if (parametro >= 1 && parametro < 5) {
-                      resultado = "Ligera";
-                  } else if (parametro >= 5 && parametro < 10) {
-                      resultado = "Moderada";
-                  } else if (parametro >= 10 && parametro < 15) {
-                      resultado = "Severa";
-                  } else {
-                      resultado = "Sin clasificación";
-                  }
-                } 
+                  let resultado = "";
+                  if (!isNaN(parametro)) {
+                    if (parametro == 0) {
+                        resultado = "Sin erosión";
+                    } else if (parametro >= 1 && parametro < 5) {
+                        resultado = "Ligera";
+                    } else if (parametro >= 5 && parametro < 10) {
+                        resultado = "Moderada";
+                    } else if (parametro >= 10 && parametro < 15) {
+                        resultado = "Severa";
+                    } else {
+                        resultado = "Sin clasificación";
+                    }
+                  } 
 
-                variacionErosion.value = resultado;
-              });
+                  variacionErosion.value = resultado;
+                });
 
-            </script>
-            
-
+              </script>
+              
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Movimiento de masa</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="movimientoMasa" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Drenaje natural</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" placeholder="complete este campo" id="drenajeNatural" aria-label="complete este campo" value="25">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Inundaciones</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="inundaciones" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Encharcamientos</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" placeholder="complete este campo" id="encharcamientos" aria-label="complete este campo">
                 </div>
               </div>
-              <!-- .....Realizada..... -->
-              <div class="col-lg-3 mt-5">
+              <!-- .....Profundidad efectiva ✔..... -->
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Profundidad efectiva <span class="text-dark opacity-6">(cm)</span></label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="profundidad" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Textura</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="textura" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Pedregosidad superficial</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="pedregosidad" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Afloramiento rocoso</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="afloramiento" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label for="resultadoFertilidad" class="text-dark font-weight-bold"> Fertilidad 
                   <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-success">open_in_new</i></a></span>
                 </label>
@@ -345,49 +344,49 @@
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Contenido de sales</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="contenidoSales" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Contenido de sodio(Na)</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="contenidoSodio" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Sales y sodio(Na)</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="sales_Sodio" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Ca/Mg</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="ca_mg" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold"> Saturacion de aluminio</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="saturacionAluminio" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Distribucion de lluvia</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="distribucionLluvia" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 ms-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label for="pisosTermicos" class="text-dark font-weight-bold">Pisos termicos 
                   <span class="input-group-addon"><a id="openModalPisosTermicos"><i class="material-icons text-success">open_in_new</i></a></span>
                 </label>
@@ -397,21 +396,21 @@
               </div>
                
               <!-- .......... -->
-              <div class="col-lg-3 me-6 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Condicion de humedad</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="condicionHumedad" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <label class="text-dark font-weight-bold">Temperatura heladera</label>
                 <div class="input-group input-group-static">
                   <input type="number" class="form-control" id="temperatura" placeholder="complete este campo" aria-label="complete este campo">
                 </div>
               </div>
               <!-- .......... -->
-              <div class="col-lg-3 mt-5">
+              <div class="col-lg-3 ms-3 me-3 mt-5">
                 <div class="input-group input-group-static">
                   <label class="text-dark font-weight-bold">Tipo select</label>
                   <select id="transactionType" class="form-select form-select-lg mb-2 form-control" aria-label=".form-select-lg example">
@@ -449,7 +448,7 @@
             <!-- <a href="index.html">
               <img src="../assets/img/logo_maiz.png" class="mb-4" alt="main_logo" style="width:40px; margin-left:32px">
             </a> -->
-            <h5 class="font-weight-bolder mt-5 ms-6 mb-4"><span class="text-dark font-weight-bold"><span
+            <h5 class="font-weight-bolder mt-5 ms-3 me-3 mb-4"><span class="text-dark font-weight-bold"><span
                   class="text-success">ECO</span>suelos</span></h5>
           </div>
         </div>
