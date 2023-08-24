@@ -274,11 +274,11 @@ if (ph<=5.5){
     //para suelos salinos página 32
     FT=(0.7*F1)+(0.3*F2)*K;
     FT=parseFloat(FT).toFixed(2);
-    r="Horizonte 1: <b><span style='color: #4CAF50 ;font-size:25px ;'>" + F1 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    r="Horizonte 1: <b><span style='color: #4CAF50 ;font-size:25px ;'>" + F1 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>";
     r=r+"Horizonte 2: <b><span style='color: #4CAF50 ;font-size:25px ;'>" + F2 + "</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>";
     //grado de fertilidad pag 30
     r=r+"Fertilidad total: <b><span style='color: red;font-size:25px ;'>" + FT + "</b></span>";
-    result=document.getElementById('resultado');
+    result=document.getElementById('resultadoFertilidad');
     result.innerHTML=r;
     
     localStorage.setItem("resultadoFT", FT);

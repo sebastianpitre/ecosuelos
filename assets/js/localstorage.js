@@ -1,3 +1,32 @@
+// localStorage GENERAL
+
+// Obtener todos los campos de entrada por su ID
+const inputFields = [
+    "clase", "porcentaje", "tipo", "parametroErosion",
+    "movimientoMasa", "drenajeNatural", "inundaciones",
+    "encharcamientos", "profundidad", "textura",
+    "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperatura"
+  ];
+
+  // Cargar los valores del almacenamiento local cuando se carga la página
+  window.addEventListener("load", () => {
+    inputFields.forEach(fieldId => {
+      const fieldValue = localStorage.getItem(fieldId);
+      if (fieldValue !== null) {
+        document.getElementById(fieldId).value = fieldValue;
+      }
+    });
+  });
+
+  // Guardar valores en el almacenamiento local cuando se cambian
+  inputFields.forEach(fieldId => {
+    const inputField = document.getElementById(fieldId);
+    inputField.addEventListener("input", () => {
+      localStorage.setItem(fieldId, inputField.value);
+    });
+  });
+
+
 // MOSTRAR DATOS LOCALES DE FERTILIDAD 
 
     // Obtiene el resultado almacenado en el localStorage
