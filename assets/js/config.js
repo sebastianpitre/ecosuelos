@@ -1,4 +1,5 @@
-// INHABILITA LA RUEDA DEL MOUSE EN LOS INPUTS
+// ⭐INHABILITA LA RUEDA DEL MOUSE EN LOS INPUTS
+
 // Obtén todos los inputs de tipo "number"
 const numberInputs = document.querySelectorAll('input[type="number"]');
 
