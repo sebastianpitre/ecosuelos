@@ -24,17 +24,17 @@ function calcularPisoTermico() {
     let pisoTermico = "";
 
     if (altura <= 1000 && temperatura > 24) {
-        pisoTermico = "Cálido 🥵";
+        pisoTermico = "Cálido ";
     } else if (altura <= 2000 && temperatura >= 18 && temperatura <= 24) {
-        pisoTermico = "Templado 🤒";
+        pisoTermico = "Templado ";
     } else if (altura <= 3000 && temperatura >= 12 && temperatura <= 18) {
-        pisoTermico = "Frío😖";
+        pisoTermico = "Frío";
     } else if (altura <= 3600 && temperatura >= 8 && temperatura <= 12) {
         pisoTermico = "Muy frío";
     } else if (altura <= 4200 && temperatura >= 4 && temperatura <= 8) {
-        pisoTermico = "Extremadamente frío 🥶";
+        pisoTermico = "Extremadamente frío ";
     } else if (altura <= 4700 && temperatura >= 1.5 && temperatura <= 4) {
-        pisoTermico = "Subnival😰";
+        pisoTermico = "Subnival";
     } else if (altura > 4700 && temperatura < 1.5) {
         pisoTermico = "Nival";
     } else {
@@ -53,6 +53,11 @@ function calcularPisoTermico() {
     let exportarBtn = document.getElementById('exportarBtn');
     exportarBtn.style.display = "block";
 
+// 🥵
+// 🤒
+// 😖
+// 🥶
+// 😰
 
 }
 
@@ -110,5 +115,34 @@ function calcularErosion () {
 
         variacionErosion.value = resultadoErosion;
     });
+
+}
+
+function calcularMovimientoMasa () {
+  // Obtener referencias a los elementos por su ID
+  const afectacionMov_masa = document.getElementById("afectacionMov_masa");
+  const claseMov_masa = document.getElementById("claseMov_masa");
+
+  // Agregar evento input al campo de afectacion
+  afectacionMov_masa.addEventListener("input", function () {
+      const afectacion = parseFloat(afectacionMov_masa.value);
+
+      let resultadoMov_masa = "";
+      if (!isNaN(afectacion)) {
+      if (afectacion == 0) {
+          resultadoMov_masa = "Sin erosión";
+      } else if (afectacion >= 1 && afectacion < 5) {
+          resultadoMov_masa = "Ligera";
+      } else if (afectacion >= 5 && afectacion < 10) {
+          resultadoMov_masa = "Moderada";
+      } else if (afectacion >= 10 && afectacion < 15) {
+          resultadoMov_masa = "Severa";
+      } else {
+          resultadoMov_masa = "Sin clasificación";
+      }
+      } 
+
+      claseMov_masa.value = resultadoMov_masa;
+  });
 
 }

@@ -3,6 +3,7 @@
 // Obtener todos los campos de entrada por su ID
 const inputFields = [
     "clase", "porcentaje", "tipo", "parametroErosion",
+    "afectacionMov_masa","claseMov_masa",
     "movimientoMasa", "drenajeNatural", "inundaciones",
     "encharcamientos", "profundidad", "textura",
     "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperatura"
