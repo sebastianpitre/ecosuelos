@@ -1,11 +1,11 @@
 function closed() {
     $("#modalContPisosTermicos").fadeOut();
     $("#modalFramePisosTermicos").attr("src", "");
-    $("#modalContPreparacion").fadeOut();
-    $("#modalFramePreparacion").attr("src", "");
+    $("#modalContMovMasa").fadeOut();
+    $("#modalFrameMovMasa").attr("src", "");
 
     // Actualizar la página
-    window.location.reload();
+    window.location.reload();   
 };
 
 // separador de modal
@@ -16,8 +16,8 @@ $(document).ready(function() {
 });
 
 // separador de modal
-    $("#openModalPreparacion").click(function() {
-    $("#modalContPreparacion").fadeIn();
-    $("#modalFramePreparacion").attr("src", "about2.html#modal2");
+    $("#openModalMovMasa").click(function() {
+    $("#modalContMovMasa").fadeIn();
+    $("#modalFrameMovMasa").attr("src", "calculos/movimiento_masa.html");
 });
 });

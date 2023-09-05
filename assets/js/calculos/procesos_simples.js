@@ -3,12 +3,19 @@
 function cargarDatosAlmacenados() {
     const alturaGuardada = localStorage.getItem('altura');
     const temperaturaGuardada = localStorage.getItem('temperatura');
+    const afectacionMovMasaGuardada = localStorage.getItem('afectacionMovMasa')
 
     // Si hay datos guardados, cargarlos en los campos de entrada
-    if (alturaGuardada !== null && temperaturaGuardada !== null) {
+    if (alturaGuardada !== null && temperaturaGuardada !== null &&
+        afectacionMovMasaGuardada !== null
+        ) {
         document.getElementById('altura').value = alturaGuardada;
         document.getElementById('temperatura').value = temperaturaGuardada;
+        document.getElementById('afectacionMovMasa').value = afectacionMovMasaGuardada;
     }
+
+
+    
 }
 
 // Llamar a la función para cargar los datos almacenados
@@ -52,12 +59,6 @@ function calcularPisoTermico() {
     // Mostrar el botón "Exportar"
     let exportarBtn = document.getElementById('exportarBtn');
     exportarBtn.style.display = "block";
-
-// 🥵
-// 🤒
-// 😖
-// 🥶
-// 😰
 
 }
 
@@ -118,31 +119,37 @@ function calcularErosion () {
 
 }
 
-function calcularMovimientoMasa () {
-  // Obtener referencias a los elementos por su ID
-  const afectacionMov_masa = document.getElementById("afectacionMov_masa");
-  const claseMov_masa = document.getElementById("claseMov_masa");
+// -------------------------⭐ MOVIMIENTO DE MASA  ⭐----------------------------------------
 
-  // Agregar evento input al campo de afectacion
-  afectacionMov_masa.addEventListener("input", function () {
-      const afectacion = parseFloat(afectacionMov_masa.value);
+function calcularMovMasa() {
+    let afectacionMovMasa = parseFloat(document.getElementById('afectacionMovMasa').value);
+    let resultadoMovMasa = document.getElementById('resultadoMovMasa');
 
-      let resultadoMov_masa = "";
-      if (!isNaN(afectacion)) {
-      if (afectacion == 0) {
-          resultadoMov_masa = "Sin erosión";
-      } else if (afectacion >= 1 && afectacion < 5) {
-          resultadoMov_masa = "Ligera";
-      } else if (afectacion >= 5 && afectacion < 10) {
-          resultadoMov_masa = "Moderada";
-      } else if (afectacion >= 10 && afectacion < 15) {
-          resultadoMov_masa = "Severa";
-      } else {
-          resultadoMov_masa = "Sin clasificación";
-      }
-      } 
+    let movMasa = "";
 
-      claseMov_masa.value = resultadoMov_masa;
-  });
+    if (afectacionMovMasa <= 0 ) {
+        movMasa = "No hay";
+    } else if (afectacionMovMasa < 10 ) {
+        movMasa = "Pocas";
+    } else if (afectacionMovMasa >= 10 && afectacionMovMasa <= 24 ) {
+        movMasa = "Frecuentes";
+    } else if (afectacionMovMasa >= 25 && afectacionMovMasa <= 74 ) {
+        movMasa = "Abundantes";
+    } else if (afectacionMovMasa >= 75) {
+        movMasa = "Muy abundantes";
+    } else {
+        movMasa = "¡Datos inconcretos!";
+    }
+
+    // Almacenar los datos en localStorage
+    localStorage.setItem('movMasa', encodeURIComponent(movMasa));
+    localStorage.setItem('afectacionMovMasa', afectacionMovMasa);
+
+    // Mostrar el resultado en la página actual
+    resultadoMovMasa.value = movMasa;
+    
+    // Mostrar el botón "Exportar"
+    let exportarBtn = document.getElementById('exportarBtn');
+    exportarBtn.style.display = "block";
 
 }

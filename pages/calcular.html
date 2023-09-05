@@ -174,13 +174,19 @@
   <!-- End Navbar -->
   </div></div></div>
 
-  <div class="card1 card-body  mx-3 mx-md-8 mt-8 mb-4">
+  <div class="card1 card-body  mx-3 mx-md-8 mt-7 mb-4">
 
      <!-- modal -->
      <div id="modalContPisosTermicos" class="modal_calculo  animacion_modal">
       <div class="modal-content_calculo col-8">
         <button onclick="closed()" class="btn btn-sm close_calculo text-white bg-gradient-dark">&times;</button>
         <iframe class="iframe_calculo" id="modalFramePisosTermicos" ></iframe>
+      </div>
+    </div>
+    <div id="modalContMovMasa" class="modal_calculo  animacion_modal">
+      <div class="modal-content_calculo col-8">
+        <button onclick="closed()" class="btn btn-sm close_calculo text-white bg-gradient-dark">&times;</button>
+        <iframe class="iframe_calculo" id="modalFrameMovMasa" ></iframe>
       </div>
     </div>
 
@@ -226,9 +232,11 @@
 
                 <!-- .......... -->
                 <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Movimiento de masa</label>
+                  <label class="text-dark font-weight-bold"> Movimiento de masa
+                    <span class="input-group-addon"><a id="openModalMovMasa"><i class="material-icons text-success">open_in_new</i></a></span>
+                  </label>
                   <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="movimientoMasa" placeholder="complete este campo" aria-label="complete este campo">
+                    <input type="text" class="form-control bg-gray-200" id="resultadoMovMasa" placeholder="complete este campo" aria-label="complete este campo" readonly>
                   </div>
                 </div>
                 <!-- .......... -->
@@ -286,7 +294,7 @@
                     <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-success">open_in_new</i></a></span>
                   </label>
                   <div class="input-group form-group input-group-static">
-                      <input type="number" id="resultadoFertilidad" class="form-control text-success " placeholder="complete este campo" aria-label="complete este campo" readonly>
+                      <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo" aria-label="complete este campo" readonly>
                   </div>
                 </div>
                 <!-- .......... -->
@@ -337,7 +345,7 @@
                     <span class="input-group-addon"><a id="openModalPisosTermicos"><i class="material-icons text-success">open_in_new</i></a></span>
                   </label>
                   <div class="input-group input-group-static">
-                    <input type="text" class="form-control font-weight-bolder" id="resultadoPisosTermicos" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    <input type="text" class="form-control bg-gray-200 " id="resultadoPisosTermicos" placeholder="complete este campo" aria-label="complete este campo" readonly>
                   </div>
                 </div>
                 
@@ -352,7 +360,7 @@
                 <div class="col-lg-3 ms-3 me-3 mt-5">
                   <label class="text-dark font-weight-bold">Temperatura heladera</label>
                   <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="temperatura" placeholder="complete este campo" aria-label="complete este campo">
+                    <input type="number" class="form-control" id="temperaturaHeladera" placeholder="complete este campo" aria-label="complete este campo">
                   </div>
                 </div>
                 <!-- .......... -->
@@ -467,7 +475,7 @@
 
   <script src="../assets/js/modal.js"></script>
   <script src="../assets/js/localstorage.js"></script>
-  <script src="../../assets/js/config.js"></script>
+  <script src="../assets/js/config.js"></script>
 
 </body>
 

@@ -2,11 +2,9 @@
 
 // Obtener todos los campos de entrada por su ID
 const inputFields = [
-    "clase", "porcentaje", "tipo", "parametroErosion",
-    "afectacionMov_masa","claseMov_masa",
-    "movimientoMasa", "drenajeNatural", "inundaciones",
+    "clase", "porcentaje", "tipo", "parametroErosion", "drenajeNatural", "inundaciones",
     "encharcamientos", "profundidad", "textura",
-    "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperatura"
+    "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperaturaHeladera",
   ];
 
   // Cargar los valores del almacenamiento local cuando se carga la página
@@ -28,7 +26,7 @@ const inputFields = [
   });
 
 
-// MOSTRAR DATOS LOCALES DE FERTILIDAD 
+// MOSTRAR DATOS LOCALES DE FERTILIDAD
 
     // Obtiene el resultado almacenado en el localStorage
     var resultadoFT = window.localStorage.getItem("resultadoFT");
@@ -36,6 +34,7 @@ const inputFields = [
     // Muestra el resultado en el campo de entrada
     document.getElementById("resultadoFertilidad").value = resultadoFT;
 
+    
 // MOSTRAR DATOS LOCALES DE PISOS TERMICOS
 
     // Recuperar el resultado almacenado en localStorage
@@ -43,4 +42,14 @@ const inputFields = [
 
     // Mostrar el resultado en la página
     const resultadoPisosTermicos = document.getElementById('resultadoPisosTermicos');
-    resultadoPisosTermicos.value = decodeURIComponent(pisoTermico);
+    resultadoPisosTermicos.value = decodeURIComponent(pisoTermico);  
+
+
+// MOSTRAR DATOS LOCALES DE MOVIMIENTO DE MASA
+
+    // Recuperar el resultado almacenado en localStorage
+    const movMasa = localStorage.getItem('movMasa');
+
+    // Mostrar el resultado en la página
+    const resultadoMovMasa = document.getElementById('resultadoMovMasa');
+    resultadoMovMasa.value = decodeURIComponent(movMasa);
