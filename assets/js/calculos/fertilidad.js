@@ -50,7 +50,7 @@ ConductividadElectrica=ConductividadElectrica/1000;
 PorcentajeSaturacionSodio=sodio/(cic*100);
 
 /////calificacion del ph/////
-let puntajeph=0;
+let puntajeph;
 if (ph<=4.5 || ph>=8.5)
     puntajeph=1;
 else if((ph>=4.6 && ph<=5.0) || (ph>=7.9 && ph<=8.4 ))
@@ -64,7 +64,7 @@ else
     puntajeph=5;
 
 /////calificacion SAl se mide si ph<=5.5/////
-let puntajeSAl=0;
+let puntajeSAl;
 if (ph<=5.5){
     if (SAl>60)
         puntajeSAl=1;
@@ -79,7 +79,7 @@ if (ph<=5.5){
         puntajeSAl=5;
 }
 /////calificacion cic/////
-    let puntajecic=0;
+    let puntajecic;
     if (cic<5)
         puntajecic=1;
     else if(cic>=5 && cic<=10) 
@@ -93,7 +93,7 @@ if (ph<=5.5){
         puntajecic=5;
     
     /////calificacion BasesTotales/////
-    let puntajebt=0;
+    let puntajebt;
     if (BasesTotales<4)
         puntajebt=0.5;
     else if(BasesTotales>=4 && BasesTotales<=8) 
@@ -107,7 +107,7 @@ if (ph<=5.5){
         puntajebt=2.5;
 
     /////calificacion Porcentaje de saturación/////
-    let puntajePorcentajeSaturacion=0;
+    let puntajePorcentajeSaturacion;
     if (PorcentajeSaturacion<10)
         puntajePorcentajeSaturacion=0.5;
     else if(PorcentajeSaturacion>=10 && PorcentajeSaturacion<=35) 
@@ -121,7 +121,7 @@ if (ph<=5.5){
         puntajePorcentajeSaturacion=2.5;
     
     /////calificacion carbono orgánico/////
-    let puntajeCarbonoOrganico=0;
+    let puntajeCarbonoOrganico;
     if (ClimaCarbono=="CALIDO"){
         if (CarbonoOrganico<0.2)
             puntajeCarbonoOrganico=1;
@@ -165,7 +165,7 @@ if (ph<=5.5){
     }
 
     /////calificacion fosforo/////
-    let puntajefosforo=0;
+    let puntajefosforo;
     if (fosforo<10)
         puntajefosforo=1;
     else if(fosforo>=10 && fosforo<=20) 
@@ -179,7 +179,7 @@ if (ph<=5.5){
         puntajefosforo=5;
 
     /////calificacion potasio/////
-    let puntajepotasio=0;
+    let puntajepotasio;
     if (potasio<0.1)
         puntajepotasio=1;
     else if(potasio>=0.1 && potasio<=0.2) 

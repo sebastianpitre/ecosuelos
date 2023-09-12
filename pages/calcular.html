@@ -189,6 +189,12 @@
         <iframe class="iframe_calculo" id="modalFrameMovMasa" ></iframe>
       </div>
     </div>
+    <div id="modalContErosion" class="modal_calculo  animacion_modal">
+      <div class="modal-content_calculo col-8">
+        <button onclick="closed()" class="btn btn-sm close_calculo text-white bg-gradient-dark">&times;</button>
+        <iframe class="iframe_calculo" id="modalFrameErosion" ></iframe>
+      </div>
+    </div>
 
     <!-- CARD -->
     <section class="row mb-4 card opacity-9">
@@ -219,14 +225,11 @@
 
                 <!-- .......... -->
                 <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Erosion <span class="text-dark opacity-6">(Grado)</span></label>
-                  <div class="row">
-                      <div class="col input-group input-group-static">
-                          <input type="number" class="form-control" id="parametroErosion" placeholder="Digite grado" oninput="calcularErosion()">
-                      </div>
-                      <div class="col input-group input-group-static">
-                          <input type="text" class="form-control" id="variacionErosion" placeholder="Variación" readonly>
-                      </div>
+                  <label class="text-dark font-weight-bold">Erosion hídrica
+                    <span class="input-group-addon"><a id="openModalErosion"><i class="material-icons text-success">open_in_new</i></a></span>
+                  </label>
+                  <div class="input-group input-group-static">
+                    <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo" aria-label="complete este campo" readonly>
                   </div>
                 </div>
 

@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/logo_maiz.png">
   <link rel="icon" type="image/png" href="../../assets/img/logo_maiz.png">
   <title>
-    Pisos Termicos
+    Erosión Hídrica
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css"
@@ -43,7 +43,7 @@
   
 </head>
 
-<body class="blog-author bg-gray-200" >
+<body class="blog-author bg-gray-200 " >
 
 
   <div class="page-header align-items-start bg-gray-200 min-vh-100" style="background-image: url(../assets/img/fotosmaiz\ \(4\).jpg);" loading="lazy">
@@ -53,32 +53,24 @@
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
             <div class="row">
-              <h3 class="text-center mt-2 ">Pisos Térmicos.</h4>
+              <h3 class="text-center mt-2 ">Erosión Hídrica</h4>
                 <div class="container">
-                  <div class="row mb-4">
+                  <div class="row mb-4 justify-content-center">
       
-                    <div class="col-6">
-                      <label for="altura" class="text-dark mb-n3 ms-n1 font-weight-bold">Altura 
-                        <span class="text-dark opacity-6"> (s. n. m.)</span>
+                    <div class="col-6 ">
+                      <label for="perdidaSuelo" class="text-dark mb-n3 ms-n1 font-weight-bold">Porcentaje de perdida de suelo
+                        <span class="text-dark opacity-6"> (Por acción de agua)</span>
                       </label>
                       <div class="input-group input-group-static">
-                        <input type="number" id="altura" value="" placeholder="Digite" class="form-control mt-n2">
+                        <input type="number" id="perdidaSuelo" value="" placeholder="Digite" class="form-control mt-n2">
                       </div>
                     </div>
                     <!-- .......... -->
-                    <div class="col-6">
-                      <label for="temperatura" class="text-dark mb-n3 ms-n1 font-weight-bold">Temperatura
-                        <span class="text-dark opacity-6"> (°C)</span>
-                      </label>
-                      <div class="input-group input-group-static">
-                        <input type="number" id="temperatura" value="" class="form-control mt-n2">
-                      </div>
-                    </div>
       
                   </div>
                   <div id="idboton" class="text-center">
-                    <!-- botón principal -->
-                    <input type="button" value="Calcular" class="btn bg-gradient-success" onclick="calcularPisoTermico()">
+                    <!-- boton principal -->
+                    <input type="button" value="Calcular" class="btn bg-gradient-success" onclick="calcularErosion()">
                   </div>
                 </div>
             </div>
@@ -103,7 +95,7 @@
             <div  class="justify-content-center text-center">
               <div class="row fila">
                 <div class="col justify-content-center text-center my-3">
-              <input type="text" id="resultadoPisosTermicos" class="text-center text-2xl form-control mt-n2" readonly draggable="false">
+              <input type="text" id="resultadoErosion" class="text-center text-2xl form-control mt-n2" readonly draggable="false">
             </div>
                 
               </div>
@@ -139,7 +131,7 @@
 
   <!-- FUNCIONES CALCULO -->
 
-  <script src="../../assets/js/localstorage/localstorage.js"></script>
+  <script src="../../assets/js/localstorage.js"></script>
   <script src="../../assets/js/config.js"></script>
 
 </body>

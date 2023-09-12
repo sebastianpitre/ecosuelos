@@ -2,7 +2,7 @@
 
 // Obtener todos los campos de entrada por su ID
 const inputFields = [
-    "clase", "porcentaje", "tipo", "parametroErosion", "drenajeNatural", "inundaciones",
+    "clase", "porcentaje", "tipo", "drenajeNatural", "inundaciones",
     "encharcamientos", "profundidad", "textura",
     "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperaturaHeladera",
   ];
@@ -53,3 +53,12 @@ const inputFields = [
     // Mostrar el resultado en la página
     const resultadoMovMasa = document.getElementById('resultadoMovMasa');
     resultadoMovMasa.value = decodeURIComponent(movMasa);
+
+    // MOSTRAR DATOS LOCALES DE EROSION
+
+    // Recuperar el resultado almacenado en localStorage
+    const erosion = localStorage.getItem('erosion');
+
+    // Mostrar el resultado en la página
+    const resultadoErosion = document.getElementById('resultadoErosion');
+    resultadoErosion.value = decodeURIComponent(erosion);

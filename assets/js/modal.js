@@ -20,4 +20,10 @@ $(document).ready(function() {
     $("#modalContMovMasa").fadeIn();
     $("#modalFrameMovMasa").attr("src", "calculos/movimiento_masa.html");
 });
+
+// separador de modal
+$("#openModalErosion").click(function() {
+    $("#modalContErosion").fadeIn();
+    $("#modalFrameErosion").attr("src", "calculos/erosion_hidrica.html");
+});
 });

@@ -89,7 +89,7 @@ function calcularTipo() {
   document.getElementById("tipo").value = tipo;
 }
 
-// -------------------------⭐ EROSION  ⭐----------------------------------------
+// -------------------------⭐ EROSIÓN HÍDRICA  ⭐----------------------------------------
 function calcularErosion () {
     // Obtener referencias a los elementos por su ID
     const parametroErosion = document.getElementById("parametroErosion");
@@ -105,7 +105,7 @@ function calcularErosion () {
             resultadoErosion = "Sin erosión";
         } else if (parametro >= 1 && parametro < 5) {
             resultadoErosion = "Ligera";
-        } else if (parametro >= 5 && parametro < 10) {
+        } else if (parametro >= 25 && parametro < 10) {
             resultadoErosion = "Moderada";
         } else if (parametro >= 10 && parametro < 15) {
             resultadoErosion = "Severa";
@@ -147,6 +147,41 @@ function calcularMovMasa() {
 
     // Mostrar el resultado en la página actual
     resultadoMovMasa.value = movMasa;
+    
+    // Mostrar el botón "Exportar"
+    let exportarBtn = document.getElementById('exportarBtn');
+    exportarBtn.style.display = "block";
+
+}
+
+// -------------------------⭐ EROSION HÍDRICA ⭐----------------------------------------
+
+function calcularErosion() {
+    let perdidaSuelo = parseFloat(document.getElementById('perdidaSuelo').value);
+    let resultadoErosion = document.getElementById('resultadoErosion');
+
+    let erosion = "";
+
+    if (perdidaSuelo <=24 ) {
+        erosion = "Sin erosión";
+    } else if (perdidaSuelo == 25 ) {
+        erosion = "Ligera";
+    } else if (perdidaSuelo > 25 && perdidaSuelo <= 74 ) {
+        erosion = "Moderada";
+    } else if (perdidaSuelo >= 75 && perdidaSuelo < 100  ) {
+        erosion = "Severa";
+    } else if (perdidaSuelo == 100) {
+        erosion = "Muy Severa";
+    } else {
+        erosion = "¡Datos no validos!";
+    }
+
+    // Almacenar los datos en localStorage
+    localStorage.setItem('erosion', encodeURIComponent(erosion));
+    localStorage.setItem('perdidaSuelo', perdidaSuelo);
+
+    // Mostrar el resultado en la página actual
+    resultadoErosion.value = erosion;
     
     // Mostrar el botón "Exportar"
     let exportarBtn = document.getElementById('exportarBtn');
