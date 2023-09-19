@@ -11,6 +11,16 @@
     background-color: rgba(0, 0, 0, 0.719);
     z-index: 9998 ;
   }
+
+  .modal-content_calculo{
+    width: 70%;
+  }
+
+  @media(max-width:400px){
+    .modal-content_calculo{
+        width: 90%;
+      }
+  }
   
   .modal-content_calculo {
     position: absolute;

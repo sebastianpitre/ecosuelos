@@ -40,20 +40,25 @@
   <!-- Boxicons CSS -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="../../assets/css/menu_global.css">
+  <script src="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js
+  "></script>
+  <link href="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css
+  " rel="stylesheet">
   
 </head>
 
-<body class="blog-author bg-gray-200 " >
+<body class="blog-author bg-gray-200">
 
 
   <div class="page-header align-items-start bg-gray-200 min-vh-100" style="background-image: url(../assets/img/fotosmaiz\ \(4\).jpg);" loading="lazy">
     <div class="container my-auto mx-md-8">
       <section class="row  mb-4 my-auto card opacity-9">
       <div class="container-fluid">
-        <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
-            <div class="row">
-              <h3 class="text-center mt-2 ">Erosión Hídrica</h4>
+            <h3 class="text-center mt-2 ">Erosión Hídrica</h4>
+              <form onsubmit="return false;">
                 <div class="container">
                   <div class="row mb-4 justify-content-center">
       
@@ -69,14 +74,14 @@
       
                   </div>
                   <div id="idboton" class="text-center">
+                    <button class="btn bg-gradient-success"  onclick="calcularErosion()">calcular</button>
                     <!-- boton principal -->
-                    <input type="button" value="Calcular" class="btn bg-gradient-success" onclick="calcularErosion()">
                   </div>
                 </div>
-            </div>
+              </form>
+            
 
           </div>
-        </div>
       </div>
       
     </section>
@@ -126,6 +131,7 @@
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
   <script src="../../assets/js/calculos/procesos_simples.js"></script>
 

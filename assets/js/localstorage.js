@@ -26,7 +26,7 @@ const inputFields = [
   });
 
 
-// MOSTRAR DATOS LOCALES DE FERTILIDAD
+// MOSTRAR DATOS LOCALES DE FERTILIDAD⭐
 
     // Obtiene el resultado almacenado en el localStorage
     var resultadoFT = window.localStorage.getItem("resultadoFT");
@@ -35,7 +35,7 @@ const inputFields = [
     document.getElementById("resultadoFertilidad").value = resultadoFT;
 
     
-// MOSTRAR DATOS LOCALES DE PISOS TERMICOS
+// MOSTRAR DATOS LOCALES DE PISOS TERMICOS⭐
 
     // Recuperar el resultado almacenado en localStorage
     const pisoTermico = localStorage.getItem('pisoTermico');
@@ -45,7 +45,7 @@ const inputFields = [
     resultadoPisosTermicos.value = decodeURIComponent(pisoTermico);  
 
 
-// MOSTRAR DATOS LOCALES DE MOVIMIENTO DE MASA
+// MOSTRAR DATOS LOCALES DE MOVIMIENTO DE MASA⭐
 
     // Recuperar el resultado almacenado en localStorage
     const movMasa = localStorage.getItem('movMasa');
@@ -54,11 +54,11 @@ const inputFields = [
     const resultadoMovMasa = document.getElementById('resultadoMovMasa');
     resultadoMovMasa.value = decodeURIComponent(movMasa);
 
-    // MOSTRAR DATOS LOCALES DE EROSION
+// MOSTRAR DATOS LOCALES DE EROSION⭐
 
     // Recuperar el resultado almacenado en localStorage
     const erosion = localStorage.getItem('erosion');
 
     // Mostrar el resultado en la página
     const resultadoErosion = document.getElementById('resultadoErosion');
-    resultadoErosion.value = decodeURIComponent(erosion);
+    resultadoErosion.value = decodeURIComponent('erosion');

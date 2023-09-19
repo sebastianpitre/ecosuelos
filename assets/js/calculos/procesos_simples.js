@@ -3,19 +3,16 @@
 function cargarDatosAlmacenados() {
     const alturaGuardada = localStorage.getItem('altura');
     const temperaturaGuardada = localStorage.getItem('temperatura');
-    const afectacionMovMasaGuardada = localStorage.getItem('afectacionMovMasa')
+    const afectacionMovMasaGuardada = localStorage.getItem('afectacionMovMasa');
 
     // Si hay datos guardados, cargarlos en los campos de entrada
-    if (alturaGuardada !== null && temperaturaGuardada !== null &&
-        afectacionMovMasaGuardada !== null
-        ) {
+    if (alturaGuardada !== null && temperaturaGuardada !== null && afectacionMovMasaGuardada !== null) {
         document.getElementById('altura').value = alturaGuardada;
         document.getElementById('temperatura').value = temperaturaGuardada;
         document.getElementById('afectacionMovMasa').value = afectacionMovMasaGuardada;
     }
 
-
-    
+    // -----------------------------------------------------
 }
 
 // Llamar a la función para cargar los datos almacenados
@@ -47,6 +44,14 @@ function calcularPisoTermico() {
     } else {
         pisoTermico = "¡Datos inconcretos!";
     }
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Datos guardados',
+        showConfirmButton: false,
+        timer: 2000,
+
+        })
 
     // Almacenar los datos en localStorage
     localStorage.setItem('pisoTermico', encodeURIComponent(pisoTermico));
@@ -89,36 +94,6 @@ function calcularTipo() {
   document.getElementById("tipo").value = tipo;
 }
 
-// -------------------------⭐ EROSIÓN HÍDRICA  ⭐----------------------------------------
-function calcularErosion () {
-    // Obtener referencias a los elementos por su ID
-    const parametroErosion = document.getElementById("parametroErosion");
-    const variacionErosion = document.getElementById("variacionErosion");
-
-    // Agregar evento input al campo de parametro
-    parametroErosion.addEventListener("input", function () {
-        const parametro = parseFloat(parametroErosion.value);
-
-        let resultadoErosion = "";
-        if (!isNaN(parametro)) {
-        if (parametro == 0) {
-            resultadoErosion = "Sin erosión";
-        } else if (parametro >= 1 && parametro < 5) {
-            resultadoErosion = "Ligera";
-        } else if (parametro >= 25 && parametro < 10) {
-            resultadoErosion = "Moderada";
-        } else if (parametro >= 10 && parametro < 15) {
-            resultadoErosion = "Severa";
-        } else {
-            resultadoErosion = "Sin clasificación";
-        }
-        } 
-
-        variacionErosion.value = resultadoErosion;
-    });
-
-}
-
 // -------------------------⭐ MOVIMIENTO DE MASA  ⭐----------------------------------------
 
 function calcularMovMasa() {
@@ -141,6 +116,14 @@ function calcularMovMasa() {
         movMasa = "¡Datos inconcretos!";
     }
 
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Datos guardados',
+        showConfirmButton: false,
+        timer: 2000,
+
+        })
     // Almacenar los datos en localStorage
     localStorage.setItem('movMasa', encodeURIComponent(movMasa));
     localStorage.setItem('afectacionMovMasa', afectacionMovMasa);
@@ -176,6 +159,13 @@ function calcularErosion() {
         erosion = "¡Datos no validos!";
     }
 
+    Swal.fire({
+        icon: 'success',
+        title: 'Datos guardados',
+        showConfirmButton: false,
+        timer: 2000,
+
+        })
     // Almacenar los datos en localStorage
     localStorage.setItem('erosion', encodeURIComponent(erosion));
     localStorage.setItem('perdidaSuelo', perdidaSuelo);
@@ -186,5 +176,7 @@ function calcularErosion() {
     // Mostrar el botón "Exportar"
     let exportarBtn = document.getElementById('exportarBtn');
     exportarBtn.style.display = "block";
+
+    
 
 }
