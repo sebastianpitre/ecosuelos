@@ -1,22 +1,3 @@
-// -------------------------⭐ PISOS TERMICOS  ⭐----------------------------------------
-// Función para cargar los datos almacenados, si existen
-function cargarDatosAlmacenados() {
-    const alturaGuardada = localStorage.getItem('altura');
-    const temperaturaGuardada = localStorage.getItem('temperatura');
-    const afectacionMovMasaGuardada = localStorage.getItem('afectacionMovMasa');
-
-    // Si hay datos guardados, cargarlos en los campos de entrada
-    if (alturaGuardada !== null && temperaturaGuardada !== null && afectacionMovMasaGuardada !== null) {
-        document.getElementById('altura').value = alturaGuardada;
-        document.getElementById('temperatura').value = temperaturaGuardada;
-        document.getElementById('afectacionMovMasa').value = afectacionMovMasaGuardada;
-    }
-
-    // -----------------------------------------------------
-}
-
-// Llamar a la función para cargar los datos almacenados
-cargarDatosAlmacenados();
 
 
 // Función para calcular el piso térmico
@@ -60,10 +41,6 @@ function calcularPisoTermico() {
 
     // Mostrar el resultado en la página actual
     resultadoPisosTermicos.value = pisoTermico;
-    
-    // Mostrar el botón "Exportar"
-    let exportarBtn = document.getElementById('exportarBtn');
-    exportarBtn.style.display = "block";
 
 }
 
@@ -131,9 +108,6 @@ function calcularMovMasa() {
     // Mostrar el resultado en la página actual
     resultadoMovMasa.value = movMasa;
     
-    // Mostrar el botón "Exportar"
-    let exportarBtn = document.getElementById('exportarBtn');
-    exportarBtn.style.display = "block";
 
 }
 
@@ -172,11 +146,6 @@ function calcularErosion() {
 
     // Mostrar el resultado en la página actual
     resultadoErosion.value = erosion;
-    
-    // Mostrar el botón "Exportar"
-    let exportarBtn = document.getElementById('exportarBtn');
-    exportarBtn.style.display = "block";
-
     
 
 }

@@ -61,4 +61,4 @@ const inputFields = [
 
     // Mostrar el resultado en la página
     const resultadoErosion = document.getElementById('resultadoErosion');
-    resultadoErosion.value = decodeURIComponent('erosion');
+    resultadoErosion.value = decodeURIComponent(erosion);
