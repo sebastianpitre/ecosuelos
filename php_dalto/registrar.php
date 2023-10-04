@@ -8,7 +8,8 @@ include("con_db.php");
 			$name = trim($_POST['name']);
 			$email = trim($_POST['email']);
 			$fechareg = date("d/m/y");
-			$consulta = "INSERT INTO datos(nombre, email, fecha_registro) VALUES ('$name','$email','%fechareg')";
+			$hora = time();
+			$consulta = "INSERT INTO datos(nombre, email, fecha_registro, hora) VALUES ('$name','$email','$fechareg','$hora')";
 			$resultado = mysqli_query($conex,$consulta);
 			if ($resultado) {
 				?>
@@ -16,12 +17,12 @@ include("con_db.php");
 				<?php
 			} else {
 				?>
-				<h3 class="bad"> uh carajo ocurrio una catastrofe</h3>
+				<h3 class="bad"> uh carajo ocurrió una catastrofe</h3>
 				<?php
 			}
 		} else {
 			?>
-				<h3 class="bad">Por favor complete los campos,  flojera nunca es una opción</h3>
+				<h3 class="bad">Por favor complete los campos, la flojera nunca es una opción</h3>
 				<?php
 		}
 	}
