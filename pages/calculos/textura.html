@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/logo_maiz.png">
   <link rel="icon" type="image/png" href="../../assets/img/logo_maiz.png">
   <title>
-    Cálculo de fertilidad
+    Cálculo de Textura
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css"
@@ -50,7 +50,7 @@
   
 </head>
 
-<body class="blog-author " style="background-image: url('../../assets/img/fondobg.png'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
+<body class="blog-author " style="background-image: url('../../assets/img/fondobg.png                                            '); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
   <video id="miVideo" src="../../assets/img/video (1).mp4" class="tambaleo" autoplay="true" muted="true" loop="true" poster="../assets/img/fotosmaiz\ \(1\).jpg"></video>
   <style>
     video {
@@ -192,12 +192,8 @@
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
             <div class="row">
-              <h3 class="text-center mt-2" id="animate-text1">Cálculo de la fertilidad del suelo.</h4>
+              <h3 class="text-center mt-4" id="animate-text1">Cálculo de la Textura</h4>
 
-              <!-- <div class="form-check form-switch mt-n5 d-flex align-items-center is-filled">
-                <input class="form-check-input" type="checkbox" id="toggleButton" >
-                <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">Modo Drone</label>
-              </div> -->
                 
               <!-- Escript de animacion de texto -->
               <script>
@@ -224,7 +220,40 @@
 
               </script>
             </div>
+              <div class=" container">
+                <div class="row">
 
+                  <div class="col-10 mx-auto ms-auto border-radius-lg">
+                    <div class="row justify-content-center mt-4 ">
+                      <div class="col-lg-3 ms-3 me-">
+                        <label class="text-dark font-weight-bold"><h6>% Arena</h6> </label>
+                        <div class="input-group input-group-static">
+                          <input type="number" class="form-control" id="%Arena" placeholder="complete este campo" aria-label="complete este campo">
+                        </div>
+                      </div>
+                      <!-- .......... -->
+                      <div class="col-lg-3 ms-3 me-3">
+                        <label class="text-dark font-weight-bold"><h6>% Arcilla</h6> </label>
+                        <div class="input-group input-group-static">
+                          <input type="number" class="form-control" id="%Arcilla" placeholder="complete este campo" aria-label="complete este campo">
+                        </div>
+                      </div>
+                      <!-- .......... -->
+                      <div class="col-lg-3 ms-3 me-3">
+                        <label class="text-dark font-weight-bold"><h6>% Limo</h6> </label>
+                        <div class="input-group input-group-static">
+                          <input type="number" class="form-control" id="%Limo" placeholder="complete este campo" aria-label="complete este campo">
+                        </div>
+                      </div>
+
+                      <div class="col-12 mt-2 p-4 text-center">
+                        <button class="btn btn-success" type="submit">Calcular proceso</button>
+                      </div>   
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -239,288 +268,152 @@
 
         <!-- CARD NUMERO 1 -->
         
-          <div class="tambaleo mt-4 col-lg-6">
+          <div class="mt-4 col-lg-4">
             <div class="col p-5 card opacity-9">
               <div class="container">
-                <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
-                <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+                <div class="mt-n6 w-5" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
+                <div class="mt-n6 w-5" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
               </div>
-              <h3 class=" text-center">Horizonte 1</h2>
+              <h3 class=" text-center">Resultado de la Textura</h2>
               <div class=" container">
-                <div class="row">
-
-                  <div class="col-6">
-                    <label for="ph" class="text-dark mb-n3 ms-n1 font-weight-bold">Ph</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="ph" id="ph" value="" placeholder="Digite" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="SAl" class="text-dark mb-n3 ms-n1 font-weight-bold">SAl</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="SAl" id="SAl" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="cic" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">cic</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="cic" id="cic" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="calcio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cálcio</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="calcio" id="calcio" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="potasio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Potásio</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="potasio" id="potasio" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="sodio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Sodio</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="sodio" id="sodio" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-
-                  <div class="col-6">
-                    <div class="input-group input-group-static">
-                      <label for="ClimaCarbono" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Clima carbono</label>
-                      <select name="ClimaCarbono" id="ClimaCarbono" class="form-select form-select-lg form-control mt-2" >
-                        <option> selecciona </option>
-                        <option value="CALIDO">CALIDO</option>
-                        <option value="MEDIO">MEDIO</option>
-                        <option value="FRIO">FRIO</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="CarbonoOrganico" class="text-dark mb-2 mt-3 ms-n1 font-weight-bold">Cárbono orgánico:</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="CarbonoOrganico" id="CarbonoOrganico" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="magnesio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Mágnesio</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="magnesio" id="magnesio" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="fosforo" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Fósforo</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="fosforo" id="fosforo" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="DensidadAparente" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Densidad Aparente</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="DensidadAparente" id="DensidadAparente" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  <div class="col-6">
-                    <label for="ConductividadElectrica" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Conductividad Eléctrica</label>
-                    <div class="input-group input-group-static">
-                      <input type="number" name="ConductividadElectrica" id="ConductividadElectrica" value="" class="form-control mt-n2">
-                    </div>
-                  </div>
-                  <!-- .......... -->
-                  
-
-                </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt iste dolores deleniti hic sapiente blanditiis itaque maxime quos architecto aliquam, nostrum alias error quaerat veniam ex, nulla aliquid officiis repellat!
               </div>
             </div>
           </div>
           
+          <style>
+            .mind-map {
+              position: relative;
+              width: 45rem;
+              height: 72vh;
+              margin: auto;
+            }
+
+            .cls-1{stroke-miterlimit:10;}.texto_pieza{font-size:21.32px;font-family:MyriadPro-Regular, Myriad Pro; fill: white; }
+
+            .base{
+              z-index: 3;
+              position: relative;
+              width: 40rem;
+            }
+
+            .pieza{
+              position: absolute;
+              z-index: 1;
+            }
+            .arcillosa{top: 12px; left: 192px; width: 15.7rem;}
+            .arcillo_arenosa{top: 241px; left: 133.5px; width: 15.7rem;}
+            .franco_arcillosa{top: 316.7px; left: 236px; width: 15.7rem;}
+            .arcillo_limosa{top: 216px; left: 383.1px; width: 15.7rem;}
+            .franco_arcillo_limosa{top: 316.7px; left: 383.1px; width: 15.7rem;}
+            .franco_arcillo_arenosa{top: 342.5px; left: 89.5px; width: 15.7rem;}
+            .franca{top: 383.5px; left: 254.5px; width: 15.7rem;}
+            .franco_limosa{top: 383.5px; left: 323.5px; width: 16.2rem;}
+            .limosa{top: 460.5px; left: 500.5px; width: 16.3rem;}
+            .franco_arenosa{top: 418.8px; left: 75.4px; width: 16.8rem;}
+            .areno_francosa{top: 445px; left: 61.5px; width: 16rem;}
+            .arenosa{top: 470.5px; left: 30.5px; width: 16.7rem;}
+
+
+            
+          </style>
+          
 
         <!-- CARD NUMERO 2 -->
-        <div class="tambaleo mt-4 col-lg-6 ">
-          <div class="col p-5 card opacity-9">
+        <div class="mt-4 col-lg-8 ">
+          <div class="col card opacity-9">
             <div class="container">
-              <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
-              <div class="mt-n6 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+              <div class="mt-n3 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
+              <div class="mt-n3 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
             </div>
-            <h3 class=" text-center">Horizonte 2</h2>
-            <div class="container">
-              <div class="row">
+            <h3 class=" text-center mt-2">Representación en el triangulo de texturas</h2>
+            <div class="">
+              <div class="card border-2 border-radius-sm border-dark mx-3 mx-md-4 mb-4">
 
-                <div class="col-6">
-                  <label for="ph" class="text-dark mb-n3 ms-n1 font-weight-bold">Ph</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="ph2" id="ph2" value="" placeholder="Digite" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="SAl" class="text-dark mb-n3 ms-n1 font-weight-bold">SAl</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="SAl2" id="SAl2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="cic" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">cic</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="cic2" id="cic2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="calcio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Cálcio</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="calcio2" id="calcio2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="potasio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Potásio</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="potasio2" id="potasio2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="sodio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Sodio</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="sodio2" id="sodio2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
+                <div class="table-responsive-xxl bg-gray-200" >
+                  <div class="col-12 mt-4 row justify-content-center">
+                    
+                    <div class="mind-map mb-n6">
+                      <div class="base">
+                        <img src="../../assets/img/SVG/GUIA.svg" alt="">
+                      </div>
+                      <!-- .......... -->
+                      <div class="pieza arcillosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                          <polygon class="cls-1" style="fill:#dd2900;stroke:#eee;" points="285.76 454 65.77 454 0.58 341.33 197.76 1 373.23 304.56 285.76 454"/>
+                          <text class="texto_pieza" transform="translate(159.67 306.11)"><tspan>Arcillosa</tspan></text></svg>
+                      </div>
+                      <!-- .......... -->
+                      <div class="pieza arcillo_arenosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#ff3300;stroke:#eee;" points="0.87 151.47 175.23 151.66 153.24 113.66 88.05 1 0.87 151.47"/>
+                        <text class="texto_pieza" transform="translate(60.5 98.77)"><tspan>Arcillo</tspan><tspan x="-2" y="25">arenosa</tspan></text></svg>
+                      </div>
+                      <!-- .......... -->
+                      <div class="pieza franco_arcillosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#bc3300;stroke:#eee;" points="277.85 99.5 220.85 0.5 0.86 0.5 57.85 99.5 277.85 99.5"/>
+                        <text class="texto_pieza" transform="translate(109.19 44.61)"><tspan>Franco</tspan><tspan x="-2" y="25">arcillosa</tspan></text></svg>
+                      </div>
+                      <!-- .......... -->
+                      <div class="pieza arcillo_limosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#ff3300;stroke:#eee;" points="88.35 0.99 0.87 150.43 174.72 150.43 88.35 0.99"/>
+                        <text class="texto_pieza" transform="translate(59.18 97.54)"><tspan>Arcillo</tspan><tspan x="3" y="25">limosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza franco_arcillo_limosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#ff6600;stroke:#eee;" points="231.81 99.26 57.87 99.5 0.86 0.5 174.72 0.5 231.81 99.26"/>
+                        <text class="texto_pieza" transform="translate(87.2 30.61)"><tspan>Franco</tspan><tspan x="3" y="25">arcillo</tspan><tspan x="3" y="50">limosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza franco_arcillo_arenosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#a56628;stroke:#eee;" points="275.87 61.69 245.87 113.69 0.87 113.69 66.51 0.5 240.87 0.69 275.87 61.69"/>
+                        <text class="texto_pieza" transform="translate(111.2 36.8)"><tspan>Franco</tspan><tspan x="3" y="25">arcillo</tspan><tspan x="3" y="50">arenosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza franca">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+                        <polygon class="cls-1" style="fill:#9b6600;stroke:#eee;" points="223.58 0.5 30.58 0.5 0.58 52.5 57.58 151.5 135.49 151.5 223.58 0.5"/>
+                        <text class="texto_pieza" transform="translate(71.56 74.61)"><tspan y="-25">Franco</tspan><tspan x="3" y="0">arcillo</tspan><tspan x="-3" y="25">arenosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza franco_limosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
+                        <polygon class="cls-1" style="fill:#ff991e;stroke:#78c9c5;" points="320.81 0.5 386.33 113.85 316.5 113.85 263.87 204.74 0.87 204.74 119.87 0.74 320.81 0.5"/>
+                        <text class="texto_pieza" transform="translate(163.2 91.85)"><tspan >Franco</tspan><tspan x="3" y="25">limosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza limosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
+                        <polygon class="cls-1" style="fill:#ffcc5a;stroke:#eee;" points="175.87 91.39 123.33 0.5 53.5 0.5 0.87 91.39 175.87 91.39"/>
+                        <text class="texto_pieza" transform="translate(59.05 58.5)"><tspan >Limosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza franco_arenosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 399.81 204.5">
+                        <polygon class="cls-1" style="fill:#5c6632;stroke:#eee;" points="371.78 152.5 402.7 99.5 324.78 99.5 267.78 0.5 22.78 0.5 0.68 39.76 197.2 152.5 371.78 152.5"/>
+                        <text class="texto_pieza" transform="translate(167.11 65.61)"><tspan >Franco</tspan><tspan x="3" y="25">arenosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza areno_francosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
+                        <polygon class="cls-1" style="fill:#006679;stroke:#eee;" points="22.51 0.68 0.64 37.42 87.61 113.42 219.03 113.42 22.51 0.68"/>
+                        <text class="texto_pieza" transform="translate(82.19 73.59)"><tspan x="-20">Areno</tspan><tspan x="3" y="25">francosa</tspan></text></svg>
+                      </div>
+                      <div class="pieza arenosa">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
+                        <polygon class="cls-1" style="fill:#0066ac;stroke:#eee;" points="0.87 76.78 44.9 0.78 131.87 76.78 0.87 76.78"/>
+                        <text class="texto_pieza" transform="translate(21.83 66.89)"><tspan x="3" y="-5">Limosa</tspan></text></svg>
+                      </div>
 
-                <div class="col-6">
-                  <div class="input-group input-group-static">
-                    <label for="ClimaCarbono" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Clima carbono</label>
-                    <select name="ClimaCarbono2" id="ClimaCarbono2" class="form-select form-select-lg form-control mt-2" >
-                      <option> selecciona </option>
-                      <option value="CALIDO">CALIDO</option>
-                      <option value="MEDIO">MEDIO</option>
-                      <option value="FRIO">FRIO</option>
-                    </select>
+                    </div>
                   </div>
+                  
                 </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="CarbonoOrganico" class="text-dark mb-2 mt-3 ms-n1 font-weight-bold">Cárbono orgánico:</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="CarbonoOrganico2" id="CarbonoOrganico2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="magnesio" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Mágnesio</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="magnesio2" id="magnesio2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="fosforo" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Fósforo</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="fosforo2" id="fosforo2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="DensidadAparente" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Densidad Aparente</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="DensidadAparente2" id="DensidadAparente2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-6">
-                  <label for="ConductividadElectrica" class="text-dark mb-n3 mt-3 ms-n1 font-weight-bold">Conductividad Eléctrica</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" name="ConductividadElectrica2" id="ConductividadElectrica2" value="" class="form-control mt-n2">
-                  </div>
-                </div>
-                <!-- .......... -->
-                
-
               </div>
             </div>
           </div>
         </div>
-        <!-- estilo de animacion de tambaleo -->
-        <style>
-
-          /* Estilos para el div que se tambalea */
-          .tambaleo {
-            animation: none;
-            transform-origin: center top;
-            perspective: 1000px; /* Proporciona profundidad al efecto 3D */
-          }
-    
-          /* Animación de tambaleo utilizando keyframes */
-          @keyframes tambaleoAnim {
-              0%, 100% {
-                  transform: rotateZ(0deg);
-              }
-              60% {
-                  transform: rotateZ(-1deg) translateZ(7px); /* Movimiento 3D hacia atrás */
-              }
-
-              40% {
-                  transform: rotateY(1deg) translateY(2px); /* Movimiento 3D hacia atrás */
-              }
-            
-              25% {
-                  transform: rotateZ(1deg) translateZ(2px); /* Movimiento 3D hacia atrás */
-              }
-              
-            
-             
-          }
-          
-        </style>
 
       </div>
     </section>
 
-    <section class="tambaleo row card opacity-9">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-10 mx-auto border-radius-lg my-3">
-            
-            <div class="row">
-              <h3 class="text-center mt-2">Resultado de la fertilidad del suelo.</h4>
-            </div>
-            
-            <!-- resultado -->
-            <div id="resultadoFertilidad" class="justify-content-center text-center">
-              <div class="row fila">
-                <div id="idboton">
-                  <!-- boton principal -->
-                  <a href="../calcular.html"><button class="btn btn-outline-success ">volver</button></a>
-                  <input type="button" value="Calcular fertilidad" class="btn bg-gradient-success justify-content-center" onclick="calcularFT()">
-                </div>
-              </div>
-            </div>
-
-            <!-- botones que salen en al calcular -->
-            <div id="exportarBtn" class="justify-content-center text-center mt-3" style="display: none;">
-              <a href="../calcular.html"><button class="btn btn-outline-success ">volver</button></a>
-              <input type="button" value="Calcular Fertilidad" class="btn bg-gradient-success " onclick="calcularFT()">
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>  
-    
     <!-- END CARD -->
   </div>
 

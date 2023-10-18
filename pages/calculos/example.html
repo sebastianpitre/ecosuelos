@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:black;
+        }
+        .color-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid transparent; /* Agregamos un borde transparente por defecto */
+}
+
+.color-box.has-result {
+    background-color: white;
+    background-color: green; /* Agregamos un borde verde */
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <select id="color-selector">
+        <option value="arcillosa">arcillosa</option>
+        <option value="arcillo_arenosa">arcillo_arenosa</option>
+        <option value="franco_arcillosa">franco_arcillosa</option>
+        <option value="arcillo_limosa">arcillo_limosa</option>
+        <option value="franco_arcillo_limosa">franco_arcillo_limosa</option>
+        <option value="franco_arcillo_arenosa">franco_arcillo_arenosa</option>
+        <option value="franca">franca</option>
+        <option value="franco_limosa">franco_limosa</option>
+        <option value="limosa">limosa</option>
+        <option value="franco_arenosa">franco_arenosa</option>
+        <option value="areno_francosa">areno_francosa</option>
+        <option value="arenosa">arenosa</option>
+        
+    </select>
+    
+    <div class="color-box" data-color="arcillosa"></div>
+    <div class="color-box" data-color="arcillo_arenosa"></div>
+    <div class="color-box" data-color="franco_arcillosa"></div>
+    <div class="color-box" data-color="arcillo_limosa"></div>
+    <div class="color-box" data-color="franco_arcillo_limosa"></div>
+    <div class="color-box" data-color="franco_arcillo_arenosa"></div>
+    <div class="color-box" data-color="franca"></div>
+    <div class="color-box" data-color="franco_limosa"></div>
+    <div class="color-box" data-color="limosa"></div>
+    <div class="color-box" data-color="franco_arenosa"></div>
+    <div class="color-box" data-color="areno_francosa"></div>
+    <div class="color-box" data-color="arenosa"></div>
+    
+</body>
+<script>
+const colorSelector = document.getElementById('color-selector');
+    const colorBoxes = document.querySelectorAll('.color-box');
+
+    colorSelector.addEventListener('change', () => {
+        const selectedColor = colorSelector.value;
+        colorBoxes.forEach((box) => {
+            const boxColor = box.getAttribute('data-color');
+            if (boxColor === selectedColor) {
+                box.textContent = "✔";
+                box.classList.add('has-result');
+                // Almacenar la selección en el almacenamiento local
+                localStorage.setItem('selectedColor', selectedColor);
+            } else {
+                box.textContent = "";
+                box.classList.remove('has-result');
+            }
+        });
+    });
+
+    // Recuperar la selección del almacenamiento local al cargar la página
+    const savedColor = localStorage.getItem('selectedColor');
+    if (savedColor) {
+        colorSelector.value = savedColor;
+        colorSelector.dispatchEvent(new Event('change')); // Simular el evento 'change'
+    }
+    </script>
+</html>
+
+
+
