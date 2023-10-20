@@ -48,6 +48,7 @@
   https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css
   " rel="stylesheet">
   
+  
 </head>
 
 <body class="blog-author " style="background-image: url('../../assets/img/fondobg.png                                            '); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
@@ -221,48 +222,80 @@
               </script>
             </div>
               <div class=" container">
-                <div class="row">
+                <form action="#">
+                  <div class="row">
 
-                  <div class="col-10 mx-auto ms-auto border-radius-lg">
-                    <div class="row justify-content-center mt-4 ">
-                      <div class="col-lg-3 ms-3 me-">
-                        <label class="text-dark font-weight-bold"><h6>% Arena</h6> </label>
-                        <div class="input-group input-group-static">
-                          <input type="number" class="form-control" id="%Arena" placeholder="complete este campo" aria-label="complete este campo">
+                    <div class="col-10 mx-auto ms-auto border-radius-lg">
+                      <div class="row justify-content-center mt-4 ">
+                        <div class="col-lg-3 ms-3 me-">
+                          <label class="text-dark font-weight-bold" for="arena"><h6>% Arena</h6> </label>
+                          <div class="input-group input-group-static">
+                            <input type="number" class="form-control" name="arena" id="arena" value="20" placeholder="complete este campo" aria-label="complete este campo">
+                          </div>
                         </div>
-                      </div>
-                      <!-- .......... -->
-                      <div class="col-lg-3 ms-3 me-3">
-                        <label class="text-dark font-weight-bold"><h6>% Arcilla</h6> </label>
-                        <div class="input-group input-group-static">
-                          <input type="number" class="form-control" id="%Arcilla" placeholder="complete este campo" aria-label="complete este campo">
+                        <!-- .......... -->
+                        <div class="col-lg-3 ms-3 me-3">
+                          <label class="text-dark font-weight-bold" for="arcilla"><h6>% Arcilla</h6> </label>
+                          <div class="input-group input-group-static">
+                            <input type="number" class="form-control" name="arcilla" id="arcilla" value="50" placeholder="complete este campo" aria-label="complete este campo">
+                          </div>
                         </div>
-                      </div>
-                      <!-- .......... -->
-                      <div class="col-lg-3 ms-3 me-3">
-                        <label class="text-dark font-weight-bold"><h6>% Limo</h6> </label>
-                        <div class="input-group input-group-static">
-                          <input type="number" class="form-control" id="%Limo" placeholder="complete este campo" aria-label="complete este campo">
+                        <!-- .......... -->
+                        <div class="col-lg-3 ms-3 me-3">
+                          <label class="text-dark font-weight-bold" for="limo"><h6>% Limo</h6> </label>
+                          <div class="input-group input-group-static">
+                            <input type="number" class="form-control" name="limo" id="limo" value="30" placeholder="complete este campo" aria-label="complete este campo">
+                          </div>
                         </div>
+  
+                        <div class="col-12 mt-2 p-4 text-center">
+                          <input class="btn btn-success" type="submit" value="Calcular proceso">
+                        </div>   
                       </div>
-
-                      <div class="col-12 mt-2 p-4 text-center">
-                        <button class="btn btn-success" type="submit">Calcular proceso</button>
-                      </div>   
                     </div>
+                  
                   </div>
+                </form>
                 
-                </div>
               </div>
           </div>
         </div>
       </div>
       
     </section>
-
+    <script src="../../assets/js/calculos/textura.js"></script>
     
-    
+    <!-- Condiciones de texturas en el triángulo textural
 
+El triángulo textural es un gráfico que se utiliza para clasificar la textura del suelo según el porcentaje de arena, limo y arcilla que contiene. Las condiciones de textura en el triángulo textural son las siguientes:
+
+Arena: Las partículas de arena son las más grandes, con un diámetro de 0.05 a 2.0 mm. Los suelos arenosos son sueltos, permeables y fáciles de trabajar. Sin embargo, retienen poca agua y nutrientes.
+Limo: Las partículas de limo tienen un diámetro de 0.002 a 0.05 mm. Los suelos limosos son suaves y sedosos al tacto. Tienen una buena capacidad de retención de agua y nutrientes, pero son menos permeables que los suelos arenosos.
+Arcilla: Las partículas de arcilla son las más pequeñas, con un diámetro de menos de 0.002 mm. Los suelos arcillosos son compactos y difíciles de trabajar. Tienen una alta capacidad de retención de agua y nutrientes, pero son poco permeables.
+La textura del suelo se determina trazando una línea vertical desde el porcentaje de arena en el eje horizontal hasta el porcentaje de arcilla en el eje vertical. El punto donde la línea intersecta el eje limo indica el porcentaje de limo en el suelo.
+
+Las principales condiciones de textura en el triángulo textural son las siguientes:
+
+Arenosa: Los suelos arenosos tienen más del 70% de arena.
+Franco arenosa: Los suelos franco arenosos tienen entre 45% y 70% de arena.
+Franco: Los suelos francos tienen entre 25% y 45% de arena, entre 20% y 40% de limo, y entre 20% y 40% de arcilla.
+Franco limosa: Los suelos franco limosos tienen entre 25% y 45% de arena, entre 40% y 60% de limo, y entre 15% y 25% de arcilla.
+Franco arcillosa: Los suelos franco arcillosos tienen entre 25% y 45% de arena, entre 20% y 40% de limo, y entre 35% y 55% de arcilla.
+Arcillosa: Los suelos arcillosos tienen más del 35% de arcilla.
+La textura del suelo es un factor importante que determina la capacidad del suelo para retener agua y nutrientes, así como su facilidad de trabajo. Los suelos con una textura adecuada son más productivos y requieren menos cuidados. -->
+
+    <!-- arcillosa: %arcilla de 55 a 100, %limo de 0 a 40,  %arena de 60 a 100
+          arcilloso arenosa: %arcilla de 35 a 55, %limo de 45 a 65,  %arena de 45 a 65
+          ARCILLO LIMOSA: %arcilla de 40 a 60, %limo de 40 a 60,  %arena de 0 a 20
+          FRANCO ARCILLOSA: %arcilla de 27 a 40, %limo de 60 a 73,  %arena de 20 a 45
+          FRANCO ARCILLO LIMOSA: %arcilla de 27 a 40, %limo de 60 a 73,  %arena de 0 a 20
+          FRANCO ARCILLO ARENOSA: %arcilla de 20 a 35, %limo de 65 a 80,  %arena de 45 a 80
+          FRANCO: %arcilla de 7 a 27, %limo de 28 a 50,  %arena de 23 a 52
+          FRANCO ARENOSA: %arcilla de 0 a 20, %limo de 0 a 50,  %arena de 43 a 85
+          FRANCO LIMOSA: %arcilla de 0 a 27, %limo de 50 a 87,  %arena de 0 a 50
+          LIMOSA: %arcilla de 0 a 13, %limo de 80 a 100,  %arena de 0 a 20
+          ARENO FRANCOSA: %arcilla de 0 a 15, %limo de 0 a 30,  %arena de 70 a 90
+          ARENOSA: %arcilla de 0 a 10, %limo de 0 a 15,  %arena de 85 a 100 -->
     <section class="row mb-4">
       <div class="row col-md-12 mx-auto">
 
@@ -276,7 +309,12 @@
               </div>
               <h3 class=" text-center">Resultado de la Textura</h2>
               <div class=" container">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt iste dolores deleniti hic sapiente blanditiis itaque maxime quos architecto aliquam, nostrum alias error quaerat veniam ex, nulla aliquid officiis repellat!
+                
+                <div class="col-lg">
+                  <div class="input-group input-group-static">
+                    <input type="text" class="form-control" id="resultado_textura" readonly>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -289,7 +327,8 @@
               margin: auto;
             }
 
-            .cls-1{stroke-miterlimit:10;}.texto_pieza{font-size:21.32px;font-family:MyriadPro-Regular, Myriad Pro; fill: white; }
+            .cls-1{stroke-miterlimit:10;}.texto_pieza{font-size:21.32px;font-family:MyriadPro-Regular, Myriad Pro; fill: white;text-shadow: 2px 2px 4px #000;
+ }
 
             .base{
               z-index: 3;
@@ -340,66 +379,67 @@
                       <!-- .......... -->
                       <div class="pieza arcillosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                          <polygon class="cls-1" style="fill:#dd2900;stroke:#eee;" points="285.76 454 65.77 454 0.58 341.33 197.76 1 373.23 304.56 285.76 454"/>
-                          <text class="texto_pieza" transform="translate(159.67 306.11)"><tspan>Arcillosa</tspan></text></svg>
+                          <polygon class="cls-1" data-color="Arcillosa" style="fill:#dd2900;stroke:#eee;" points="285.76 454 65.77 454 0.58 341.33 197.76 1 373.23 304.56 285.76 454"/>
+                          <text class="texto_pieza" transform="translate(159.67 306.11)"><tspan>Arcillosa</tspan></text>
+                        </svg>
                       </div>
                       <!-- .......... -->
                       <div class="pieza arcillo_arenosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#ff3300;stroke:#eee;" points="0.87 151.47 175.23 151.66 153.24 113.66 88.05 1 0.87 151.47"/>
+                        <polygon class="cls-1" data-color="arcillo_arenosa" style="fill:#ff3300;stroke:#eee;" points="0.87 151.47 175.23 151.66 153.24 113.66 88.05 1 0.87 151.47"/>
                         <text class="texto_pieza" transform="translate(60.5 98.77)"><tspan>Arcillo</tspan><tspan x="-2" y="25">arenosa</tspan></text></svg>
                       </div>
                       <!-- .......... -->
                       <div class="pieza franco_arcillosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#bc3300;stroke:#eee;" points="277.85 99.5 220.85 0.5 0.86 0.5 57.85 99.5 277.85 99.5"/>
+                        <polygon class="cls-1" data-color="Franco-arcillosa" style="fill:#bc3300;stroke:#eee;" points="277.85 99.5 220.85 0.5 0.86 0.5 57.85 99.5 277.85 99.5"/>
                         <text class="texto_pieza" transform="translate(109.19 44.61)"><tspan>Franco</tspan><tspan x="-2" y="25">arcillosa</tspan></text></svg>
                       </div>
                       <!-- .......... -->
                       <div class="pieza arcillo_limosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#ff3300;stroke:#eee;" points="88.35 0.99 0.87 150.43 174.72 150.43 88.35 0.99"/>
+                        <polygon class="cls-1" data-color="Arcillo-limosa" style="fill:#ff3300;stroke:#eee;" points="88.35 0.99 0.87 150.43 174.72 150.43 88.35 0.99"/>
                         <text class="texto_pieza" transform="translate(59.18 97.54)"><tspan>Arcillo</tspan><tspan x="3" y="25">limosa</tspan></text></svg>
                       </div>
                       <div class="pieza franco_arcillo_limosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#ff6600;stroke:#eee;" points="231.81 99.26 57.87 99.5 0.86 0.5 174.72 0.5 231.81 99.26"/>
+                        <polygon class="cls-1" data-color="Franco-arcillo-limosa" style="fill:#ff6600;stroke:#eee;" points="231.81 99.26 57.87 99.5 0.86 0.5 174.72 0.5 231.81 99.26"/>
                         <text class="texto_pieza" transform="translate(87.2 30.61)"><tspan>Franco</tspan><tspan x="3" y="25">arcillo</tspan><tspan x="3" y="50">limosa</tspan></text></svg>
                       </div>
                       <div class="pieza franco_arcillo_arenosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#a56628;stroke:#eee;" points="275.87 61.69 245.87 113.69 0.87 113.69 66.51 0.5 240.87 0.69 275.87 61.69"/>
+                        <polygon class="cls-1" data-color="Franco-arcillo-arenosa" style="fill:#a56628;stroke:#eee;" points="275.87 61.69 245.87 113.69 0.87 113.69 66.51 0.5 240.87 0.69 275.87 61.69"/>
                         <text class="texto_pieza" transform="translate(111.2 36.8)"><tspan>Franco</tspan><tspan x="3" y="25">arcillo</tspan><tspan x="3" y="50">arenosa</tspan></text></svg>
                       </div>
                       <div class="pieza franca">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
-                        <polygon class="cls-1" style="fill:#9b6600;stroke:#eee;" points="223.58 0.5 30.58 0.5 0.58 52.5 57.58 151.5 135.49 151.5 223.58 0.5"/>
-                        <text class="texto_pieza" transform="translate(71.56 74.61)"><tspan y="-25">Franco</tspan><tspan x="3" y="0">arcillo</tspan><tspan x="-3" y="25">arenosa</tspan></text></svg>
+                        <polygon class="cls-1" data-color="Franco" style="fill:#9b6600;stroke:#eee;" points="223.58 0.5 30.58 0.5 0.58 52.5 57.58 151.5 135.49 151.5 223.58 0.5"/>
+                        <text class="texto_pieza" transform="translate(71.56 74.61)"><tspan y="">Franco</tspan></text></svg>
                       </div>
                       <div class="pieza franco_limosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
-                        <polygon class="cls-1" style="fill:#ff991e;stroke:#78c9c5;" points="320.81 0.5 386.33 113.85 316.5 113.85 263.87 204.74 0.87 204.74 119.87 0.74 320.81 0.5"/>
+                        <polygon class="cls-1" data-color="Franco-limosa" style="fill:#ff991e;stroke:#eee;" points="320.81 0.5 386.33 113.85 316.5 113.85 263.87 204.74 0.87 204.74 119.87 0.74 320.81 0.5"/>
                         <text class="texto_pieza" transform="translate(163.2 91.85)"><tspan >Franco</tspan><tspan x="3" y="25">limosa</tspan></text></svg>
                       </div>
                       <div class="pieza limosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
-                        <polygon class="cls-1" style="fill:#ffcc5a;stroke:#eee;" points="175.87 91.39 123.33 0.5 53.5 0.5 0.87 91.39 175.87 91.39"/>
+                        <polygon class="cls-1" data-color="Limosa" style="fill:#ffcc5a;stroke:#eee;" points="175.87 91.39 123.33 0.5 53.5 0.5 0.87 91.39 175.87 91.39"/>
                         <text class="texto_pieza" transform="translate(59.05 58.5)"><tspan >Limosa</tspan></text></svg>
                       </div>
                       <div class="pieza franco_arenosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 399.81 204.5">
-                        <polygon class="cls-1" style="fill:#5c6632;stroke:#eee;" points="371.78 152.5 402.7 99.5 324.78 99.5 267.78 0.5 22.78 0.5 0.68 39.76 197.2 152.5 371.78 152.5"/>
+                        <polygon class="cls-1" data-color="Franco-arenosa" style="fill:#5c6632;stroke:#eee;" points="371.78 152.5 402.7 99.5 324.78 99.5 267.78 0.5 22.78 0.5 0.68 39.76 197.2 152.5 371.78 152.5"/>
                         <text class="texto_pieza" transform="translate(167.11 65.61)"><tspan >Franco</tspan><tspan x="3" y="25">arenosa</tspan></text></svg>
                       </div>
                       <div class="pieza areno_francosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
-                        <polygon class="cls-1" style="fill:#006679;stroke:#eee;" points="22.51 0.68 0.64 37.42 87.61 113.42 219.03 113.42 22.51 0.68"/>
+                        <polygon class="cls-1" data-color="Areno-francosa" style="fill:#006679;stroke:#eee;" points="22.51 0.68 0.64 37.42 87.61 113.42 219.03 113.42 22.51 0.68"/>
                         <text class="texto_pieza" transform="translate(82.19 73.59)"><tspan x="-20">Areno</tspan><tspan x="3" y="25">francosa</tspan></text></svg>
                       </div>
                       <div class="pieza arenosa">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.81 204.5">
-                        <polygon class="cls-1" style="fill:#0066ac;stroke:#eee;" points="0.87 76.78 44.9 0.78 131.87 76.78 0.87 76.78"/>
-                        <text class="texto_pieza" transform="translate(21.83 66.89)"><tspan x="3" y="-5">Limosa</tspan></text></svg>
+                        <polygon class="cls-1" data-color="Arenosa" style="fill:#0066ac;stroke:#eee;" points="0.87 76.78 44.9 0.78 131.87 76.78 0.87 76.78"/>
+                        <text class="texto_pieza" transform="translate(21.83 66.89)"><tspan x="3" y="-5">Arenosa</tspan></text></svg>
                       </div>
 
                     </div>
@@ -510,13 +550,10 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-  <script src="../../assets/js/sugerencias/sug_analisis.js"></script>
-  <script src="../../assets/js/menu_global.js"></script>
 
   <!-- FUNCIONES CALCULO -->
 
-  <script src="../../assets/js/calculos/fertilidad.js"></script>
-  <script src="../../assets/js/animaciones/tambaleo.js"></script>
+ 
   <script src="../../assets/js/localstorage.js"></script>
   <script src="../../assets/js/config.js"></script>
 

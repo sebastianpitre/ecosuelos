@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Determinar textura del suelo</title>
+</head>
+<body>
+  <h1>Determinar textura del suelo</h1>
+
+  <form action="#">
+    <label for="arena">Porcentaje de arena</label>
+    <input type="number" name="arena" id="arena" value="20" /><br><br>
+
+    <label for="limo">Porcentaje de limo</label>
+    <input type="number" name="limo" id="limo" value="30"/><br><br>
+
+    <label for="arcilla">Porcentaje de arcilla</label>
+    <input type="number" name="arcilla" id="arcilla" value="50"/>
+
+    <input type="submit" value="Calcular" />
+  </form>
+
+  <input type="text" id="resultado_textura">
+
+  <script>
+    function getTexture(arena, limo, arcilla) {
+        // Verifica que los porcentajes sean válidos
+        if (arena < 0 || arena > 100) {
+            throw new Error("El porcentaje de arena debe ser un valor entre 0 y 100");
+        }
+        if (limo < 0 || limo > 100) {
+            throw new Error("El porcentaje de limo debe ser un valor entre 0 y 100");
+        }
+        if (arcilla < 0 || arcilla > 100) {
+            throw new Error("El porcentaje de arcilla debe ser un valor entre 0 y 100");
+        }
+
+        // Determina el tipo de textura
+        if (arena > 70) {
+            return "Arenoso";
+        } else if (arena >= 50 && arena <= 70) {
+            if (limo >= 20 && limo <= 35) {
+                return "Franco arenoso";
+            } else {
+                return "Franco";
+            }
+        } else if (arena >= 25 && arena <= 50) {
+            if (limo >= 20 && limo <= 35) {
+                return "Franco limoso";
+            } else if (arcilla >= 15 && arcilla <= 30) {
+                return "Franco";
+            } else {
+                return "Limoso";
+            }
+        } else if (arcilla >= 45 && arcilla <= 60) {
+            return "Arcillosa";
+        } else if (arcilla >= 60 && arcilla <= 75) {
+            return "Arcilloso pesado";
+        } else if (arcilla >= 75 && arcilla <= 90) {
+            return "Arenoso limoso";
+        } else if (arcilla >= 90 && arcilla <= 95) {
+            return "Franco arenoso limoso";
+        } else if (arcilla >= 95 && arcilla <= 99) {
+            return "Franco limoso arenoso";
+        } else {
+            return "Limoso arenoso";
+        }
+    }
+
+    // Evento de clic del botón de calcular
+    document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const arena = parseInt(document.querySelector("#arena").value);
+        const limo = parseInt(document.querySelector("#limo").value);
+        const arcilla = parseInt(document.querySelector("#arcilla").value);
+
+        const texture = getTexture(arena, limo, arcilla);
+
+        document.querySelector("#resultado_textura").value = texture;
+        color();
+    });
+</script>
+
+<style>
+.pieza{
+    width: 200px;
+}   
+</style>
+<div class="pieza arcillosa">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+        <polygon class="cls-1" data-color="Arcillosa" style="fill:#dd2900;stroke:#eee;" points="285.76 454 65.77 454 0.58 341.33 197.76 1 373.23 304.56 285.76 454"/>
+        <text class="texto_pieza" transform="translate(159.67 306.11)"><tspan>Arcillosa</tspan></text>
+    </svg>
+</div>
+<div class="pieza arcillo_arenosa">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+        <polygon class="cls-1" data-color="arcillo_arenosa" style="fill:#00ff9d;stroke:#eee;" points="0.87 151.47 175.23 151.66 153.24 113.66 88.05 1 0.87 151.47"/>
+        <text class="texto_pieza" transform="translate(60.5 98.77)"><tspan>Arcillo</tspan><tspan x="-2" y="25">arenosa</tspan></text>
+    </svg>
+</div>
+<div class="pieza franco_arcillosa">
+    <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+        <polygon class="cls-1" data-color="franco_arcillosa" style="fill:#bc7100;stroke:#eee;" points="277.85 99.5 220.85 0.5 0.86 0.5 57.85 99.5 277.85 99.5"/>
+        <text class="texto_pieza" transform="translate(109.19 44.61)"><tspan>Franco</tspan><tspan x="-2" y="25">arcillosa</tspan></text>
+    </svg>
+</div>
+</body>
+<script>
+    function color(){
+      const colorSelector = document.getElementById('resultado_textura');
+const svgFiguras = document.querySelectorAll('.cls-1'); // Selecciona las figuras SVG
+
+    const selectedColor = colorSelector.value;
+
+    // Cambiar el color del trazo (stroke) de las figuras SVG
+    svgFiguras.forEach((figura) => {
+        const figuraColor = figura.getAttribute('data-color');
+        if (figuraColor === selectedColor) {
+            figura.style.fill = '#2690ff'; // Cambia el color del trazo a negro
+        } else {
+            figura.style.fill = '#eee'; // Restaura el color del trazo original
+        }
+    });
+    }
+    color();
+</script>
+</body>
+</html>

@@ -5,87 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background:black;
+        body {
+            background: black;
         }
-        .color-box {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    background-color: white;
-    text-align: center;
-    line-height: 100px;
-    border: 1px solid transparent; /* Agregamos un borde transparente por defecto */
-}
 
-.color-box.has-result {
-    background-color: white;
-    background-color: green; /* Agregamos un borde verde */
-}
-
-
+        
+        .pieza{
+            width: 200px;
+        }
     </style>
 </head>
 <body>
-    
+
+    <h1>Determinar textura del suelo</h1>
+
+  <form action="#">
+    <label for="sand">Porcentaje de arena</label>
+    <input type="number" name="sand" id="sand" />
+
+    <label for="silt">Porcentaje de limo</label>
+    <input type="number" name="silt" id="silt" />
+
+    <label for="clay">Porcentaje de arcilla</label>
+    <input type="number" name="clay" id="clay" />
+
+    <input type="submit" value="Calcular" />
+  </form>
+
+  <script>
+    function getTexture(sand, silt, clay) {
+      // Verifica que los porcentajes sean válidos
+      if (sand < 0 || sand > 100) {
+        throw new Error("El porcentaje de arena debe ser un valor entre 0 y 100");
+      }
+      if (silt < 0 || silt > 100) {
+        throw new Error("El porcentaje de limo debe ser un valor entre 0 y 100");
+      }
+      if (clay < 0 || clay > 100) {
+        throw new Error("El porcentaje de arcilla debe ser un valor entre 0 y 100");
+      }
+
+      // Determina el tipo de textura
+      if (sand > 70) {
+        return "Arenoso";
+      } else if (sand >= 50 && sand <= 70) {
+        if (silt >= 20 && silt <= 35) {
+          return "Franco arenoso";
+        } else {
+          return "Franco";
+        }
+      } else if (sand >= 25 && sand <= 50) {
+        if (silt >= 20 && silt <= 35) {
+          return "Franco limoso";
+        } else if (clay >= 15 && clay <= 30) {
+          return "Franco";
+        } else {
+          return "Limoso";
+        }
+      } else if (clay >= 45 && clay <= 60) {
+        return "Arcilloso";
+      } else if (clay >= 60 && clay <= 75) {
+        return "Arcilloso pesado";
+      } else if (clay >= 75 && clay <= 90) {
+        return "Arenoso limoso";
+      } else if (clay >= 90 && clay <= 95) {
+        return "Franco arenoso limoso";
+      } else if (clay >= 95 && clay <= 99) {
+        return "Franco limoso arenoso";
+      } else {
+        return "Limoso arenoso";
+      }
+    }
+
+    // Evento de clic del botón de calcular
+    document.querySelector("form").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const sand = document.querySelector("#sand").value;
+      const silt = document.querySelector("#silt").value;
+      const clay = document.querySelector("#clay").value;
+
+      const texture = getTexture(sand, silt, clay);
+
+      document.querySelector("body").innerHTML += `
+        <p>El tipo de textura es: ${texture}</p>
+      `;
+    });
+  </script>
+
+
     <select id="color-selector">
         <option value="arcillosa">arcillosa</option>
         <option value="arcillo_arenosa">arcillo_arenosa</option>
         <option value="franco_arcillosa">franco_arcillosa</option>
-        <option value="arcillo_limosa">arcillo_limosa</option>
-        <option value="franco_arcillo_limosa">franco_arcillo_limosa</option>
-        <option value="franco_arcillo_arenosa">franco_arcillo_arenosa</option>
-        <option value="franca">franca</option>
-        <option value="franco_limosa">franco_limosa</option>
-        <option value="limosa">limosa</option>
-        <option value="franco_arenosa">franco_arenosa</option>
-        <option value="areno_francosa">areno_francosa</option>
-        <option value="arenosa">arenosa</option>
-        
     </select>
-    
-    <div class="color-box" data-color="arcillosa"></div>
-    <div class="color-box" data-color="arcillo_arenosa"></div>
-    <div class="color-box" data-color="franco_arcillosa"></div>
-    <div class="color-box" data-color="arcillo_limosa"></div>
-    <div class="color-box" data-color="franco_arcillo_limosa"></div>
-    <div class="color-box" data-color="franco_arcillo_arenosa"></div>
-    <div class="color-box" data-color="franca"></div>
-    <div class="color-box" data-color="franco_limosa"></div>
-    <div class="color-box" data-color="limosa"></div>
-    <div class="color-box" data-color="franco_arenosa"></div>
-    <div class="color-box" data-color="areno_francosa"></div>
-    <div class="color-box" data-color="arenosa"></div>
-    
+
+    <div class="pieza arcillosa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+            <polygon class="cls-1" data-color="arcillosa" style="fill:#dd2900;stroke:#eee;" points="285.76 454 65.77 454 0.58 341.33 197.76 1 373.23 304.56 285.76 454"/>
+            <text class="texto_pieza" transform="translate(159.67 306.11)"><tspan>Arcillosa</tspan></text>
+        </svg>
+    </div>
+    <div class="pieza arcillo_arenosa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+            <polygon class="cls-1" data-color="arcillo_arenosa" style="fill:#00ff9d;stroke:#eee;" points="0.87 151.47 175.23 151.66 153.24 113.66 88.05 1 0.87 151.47"/>
+            <text class="texto_pieza" transform="translate(60.5 98.77)"><tspan>Arcillo</tspan><tspan x="-2" y="25">arenosa</tspan></text>
+        </svg>
+    </div>
+    <div class="pieza franco_arcillosa">
+        <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 373.81 454.5">
+            <polygon class="cls-1" data-color="franco_arcillosa" style="fill:#bc7100;stroke:#eee;" points="277.85 99.5 220.85 0.5 0.86 0.5 57.85 99.5 277.85 99.5"/>
+            <text class="texto_pieza" transform="translate(109.19 44.61)"><tspan>Franco</tspan><tspan x="-2" y="25">arcillosa</tspan></text>
+        </svg>
+    </div>
 </body>
 <script>
-const colorSelector = document.getElementById('color-selector');
-    const colorBoxes = document.querySelectorAll('.color-box');
+    const colorSelector = document.getElementById('color-selector');
+    const svgFiguras = document.querySelectorAll('.cls-1'); // Selecciona las figuras SVG
 
     colorSelector.addEventListener('change', () => {
         const selectedColor = colorSelector.value;
-        colorBoxes.forEach((box) => {
-            const boxColor = box.getAttribute('data-color');
-            if (boxColor === selectedColor) {
-                box.textContent = "✔";
-                box.classList.add('has-result');
-                // Almacenar la selección en el almacenamiento local
-                localStorage.setItem('selectedColor', selectedColor);
+
+        // Cambiar el color del trazo (stroke) de las figuras SVG
+        svgFiguras.forEach((figura) => {
+            const figuraColor = figura.getAttribute('data-color');
+            if (figuraColor === selectedColor) {
+                figura.style.fill = ''; // Cambia el color del trazo a negro
             } else {
-                box.textContent = "";
-                box.classList.remove('has-result');
+                figura.style.fill = '#eee'; // Restaura el color del trazo original
             }
         });
     });
-
-    // Recuperar la selección del almacenamiento local al cargar la página
-    const savedColor = localStorage.getItem('selectedColor');
-    if (savedColor) {
-        colorSelector.value = savedColor;
-        colorSelector.dispatchEvent(new Event('change')); // Simular el evento 'change'
-    }
-    </script>
+</script>
 </html>
-
-
-
