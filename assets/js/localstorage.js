@@ -2,9 +2,7 @@
 
 // Obtener todos los campos de entrada por su ID
 const inputFields = [
-    "clase", "porcentaje", "tipo", "drenajeNatural", "inundaciones",
-    "encharcamientos", "profundidad", "textura",
-    "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperaturaHeladera",
+    "drenajeNatural", "inundaciones", "encharcamientos", "profundidad", "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperaturaHeladera"
   ];
 
   // Cargar los valores del almacenamiento local cuando se carga la página
@@ -35,7 +33,7 @@ const inputFields = [
     document.getElementById("resultadoFertilidad").value = resultadoFT;
 
     
-// MOSTRAR DATOS LOCALES DE PISOS TERMICOS⭐
+// MOSTRAR DATOS LOCALES DE PISOS TÉRMICOS⭐
 
     // Recuperar el resultado almacenado en localStorage
     const pisoTermico = localStorage.getItem('pisoTermico');
@@ -54,7 +52,7 @@ const inputFields = [
     const resultadoMovMasa = document.getElementById('resultadoMovMasa');
     resultadoMovMasa.value = decodeURIComponent(movMasa);
 
-// MOSTRAR DATOS LOCALES DE EROSION⭐
+// MOSTRAR DATOS LOCALES DE EROSIÓN⭐
 
     // Recuperar el resultado almacenado en localStorage
     const erosion = localStorage.getItem('erosion');
@@ -62,3 +60,12 @@ const inputFields = [
     // Mostrar el resultado en la página
     const resultadoErosion = document.getElementById('resultadoErosion');
     resultadoErosion.value = decodeURIComponent(erosion);
+
+    // MOSTRAR DATOS LOCALES DE TEXTURA⭐
+
+    // Recuperar el resultado almacenado en localStorage
+    const texture = localStorage.getItem('texture');
+
+    // Mostrar el resultado en la página
+    const resultado_textura = document.getElementById('resultado_textura');
+    resultado_textura.value = decodeURIComponent(texture);

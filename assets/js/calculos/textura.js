@@ -21,7 +21,7 @@
             }
         } else if (arena >= 25 && arena <= 50) {
             if (limo >= 20 && limo <= 35) {
-                return "Franco-limoso";
+                return "Franco-arcillosa";
             } else if (arcilla >= 15 && arcilla <= 30) {
                 return "Franco";
             } else {
@@ -32,7 +32,7 @@
         } else if (arcilla >= 60 && arcilla <= 75) {
             return "Arcilloso-pesado";
         } else if (arcilla >= 75 && arcilla <= 90) {
-            return "Arenoso-limoso";
+            return "Franco-limosa";
         } else if (arcilla >= 90 && arcilla <= 95) {
             return "Franco-arenoso-limoso";
         } else if (arcilla >= 95 && arcilla <= 99) {
@@ -40,6 +40,7 @@
         } else {
             return "Arcillo-limosa";
         }
+        
     }
 
     // Evento de clic del botón de calcular
@@ -55,7 +56,21 @@
         document.querySelector("#resultado_textura").value = texture;
         // Llamar a la función color cuando el valor cambie
         color();
-    });
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Datos de la textura guardados y exportados',
+            showConfirmButton: false,
+            timer: 2000,
+
+            })
+        // Almacenar los datos en localStorage
+        localStorage.setItem('texture', encodeURIComponent(texture));
+
+        // Mostrar el resultado en la página actual
+        resultado_textura.value = texture;
+            
+        });
     
 
     function color(){

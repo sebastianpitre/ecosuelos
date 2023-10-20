@@ -173,7 +173,7 @@
 </div>
 <!-- End Navbar -->
 
-  <div class="card1 card-body  mx-3 mx-md-8 mt-7 mb-4">
+  <div class="card1 mx-3 mx-md-8 mt-7 mb-4">
 
      <!-- modal -->
      <div id="modalContPisosTermicos" class="modal_calculo  animacion_modal">
@@ -196,7 +196,20 @@
     </div>
 
     <!-- CARD -->
-    <section class="row mb-4 card opacity-9">
+    <section class="mb-4 card-body card opacity-9">
+      <div class="container" onclick="openInstrucciones()">
+				<button class="btn bg-gradient-success btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; right: -15px; top: -15px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Instrucciones de uso">
+					<i class="fas fa-info p-1 mt-2" aria-hidden="true"></i>
+				</button>
+			</div>
+      <script>
+        function openInstrucciones(){
+          Swal.fire({
+            title: 'Intrucciones',
+            html: '<div class="text-start"><p><span>●</span> Debe completar todos los campos para poder realizar de manera satisfactoria el calculo.</p><p><span>●</span> Los campos con relleno oscuro, como este ejemplo:<div class="input-group mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control bg-gray-200" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo" readonly></div></p><p>Estos se llenan automáticamente después de hacer el proceso desde otra ventana, para entrar a esas ventanas hay un icono como este:<i class="material-icons">open_in_new</i> Que abrirá otra pagina o una ventana emergente. </p><p>Las ventanas emergentes se utilizan para procesos simples y están identificadas con el mismo icono pero de color verde: <i class="material-icons text-success">open_in_new</i></p><p>En cambio Los procesos mas complejos abrirán una pagina nueva y están identificados con los iconos de color azul: <i class="material-icons text-info">open_in_new</i></p><p>Existen procesos donde solo tendrás que llenar el campo manual, ya que estos datos no necesitan de un proceso mecanizado, estos están sin ninguna decoración y se ven de esta manera:<div class="input-group  mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control" placeholder="complete este campo" id="drenajeNatural" aria-label="complete este campo"  readonly></div></p><p>Luego de llenar todos los campos correctamente, debes dar clic en el botón inferior llamado:<div class="col-12"><button class="btn btn-success  mt-n6 mb-n6">Calcular proceso</button></div></p><p>Asi obtendrás un estudio completo de tu suelo y para que es acto.</p></div> ',
+            })
+        }
+      </script>
         <div class="container-fluid">
           <div class="row">
             <div class="col-10 mx-auto ms-auto border-radius-lg">
@@ -205,20 +218,8 @@
 
                 <div class="col-lg-3 ms-3 me-3 mt-5">
                   <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
-                  <div class="row">
-                      <div class="col input-group input-group-static">
-                        <select class="form-select form-select-sm form-control" id="clase" placeholder="clase">
-                          <option> </option>
-                          <option value="simple">Simple</option>
-                          <option value="compleja">Compleja</option>
-                        </select>
-                      </div>
-                    <div class="col input-group input-group-static">
-                      <input type="number" class="form-control" id="porcentaje" placeholder="porcentaje" oninput="calcularTipo()">
-                    </div>
-                    <div class="col input-group input-group-static">
-                      <input type="text" class="form-control" id="tipo" placeholder="tipo" readonly>
-                    </div>
+                  <div class="input-group input-group-static">
+                    <input type="text" class="form-control" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo">
                   </div>
                 </div>
 
@@ -272,10 +273,10 @@
                 <!-- .......... -->
                 <div class="col-lg-3 ms-3 me-3 mt-5">
                   <label class="text-dark font-weight-bold"> Textura
-                    <span class="input-group-addon"><a href="calculos/textura.html"><i class="material-icons text-success">open_in_new</i></a></span>
+                    <span class="input-group-addon"><a href="calculos/calcular_textura.html"><i class="material-icons text-info">open_in_new</i></a></span>
                   </label>
                   <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="textura" placeholder="complete este campo" aria-label="complete este campo">
+                    <input type="text" class="form-control bg-gray-200" id="resultado_textura" placeholder="complete este campo" aria-label="complete este campo" readonly>
                   </div>
                 </div>
                 <!-- .......... -->
@@ -295,7 +296,7 @@
                 <!-- .....Fertilidad ✔..... -->
                 <div class="col-lg-3 ms-3 me-3 mt-5">
                   <label for="resultadoFertilidad" class="text-dark font-weight-bold"> Fertilidad 
-                    <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-success">open_in_new</i></a></span>
+                    <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-info">open_in_new</i></a></span>
                   </label>
                   <div class="input-group form-group input-group-static">
                       <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo" aria-label="complete este campo" readonly>
