@@ -1,0 +1,40 @@
+<script>
+    function esSueloClase2(pendiente, erosion, movimientosEnMasa, drenajeNatural, inundaciones, encharcamientos, profundidadEfectiva, familia_textura, grupo_textural, fragmentosEnElSuelo, pedregosidadSuperficial, afloramientoRocoso, fertilidad, contenidoDeSales, contenidoDeSodio, salesYSodio,Na_intercambiable_sales_y_sodio,salesYSodio_area_afectada,profundidadDeNa, caMg, saturacionDeAluminio, distribucionDeLluvias, pisoTermico, condicionDeHumedad, temperaturaHeladas, heladas) {
+    if (
+        pendiente >= 0 && pendiente <= 7 &&
+        (erosion === "No hay" || erosion === "Ligero") &&
+        movimientosEnMasa === "No hay" &&
+        (drenajeNatural === "Bien drenado" || drenajeNatural === "Moderado") &&
+        (inundaciones === "No se presentan" || inundaciones === "Raras" || inundaciones === "Extremadamente cortas" || inundaciones === "Muy cortas") &&
+        (encharcamientos === "No se presentan" || encharcamientos === "Raros" || encharcamientos === "Extremadamente cortos" || encharcamientos === "Muy cortos") &&
+        profundidadEfectiva > 75 &&
+        (familia_textura === "Francosa fina" || familia_textura === "Limosa fina" || familia_textura === "Contrastadas") &&
+        grupo_textural === "Moderadamente finos" &&
+        fragmentosEnElSuelo < 3 &&
+        pedregosidadSuperficial < 0.1 &&
+        (afloramientoRocoso >= 0.1 && afloramientoRocoso <= 2) &&
+        (fertilidad === "Muy alta" || fertilidad === "Alta" || fertilidad === "Media") &&
+        (contenidoDeSales === "No se presentan" || contenidoDeSales === "Ligero") &&
+        contenidoDeSodio === "No se presenta" &&
+        salesYSodio === "No hay" &&
+        Na_intercambiable_sales_y_sodio === "No hay" &&
+        salesYSodio_area_afectada < 5 &&
+        profundidadDeNa > 100 &&
+        (caMg === "Normal" || caMg === "Estrecha >50") &&
+        saturacionDeAluminio < 15 &&
+        (distribucionDeLluvias === 1 || distribucionDeLluvias === 2) &&
+        (pisoTermico === "Cálido" || pisoTermico === "Templado" || pisoTermico === "Frío") &&
+        condicionDeHumedad === "Húmedo a seco" &&
+        temperaturaHeladas > 12 &&
+        heladas === "baja frecuencia, 1-2 anual"
+    ) {
+        console.log("El suelo es de clase 2");
+    } else {
+        console.log("El suelo no es de clase 2");
+    }
+}
+
+// Ejemplo de uso:
+esSueloClase2(5, "No hay", "No hay", "Bien drenado", "Raras", "No se presentan", 80, "Francosa fina", "Moderadamente finos", 2, 0.05, 0.5, "Muy alta", "Ligero", "No se presenta", "No hay", "No hay",4, 120, "Estrecha >50", 10, 1, "Cálido", "Húmedo a seco", 15, "baja frecuencia, 1-2 anual");
+
+</script>

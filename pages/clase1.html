@@ -1,0 +1,39 @@
+<script>
+function esSueloClase1(pendiente, erosion, movimientosEnMasa, drenajeNatural, inundaciones, encharcamientos, profundidadEfectiva, familia_textura, grupo_textural, fragmentosEnElSuelo, pedregosidadSuperficial, afloramientoRocoso, fertilidad, contenidoDeSales, contenidoDeSodio, salesYSodio,Na_intercambiable_sales_y_sodio,salesYSodio_area_afectada,profundidadDeNa, caMg, saturacionDeAluminio, distribucionDeLluvias, pisoTermico, condicionDeHumedad, temperaturaHeladas, heladas) {
+    if (
+        pendiente >= 0 && pendiente <= 3 &&
+        erosion === "No hay" &&
+        movimientosEnMasa === "No hay" &&
+        drenajeNatural === "Bien drenado" &&
+        inundaciones === "No se presentan" &&
+        encharcamientos === "No hay" &&
+        profundidadEfectiva > 100 &&
+        familia_textura === "Francosa fina" &&
+        grupo_textural === "Moderadamente finos" &&
+        fragmentosEnElSuelo < 3 &&
+        pedregosidadSuperficial < 0.1 &&
+        afloramientoRocoso < 0.1 &&
+        (fertilidad === "Muy alta" || fertilidad === "Alta" || fertilidad === "Media") &&
+        contenidoDeSales === "No se presentan" &&
+        contenidoDeSodio === "No se presenta" &&
+        salesYSodio === "No hay" &&
+        Na_intercambiable_sales_y_sodio === "No hay" &&
+        salesYSodio_area_afectada === "No hay" &&
+        profundidadDeNa > 100 &&
+        caMg === "Normal" &&
+        saturacionDeAluminio < 15 &&
+        distribucionDeLluvias === 1 &&
+        (pisoTermico === "Cálido" || pisoTermico === "Templado" || pisoTermico === "Frío") &&
+        condicionDeHumedad === "Húmedo seco" &&
+        temperaturaHeladas > 12 &&
+        heladas === "No hay"
+    ) {
+        console.log("El suelo es de clase 1");
+    } else {
+        console.log("El suelo no es de clase 1");
+    }
+}
+
+// Ejemplo de uso:
+esSueloClase1(2, "No hay", "No hay", "Bien drenado", "No se presentan", "No hay", 120, "Francosa fina", "Moderadamente finos", 2, 0.05, 0.05, "Muy alta", "No se presentan", "No se presenta", "No hay","No hay","No hay", 120, "Normal", 10, 1, "Cálido", "Húmedo seco", 15, "No hay");
+</script>

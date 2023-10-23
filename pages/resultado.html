@@ -1,0 +1,124 @@
+<script>function determinarClaseDeSuelo(cond) {
+    // Verificar las cond comunes a todas las clases
+    if (
+        cond.pendiente >= 0 && cond.pendiente <= 3 &&
+        cond.erosion === "No hay" &&
+        cond.movimientosEnMasa === "No hay" &&
+        cond.drenajeNatural === "Bien drenado" &&
+        cond.inundaciones === "No se presentan" &&
+        cond.encharcamientos === "No hay" &&
+        cond.profundidadEfectiva > 100 &&
+        cond.familia_textura === "Francosa fina" &&
+        cond.grupo_textural === "Moderadamente finos" &&
+        cond.fragmentosEnElSuelo < 3 &&
+        cond.pedregosidadSuperficial < 0.1 &&
+        cond.afloramientoRocoso < 0.1 &&
+        (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+        cond.contenidoDeSales === "No se presentan" &&
+        cond.contenidoDeSodio === "No se presenta" &&
+        cond.salesYSodio === "No hay" &&
+        cond.salesYSodio_area_afectada === "No hay" &&
+        cond.profundidadDeNa > 100 &&
+        cond.caMg === "Normal" &&
+        cond.saturacionDeAluminio < 15 &&
+        cond.distribucionDeLluvias === 1 &&
+        (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+        cond.condicionDeHumedad === "Húmedo seco" &&
+        cond.temperaturaHeladas > 12 &&
+        cond.heladas === "No hay"
+    ) {
+        return "Clase 1";
+    } else if (
+        cond.pendiente >= 0 && cond.pendiente <= 7 &&
+        (cond.erosion === "No hay" || cond.erosion === "Ligero") &&
+        cond.movimientosEnMasa === "No hay" &&
+        (cond.drenajeNatural === "Bien drenado" || cond.drenajeNatural === "Moderado") &&
+        (cond.inundaciones === "No se presentan" || cond.inundaciones === "Raras" || cond.inundaciones === "Extremadamente cortas" || cond.inundaciones === "Muy cortas") &&
+        (cond.encharcamientos === "No se presentan" || cond.encharcamientos === "Raros" || cond.encharcamientos === "Extremadamente cortos" || cond.encharcamientos === "Muy cortos") &&
+        cond.profundidadEfectiva > 75 &&
+        (cond.familia_textura === "Francosa fina" || cond.familia_textura === "Limosa fina" || cond.familia_textura === "Contrastadas") &&
+        cond.grupo_textural === "Moderadamente finos" &&
+        cond.fragmentosEnElSuelo < 3 &&
+        cond.pedregosidadSuperficial < 0.1 &&
+        (cond.afloramientoRocoso >= 0.1 && cond.afloramientoRocoso <= 2) &&
+        (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+        (cond.contenidoDeSales === "No se presentan" || cond.contenidoDeSales === "Ligero") &&
+        cond.contenidoDeSodio === "No se presenta" &&
+        cond.salesYSodio === "No hay" &&
+        cond.Na_intercambiable_sales_y_sodio === "No hay" &&
+        cond.salesYSodio_area_afectada < 5 &&
+        cond.profundidadDeNa > 100 &&
+        (cond.caMg === "Normal" || cond.caMg === "Estrecha >50") &&
+        cond.saturacionDeAluminio < 15 &&
+        (cond.distribucionDeLluvias === 1 || cond.distribucionDeLluvias === 2) &&
+        (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+        cond.condicionDeHumedad === "Húmedo a seco" &&
+        (cond.temperaturaHeladas > 12 && cond.heladas === "baja frecuencia, 1-2 al año")
+    ) {
+        return "Clase 2";
+    } else {
+        return "No se puede determinar la clase de suelo";
+    }
+}
+
+// Ejemplo de uso:
+const cond = {
+    pendiente: 2,
+    erosion: "No hay",
+    movimientosEnMasa: "No hay",
+    drenajeNatural: "Bien drenado",
+    inundaciones: "No se presentan",
+    encharcamientos: "No hay",
+    profundidadEfectiva: 120,
+    familia_textura: "Francosa fina",
+    grupo_textural: "Moderadamente finos",
+    fragmentosEnElSuelo: 2,
+    pedregosidadSuperficial: 0.05,
+    afloramientoRocoso: 0.05,
+    fertilidad: "Muy alta",
+    contenidoDeSales: "No se presentan",
+    contenidoDeSodio: "No se presenta",
+    salesYSodio: "No hay",
+    salesYSodio_area_afectada: "No hay",
+    profundidadDeNa: 120,
+    caMg: "Normal",
+    saturacionDeAluminio: 10,
+    distribucionDeLluvias: 1,
+    pisoTermico: "Cálido",
+    condicionDeHumedad: "Húmedo seco",
+    temperaturaHeladas: 15,
+    heladas: "No hay"
+};
+
+const claseSuelo = determinarClaseDeSuelo(cond);
+console.log(`La clase de suelo es: ${claseSuelo}`);
+</script>
+
+<!-- // Ejemplo de uso clase 2: hay que vericar
+const cond = {
+    pendiente: 6,
+    erosion: "No hay",
+    movimientosEnMasa: "No hay",
+    drenajeNatural: "Bien drenado",
+    inundaciones: "No se presentan",
+    encharcamientos: "No se presentan",
+    profundidadEfectiva: 120,
+    familia_textura: "Francosa fina",
+    grupo_textural: "Moderadamente finos",
+    fragmentosEnElSuelo: 2,
+    pedregosidadSuperficial: 0,
+    afloramientoRocoso: 0.1,
+    fertilidad: "Muy alta",
+    contenidoDeSales: "No se presentan",
+    contenidoDeSodio: "No se presenta",
+    salesYSodio: "No hay",
+    salesYSodio_area_afectada: 6,
+    profundidadDeNa: 120,
+    caMg: "Normal",
+    saturacionDeAluminio: 14,
+    distribucionDeLluvias: 2,
+    pisoTermico: "Cálido",
+    condicionDeHumedad: "Húmedo seco",
+    temperaturaHeladas: 15,
+    heladas: "baja frecuencia, 1-2 al año"
+}; -->
