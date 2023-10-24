@@ -1,4 +1,6 @@
-<script>function determinarClaseDeSuelo(cond) {
+<script>
+
+function determinarClaseDeSuelo(cond) {
     // Verificar las cond comunes a todas las clases
     if (
         cond.pendiente >= 0 && cond.pendiente <= 3 &&
@@ -17,6 +19,7 @@
         cond.contenidoDeSales === "No se presentan" &&
         cond.contenidoDeSodio === "No se presenta" &&
         cond.salesYSodio === "No hay" &&
+        cond.Na_intercambiable_sales_y_sodio === "No hay" &&
         cond.salesYSodio_area_afectada === "No hay" &&
         cond.profundidadDeNa > 100 &&
         cond.caMg === "Normal" &&
@@ -27,7 +30,7 @@
         cond.temperaturaHeladas > 12 &&
         cond.heladas === "No hay"
     ) {
-        return "Clase 1";
+        return "Clase 1. Las tierras de la clase 1 no presentan o tienen muy pocas limitaciones para el uso agropecuario, siendo éstas de grado ligero, fácilmente corregibles. Son aptas para una amplia diversidad de cultivos adaptados a las condiciones ecológicas, así como para ganadería intensiva con pastos de corte.";
     } else if (
         cond.pendiente >= 0 && cond.pendiente <= 7 &&
         (cond.erosion === "No hay" || cond.erosion === "Ligero") &&
@@ -53,9 +56,10 @@
         (cond.distribucionDeLluvias === 1 || cond.distribucionDeLluvias === 2) &&
         (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
         cond.condicionDeHumedad === "Húmedo a seco" &&
-        (cond.temperaturaHeladas > 12 && cond.heladas === "baja frecuencia, 1-2 al año")
+        cond.temperaturaHeladas > 12 && 
+        cond.heladas === "baja frecuencia"
     ) {
-        return "Clase 2";
+        return "Clase 2. Las tierras de la Clase 2 presentan limitaciones ligeras que pueden reducir la posibilidad de elección de plantas para cultivo y requieren prácticas de manejo fáciles de aplicar, incluyendo las de conservación, para prevenir su degradación o para mejorar la relación agua-aire";
     } else {
         return "No se puede determinar la clase de suelo";
     }
@@ -63,62 +67,103 @@
 
 // Ejemplo de uso:
 const cond = {
-    pendiente: 2,
-    erosion: "No hay",
-    movimientosEnMasa: "No hay",
-    drenajeNatural: "Bien drenado",
-    inundaciones: "No se presentan",
-    encharcamientos: "No hay",
-    profundidadEfectiva: 120,
-    familia_textura: "Francosa fina",
-    grupo_textural: "Moderadamente finos",
-    fragmentosEnElSuelo: 2,
-    pedregosidadSuperficial: 0.05,
-    afloramientoRocoso: 0.05,
-    fertilidad: "Muy alta",
-    contenidoDeSales: "No se presentan",
-    contenidoDeSodio: "No se presenta",
-    salesYSodio: "No hay",
-    salesYSodio_area_afectada: "No hay",
-    profundidadDeNa: 120,
-    caMg: "Normal",
-    saturacionDeAluminio: 10,
-    distribucionDeLluvias: 1,
-    pisoTermico: "Cálido",
-    condicionDeHumedad: "Húmedo seco",
-    temperaturaHeladas: 15,
-    heladas: "No hay"
-};
-
-const claseSuelo = determinarClaseDeSuelo(cond);
-console.log(`La clase de suelo es: ${claseSuelo}`);
-</script>
-
-<!-- // Ejemplo de uso clase 2: hay que vericar
-const cond = {
-    pendiente: 6,
+    pendiente: 0,
     erosion: "No hay",
     movimientosEnMasa: "No hay",
     drenajeNatural: "Bien drenado",
     inundaciones: "No se presentan",
     encharcamientos: "No se presentan",
-    profundidadEfectiva: 120,
+    profundidadEfectiva: 78,
     familia_textura: "Francosa fina",
     grupo_textural: "Moderadamente finos",
     fragmentosEnElSuelo: 2,
     pedregosidadSuperficial: 0,
-    afloramientoRocoso: 0.1,
+    afloramientoRocoso: 0.2,
     fertilidad: "Muy alta",
     contenidoDeSales: "No se presentan",
     contenidoDeSodio: "No se presenta",
     salesYSodio: "No hay",
-    salesYSodio_area_afectada: 6,
+    Na_intercambiable_sales_y_sodio: "No hay",
+    salesYSodio_area_afectada: 4,
     profundidadDeNa: 120,
     caMg: "Normal",
     saturacionDeAluminio: 14,
     distribucionDeLluvias: 2,
     pisoTermico: "Cálido",
-    condicionDeHumedad: "Húmedo seco",
+    condicionDeHumedad: "Húmedo a seco",
     temperaturaHeladas: 15,
-    heladas: "baja frecuencia, 1-2 al año"
+    heladas: "baja frecuencia"
+};
+
+
+const claseSuelo = determinarClaseDeSuelo(cond);
+console.log(`El suelo ha sido identificado como suelo de ${claseSuelo}`);
+</script>
+<!-- // Ejemplo de uso clase 2: hay que vericar
+const cond = {
+    pendiente: 0,
+    erosion: "No hay",
+    movimientosEnMasa: "No hay",
+    drenajeNatural: "Bien drenado",
+    inundaciones: "No se presentan",
+    encharcamientos: "No se presentan",
+    profundidadEfectiva: 78,
+    familia_textura: "Francosa fina",
+    grupo_textural: "Moderadamente finos",
+    fragmentosEnElSuelo: 2,
+    pedregosidadSuperficial: 0,
+    afloramientoRocoso: 0.2,
+    fertilidad: "Muy alta",
+    contenidoDeSales: "No se presentan",
+    contenidoDeSodio: "No se presenta",
+    salesYSodio: "No hay",
+    Na_intercambiable_sales_y_sodio: "No hay",
+    salesYSodio_area_afectada: 4,
+    profundidadDeNa: 120,
+    caMg: "Normal",
+    saturacionDeAluminio: 14,
+    distribucionDeLluvias: 2,
+    pisoTermico: "Cálido",
+    condicionDeHumedad: "Húmedo a seco",
+    temperaturaHeladas: 15,
+    heladas: "baja frecuencia"
 }; -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Clase de Suelo</title>
+</head>
+<body>
+    <h1>Ingrese los valores para determinar la clase de suelo:</h1>
+    <form id="sueloForm">
+        <label for="pendiente">Pendiente (0-100):</label>
+        <input type="number" id="pendiente" required><br>
+
+        <label for="erosion">Erosión ("No hay" o "Ligero"):</label>
+        <input type="text" id="erosion" required><br>
+
+        <!-- Agrega más campos aquí para otros datos -->
+
+        <button type="submit">Determinar Clase de Suelo</button>
+    </form>
+
+    <script>
+        document.getElementById('sueloForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const cond = {
+                pendiente: parseFloat(document.getElementById('pendiente').value),
+                erosion: document.getElementById('erosion').value,
+                // Agrega más campos aquí para otros datos
+            };
+
+            // Convierte el objeto 'cond' en una cadena JSON y la envía a la otra página
+            const encodedData = encodeURIComponent(JSON.stringify(cond));
+            window.location.href = 'result.html?data=' + encodedData;
+        });
+    </script>
+</body>
+</html>

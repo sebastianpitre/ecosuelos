@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Clase de Suelo</title>
+</head>
+<body>
+    <h1>Ingrese los valores para determinar la clase de suelo:</h1>
+    <form id="sueloForm">
+        <label for="pendiente">Pendiente (0-100):</label>
+        <input type="text" value="45" id="parametroErosion" required><br>
+
+        <label for="erosion">Erosión ("No hay" o "Ligero"):</label>
+        <input type="text" value="No hay" id="erosion" required><br>
+
+        <label for="drenajeNatural">Drenaje Natural ("Bien drenado" o "Moderado"):</label>
+        <input type="text" value="Bien drenado" id="drenajeNatural" required><br>
+
+        <!-- Agrega más campos aquí para otros datos -->
+
+        <button type="submit">Determinar Clase de Suelo</button>
+    </form>
+
+    <h2>Resultado de la Clase de Suelo:</h2>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('sueloForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const cond = {
+                
+                // Agrega más campos aquí para otros datos
+
+                erosion: document.getElementById("erosion").value,
+                movimientoMasa: document.getElementById("movimientoMasa").value,
+                drenajeNatural: document.getElementById("drenajeNatural").value,
+                inundaciones: document.getElementById("inundaciones").value,
+                encharcamientos: document.getElementById("encharcamientos").value,
+                profundidad: document.getElementById("profundidad").value,
+                textura: document.getElementById("textura").value,
+                pedregosidad: document.getElementById("pedregosidad").value,
+                afloramiento: document.getElementById("afloramiento").value,
+                contenidoSales: document.getElementById("contenidoSales").value,
+                contenidoSodio: document.getElementById("contenidoSodio").value,
+                sales_Sodio: document.getElementById("sales_Sodio").value,
+                saturacionAluminio: document.getElementById("saturacionAluminio").value,
+                distribucionLluvia: document.getElementById("distribucionLluvia").value,
+                pisosTermicos: document.getElementById("pisosTermicos").value,
+                condicionHumedad: document.getElementById("condicionHumedad").value,
+                temperatura: document.getElementById("temperatura").value,
+            };
+
+            // Llama a la función para determinar la clase de suelo y muestra el resultado
+            function determinarClaseDeSuelo(cond) {
+                // Verificar las cond comunes a todas las clases
+                if (
+                    cond.pendiente >= 0 && cond.pendiente <= 3 &&
+                    cond.erosion === "No hay" &&
+                    cond.movimientosEnMasa === "No hay" &&
+                    cond.drenajeNatural === "Bien drenado" &&
+                    cond.inundaciones === "No se presentan" &&
+                    cond.encharcamientos === "No hay" &&
+                    cond.profundidadEfectiva > 100 &&
+                    cond.familia_textura === "Francosa fina" &&
+                    cond.grupo_textural === "Moderadamente finos" &&
+                    cond.fragmentosEnElSuelo < 3 &&
+                    cond.pedregosidadSuperficial < 0.1 &&
+                    cond.afloramientoRocoso < 0.1 &&
+                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+                    cond.contenidoDeSales === "No se presentan" &&
+                    cond.contenidoDeSodio === "No se presenta" &&
+                    cond.salesYSodio === "No hay" &&
+                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
+                    cond.salesYSodio_area_afectada === "No hay" &&
+                    cond.profundidadDeNa > 100 &&
+                    cond.caMg === "Normal" &&
+                    cond.saturacionDeAluminio < 15 &&
+                    cond.distribucionDeLluvias === 1 &&
+                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+                    cond.condicionDeHumedad === "Húmedo seco" &&
+                    cond.temperaturaHeladas > 12 &&
+                    cond.heladas === "No hay"
+                ) {
+                    return "Clase 1. Las tierras de la clase 1 no presentan o tienen muy pocas limitaciones para el uso agropecuario, siendo éstas de grado ligero, fácilmente corregibles. Son aptas para una amplia diversidad de cultivos adaptados a las condiciones ecológicas, así como para ganadería intensiva con pastos de corte.";
+                } else if (
+                    cond.pendiente >= 0 && cond.pendiente <= 7 &&
+                    (cond.erosion === "No hay" || cond.erosion === "Ligero") &&
+                    cond.movimientosEnMasa === "No hay" &&
+                    (cond.drenajeNatural === "Bien drenado" || cond.drenajeNatural === "Moderado") &&
+                    (cond.inundaciones === "No se presentan" || cond.inundaciones === "Raras" || cond.inundaciones === "Extremadamente cortas" || cond.inundaciones === "Muy cortas") &&
+                    (cond.encharcamientos === "No se presentan" || cond.encharcamientos === "Raros" || cond.encharcamientos === "Extremadamente cortos" || cond.encharcamientos === "Muy cortos") &&
+                    cond.profundidadEfectiva > 75 &&
+                    (cond.familia_textura === "Francosa fina" || cond.familia_textura === "Limosa fina" || cond.familia_textura === "Contrastadas") &&
+                    cond.grupo_textural === "Moderadamente finos" &&
+                    cond.fragmentosEnElSuelo < 3 &&
+                    cond.pedregosidadSuperficial < 0.1 &&
+                    (cond.afloramientoRocoso >= 0.1 && cond.afloramientoRocoso <= 2) &&
+                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+                    (cond.contenidoDeSales === "No se presentan" || cond.contenidoDeSales === "Ligero") &&
+                    cond.contenidoDeSodio === "No se presenta" &&
+                    cond.salesYSodio === "No hay" &&
+                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
+                    cond.salesYSodio_area_afectada < 5 &&
+                    cond.profundidadDeNa > 100 &&
+                    (cond.caMg === "Normal" || cond.caMg === "Estrecha >50") &&
+                    cond.saturacionDeAluminio < 15 &&
+                    (cond.distribucionDeLluvias === 1 || cond.distribucionDeLluvias === 2) &&
+                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+                    cond.condicionDeHumedad === "Húmedo a seco" &&
+                    cond.temperaturaHeladas > 12 && 
+                    cond.heladas === "baja frecuencia"
+                ) {
+                    return "Clase 2. Las tierras de la Clase 2 presentan limitaciones ligeras que pueden reducir la posibilidad de elección de plantas para cultivo y requieren prácticas de manejo fáciles de aplicar, incluyendo las de conservación, para prevenir su degradación o para mejorar la relación agua-aire";
+                } else {
+                    return "No se puede determinar la clase de suelo";
+                }
+            }
+            
+
+            const claseSuelo = determinarClaseDeSuelo(cond);
+            document.getElementById('resultado').textContent = `El suelo ha sido identificado como suelo de ${claseSuelo}`;
+        });
+    </script>
+</body>
+</html>
