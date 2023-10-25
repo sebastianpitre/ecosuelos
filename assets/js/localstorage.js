@@ -2,8 +2,8 @@
 
 // Obtener todos los campos de entrada por su ID
 const inputFields = [
-    "drenajeNatural", "inundaciones", "encharcamientos", "profundidad", "pedregosidad","afloramiento","contenidoSales","contenidoSodio","sales_Sodio","ca_mg","saturacionAluminio","distribucionLluvia","condicionHumedad","temperaturaHeladera"
-  ];
+    "pendiente", "erosion", "movimientosEnMasa", "drenajeNatural", "inundaciones","encharcamientos","profundidadEfectiva","familia_textura","grupo_textural","fragmentosEnElSuelo","pedregosidadSuperficial","afloramientoRocoso","fertilidad","contenidoDeSales","contenidoDeSodio"
+    ,"Na_intercambiable_sales_y_sodio" ,"salesYSodio_area_afectada" ,"profundidadDeNa","caMg","saturacionDeAluminio","distribucionDeLluvias","profundidadDeNa","condicionDeHumedad","heladas"];
 
   // Cargar los valores del almacenamiento local cuando se carga la página
   window.addEventListener("load", () => {
