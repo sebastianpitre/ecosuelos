@@ -8,14 +8,31 @@
 <body>
     <h1>Ingrese los valores para determinar la clase de suelo:</h1>
     <form id="sueloForm">
-        <label for="pendiente">Pendiente (0-100):</label>
-        <input type="text" value="45" id="parametroErosion" required><br>
-
-        <label for="erosion">Erosión ("No hay" o "Ligero"):</label>
-        <input type="text" value="No hay" id="erosion" required><br>
-
-        <label for="drenajeNatural">Drenaje Natural ("Bien drenado" o "Moderado"):</label>
-        <input type="text" value="Bien drenado" id="drenajeNatural" required><br>
+        <input type="number" id="pendiente" value="2" />
+        <input type="text" id="erosion" value="No hay" />
+        <input type="text" id="movimientosEnMasa" value="No hay" />
+        <input type="text" id="drenajeNatural" value="Bien drenado" />
+        <input type="text" id="inundaciones" value="No se presentan" />
+        <input type="text" id="encharcamientos" value="No hay" />
+        <input type="number" id="profundidadEfectiva" value="120" />
+        <input type="text" id="familia_textura" value="Francosa fina" />
+        <input type="text" id="grupo_textural" value="Moderadamente finos" />
+        <input type="number" id="fragmentosEnElSuelo" value="2" />
+        <input type="number" id="pedregosidadSuperficial" value="0.05" />
+        <input type="number" id="afloramientoRocoso" value="0.05" />
+        <input type="text" id="fertilidad" value="Muy alta" />
+        <input type="text" id="contenidoDeSales" value="No se presentan" />
+        <input type="text" id="contenidoDeSodio" value="No se presenta" />
+        <input type="text" id="Na_intercambiable_sales_y_sodio" value="No hay" />
+        <input type="text" id="salesYSodio_area_afectada" value="No hay" />
+        <input type="number" id="profundidadDeNa" value="120" />
+        <input type="text" id="caMg" value="Normal" />
+        <input type="number" id="saturacionDeAluminio" value="10" />
+        <input type="number" id="distribucionDeLluvias" value="1" />
+        <input type="text" id="pisoTermico" value="Cálido" />
+        <input type="text" id="condicionDeHumedad" value="Húmedo seco" />
+        <input type="number" id="temperaturaHeladas" value="15" />
+        <input type="text" id="heladas" value="No hay" />
 
         <!-- Agrega más campos aquí para otros datos -->
 
@@ -32,23 +49,31 @@
                 
                 // Agrega más campos aquí para otros datos
 
+                pendiente: parseFloat(document.getElementById("pendiente").value),
                 erosion: document.getElementById("erosion").value,
-                movimientoMasa: document.getElementById("movimientoMasa").value,
+                movimientosEnMasa: document.getElementById("movimientosEnMasa").value,
                 drenajeNatural: document.getElementById("drenajeNatural").value,
                 inundaciones: document.getElementById("inundaciones").value,
                 encharcamientos: document.getElementById("encharcamientos").value,
-                profundidad: document.getElementById("profundidad").value,
-                textura: document.getElementById("textura").value,
-                pedregosidad: document.getElementById("pedregosidad").value,
-                afloramiento: document.getElementById("afloramiento").value,
-                contenidoSales: document.getElementById("contenidoSales").value,
-                contenidoSodio: document.getElementById("contenidoSodio").value,
-                sales_Sodio: document.getElementById("sales_Sodio").value,
-                saturacionAluminio: document.getElementById("saturacionAluminio").value,
-                distribucionLluvia: document.getElementById("distribucionLluvia").value,
-                pisosTermicos: document.getElementById("pisosTermicos").value,
-                condicionHumedad: document.getElementById("condicionHumedad").value,
-                temperatura: document.getElementById("temperatura").value,
+                profundidadEfectiva: parseFloat(document.getElementById("profundidadEfectiva").value),
+                familia_textura: document.getElementById("familia_textura").value,
+                grupo_textural: document.getElementById("grupo_textural").value,
+                fragmentosEnElSuelo: parseFloat(document.getElementById("fragmentosEnElSuelo").value),
+                pedregosidadSuperficial: parseFloat(document.getElementById("pedregosidadSuperficial").value),
+                afloramientoRocoso: parseFloat(document.getElementById("afloramientoRocoso").value),
+                fertilidad: document.getElementById("fertilidad").value,
+                contenidoDeSales: document.getElementById("contenidoDeSales").value,
+                contenidoDeSodio: document.getElementById("contenidoDeSodio").value,
+                Na_intercambiable_sales_y_sodio: document.getElementById("Na_intercambiable_sales_y_sodio").value,
+                salesYSodio_area_afectada: document.getElementById("salesYSodio_area_afectada").value,
+                profundidadDeNa: parseFloat(document.getElementById("profundidadDeNa").value),
+                caMg: document.getElementById("caMg").value,
+                saturacionDeAluminio: parseFloat(document.getElementById("saturacionDeAluminio").value),
+                distribucionDeLluvias: parseFloat(document.getElementById("distribucionDeLluvias").value),
+                pisoTermico: document.getElementById("pisoTermico").value,
+                condicionDeHumedad: document.getElementById("condicionDeHumedad").value,
+                temperaturaHeladas: parseFloat(document.getElementById("temperaturaHeladas").value),
+                heladas: document.getElementById("heladas").value,
             };
 
             // Llama a la función para determinar la clase de suelo y muestra el resultado
@@ -70,7 +95,6 @@
                     (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
                     cond.contenidoDeSales === "No se presentan" &&
                     cond.contenidoDeSodio === "No se presenta" &&
-                    cond.salesYSodio === "No hay" &&
                     cond.Na_intercambiable_sales_y_sodio === "No hay" &&
                     cond.salesYSodio_area_afectada === "No hay" &&
                     cond.profundidadDeNa > 100 &&
@@ -110,7 +134,8 @@
                     cond.condicionDeHumedad === "Húmedo a seco" &&
                     cond.temperaturaHeladas > 12 && 
                     cond.heladas === "baja frecuencia"
-                ) {
+                ) 
+                {
                     return "Clase 2. Las tierras de la Clase 2 presentan limitaciones ligeras que pueden reducir la posibilidad de elección de plantas para cultivo y requieren prácticas de manejo fáciles de aplicar, incluyendo las de conservación, para prevenir su degradación o para mejorar la relación agua-aire";
                 } else {
                     return "No se puede determinar la clase de suelo";

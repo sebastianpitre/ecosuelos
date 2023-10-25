@@ -201,183 +201,233 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-10 mx-auto ms-auto border-radius-lg">
-              <div class="row justify-content-center ">
-                <h4 class="text-center mt-5 animate-text" id="animate-text1">Ingrese la caracteristicas del suelo.</h4>
+              <form id="sueloForm">
+                <div class="row justify-content-center ">
+                  <h4 class="text-center mt-5 animate-text" id="animate-text1">Ingrese la caracteristicas del suelo.</h4>
 
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo">
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
+                    <div class="input-group input-group-static">
+                      <input type="text" class="form-control" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="pendiente" value="2" />
                   </div>
-                </div>
 
-                <!-- .....Erosion hídrica ✔..... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Erosion hídrica
-                    <span class="input-group-addon"><a id="openModalErosion"><i class="material-icons text-success">open_in_new</i></a></span>
-                  </label>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                  <!-- .....Erosion hídrica ✔..... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Erosion hídrica
+                      <span class="input-group-addon"><a id="openModalErosion"><i class="material-icons text-success">open_in_new</i></a></span>
+                    </label>
+                    <div class="input-group input-group-static">
+                      <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    </div>
+                    <input type="text" id="erosion" value="No hay" />
                   </div>
-                </div>
 
-                <!-- .....Movimiento de masa ✔..... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Movimiento de masa
-                    <span class="input-group-addon"><a id="openModalMovMasa"><i class="material-icons text-success">open_in_new</i></a></span>
-                  </label>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control bg-gray-200" id="resultadoMovMasa" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                  <!-- .....Movimiento de masa ✔..... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Movimiento de masa
+                      <span class="input-group-addon"><a id="openModalMovMasa"><i class="material-icons text-success">open_in_new</i></a></span>
+                    </label>
+                    <div class="input-group input-group-static">
+                      <input type="text" class="form-control bg-gray-200" id="resultadoMovMasa" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    </div>
+                    <input type="text" id="movimientosEnMasa" value="No hay" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Drenaje natural</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" placeholder="complete este campo" id="drenajeNatural" aria-label="complete este campo" value="25">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Drenaje natural</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" placeholder="complete este campo" id="resultadoDrenajeNatural" aria-label="complete este campo" value="25">
+                    </div>
+                    <input type="text" id="drenajeNatural" value="Bien drenado" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Inundaciones</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="inundaciones" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Inundaciones</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoInundaciones" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="inundaciones" value="No se presentan" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Encharcamientos</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" placeholder="complete este campo" id="encharcamientos" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Encharcamientos</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" placeholder="complete este campo" id="resultadoEncharcamientos" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="encharcamientos" value="No hay"/>
                   </div>
-                </div>
-                <!-- .....Profundidad efectiva ✔..... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Profundidad efectiva <span class="text-dark opacity-6">(cm)</span></label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="profundidad" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .....Profundidad efectiva ✔..... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Profundidad efectiva <span class="text-dark opacity-6">(cm)</span></label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoProfundidad" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="profundidadEfectiva" value="120" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Textura
-                    <span class="input-group-addon"><a href="calculos/calcular_textura.html"><i class="material-icons text-info">open_in_new</i></a></span>
-                  </label>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control bg-gray-200" id="resultado_textura" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Textura
+                      <span class="input-group-addon"><a href="calculos/calcular_textura.html"><i class="material-icons text-info">open_in_new</i></a></span>
+                    </label>
+                    <div class="input-group input-group-static">
+                      <input type="text" class="form-control bg-gray-200" id="resultado_textura" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    </div>
+                    <input type="text" id="familia_textura" value="Francosa fina" />
+                    <input type="text" id="grupo_textural" value="Moderadamente finos" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Pedregosidad superficial</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="pedregosidad" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Fragmentos en el suelo</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoFragmentosEnElSuelo" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="fragmentosEnElSuelo" value="2" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Afloramiento rocoso</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="afloramiento" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Pedregosidad superficial</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoPedregosidad" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="pedregosidadSuperficial" value="0.05" />
                   </div>
-                </div>
-                <!-- .....Fertilidad ✔..... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label for="resultadoFertilidad" class="text-dark font-weight-bold"> Fertilidad 
-                    <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-info">open_in_new</i></a></span>
-                  </label>
-                  <div class="input-group form-group input-group-static">
-                      <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Afloramiento rocoso</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoAfloramiento" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="afloramientoRocoso" value="0.05" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Contenido de sales</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="contenidoSales" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .....Fertilidad ✔..... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label for="resultadoFertilidad" class="text-dark font-weight-bold"> Fertilidad 
+                      <span class="input-group-addon"><a href="calculos/calcular_fertilidad.html"><i class="material-icons text-info">open_in_new</i></a></span>
+                    </label>
+                    <div class="input-group form-group input-group-static">
+                        <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    </div>
+                    <input type="text" id="fertilidad" value="Muy alta" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Contenido de sodio(Na)</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="contenidoSodio" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Contenido de sales</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoContenidoSales" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="contenidoDeSales" value="No se presentan" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Sales y sodio(Na)</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="sales_Sodio" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Contenido de sodio(Na)</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoContenidoSodio" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="contenidoDeSodio" value="No se presenta" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Ca/Mg</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="ca_mg" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Sales y sodio(Na)</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="sales_Sodio" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="Na_intercambiable_sales_y_sodio" value="No hay" />
+                    <input type="text" id="salesYSodio_area_afectada" value="No hay" />
+                    <input type="number" id="profundidadDeNa" value="120" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold"> Saturacion de aluminio</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="saturacionAluminio" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Ca/Mg</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoCa_mg" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="caMg" value="Normal" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Distribucion de lluvia</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="distribucionLluvia" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold"> Saturacion de aluminio</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoSaturacionAluminio" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="saturacionDeAluminio" value="10" />
                   </div>
-                </div>
-                <!-- .....Pisos termicos ✔..... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label for="pisosTermicos" class="text-dark font-weight-bold">Pisos termicos 
-                    <span class="input-group-addon"><a id="openModalPisosTermicos"><i class="material-icons text-success">open_in_new</i></a></span>
-                  </label>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control bg-gray-200 " id="resultadoPisosTermicos" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Distribucion de lluvia</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadodDstribucionLluvia" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="distribucionDeLluvias" value="1" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Condicion de humedad</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="condicionHumedad" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .....Pisos termicos ✔..... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label for="pisosTermicos" class="text-dark font-weight-bold">Pisos termicos 
+                      <span class="input-group-addon"><a id="openModalPisosTermicos"><i class="material-icons text-success">open_in_new</i></a></span>
+                    </label>
+                    <div class="input-group input-group-static">
+                      <input type="text" class="form-control bg-gray-200 " id="resultadoPisosTermicos" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                    </div>
+                    <input type="text" id="pisoTermico" value="Cálido" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <label class="text-dark font-weight-bold">Temperatura heladera</label>
-                  <div class="input-group input-group-static">
-                    <input type="number" class="form-control" id="temperaturaHeladera" placeholder="complete este campo" aria-label="complete este campo">
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Condicion de humedad</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoCondicionHumedad" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="text" id="condicionDeHumedad" value="Húmedo seco" />
                   </div>
-                </div>
-                <!-- .......... -->
-                <div class="col-lg-3 ms-3 me-3 mt-5">
-                  <div class="input-group input-group-static">
-                    <label class="text-dark font-weight-bold">Tipo select</label>
-                    <select id="transactionType" class="form-select form-select-lg mb-2 form-control" aria-label=".form-select-lg example">
-                      <option> selecciona </option>
-                      <option value="alquilar">Alquiler</option>
-                      <option value="comprar">Comprar</option>
-                    </select>
+                  <!-- .......... -->
+                  <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <label class="text-dark font-weight-bold">Temperatura heladera</label>
+                    <div class="input-group input-group-static">
+                      <input type="number" class="form-control" id="resultadoTemperaturaHeladera" placeholder="complete este campo" aria-label="complete este campo">
+                    </div>
+                    <input type="number" id="temperaturaHeladas" value="15" />
+                    <input type="text" id="heladas" value="No hay" />
                   </div>
-                </div>
+                  <!-- .......... -->
+                  <!-- <div class="col-lg-3 ms-3 me-3 mt-5">
+                    <div class="input-group input-group-static">
+                      <label class="text-dark font-weight-bold">Tipo select</label>
+                      <select id="transactionType" class="form-select form-select-lg mb-2 form-control" aria-label=".form-select-lg example">
+                        <option> selecciona </option>
+                        <option value="alquilar">Alquiler</option>
+                        <option value="comprar">Comprar</option>
+                      </select>
+                    </div>
+                  </div> -->
 
-                <div class="col-12 mt-2 p-4 text-center">
-                  <button class="btn btn-success" type="submit">Calcular proceso</button>
-                </div>      
+                  <div class="col-12 mt-2 p-4 text-center">
+                    <button class="btn btn-success" type="submit">Calcular proceso</button>
+                  </div>      
 
-              </div>
-
+                </div>
+              </form>
             </div>
           </div>
         </div>
     
     </section>
+
+    <section class="card opacity-9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 mx-auto border-radius-lg my-3">
+            
+            <div class="row">
+              <h3 class="text-center mt-2">Resultado de la Clase de Suelo</h4>
+            </div>
+            
+            <!-- resultado -->
+            <div id="resultado" class="justify-content-center text-center"></div>
+
+          </div>
+        </div>
+      </div>
+    </section>  
 
   <!-- END CARD -->
   </div>
@@ -469,6 +519,111 @@
   <script src="../assets/js/modal.js"></script>
   <script src="../assets/js/localstorage.js"></script>
   <script src="../assets/js/config.js"></script>
+  <script>
+    document.getElementById('sueloForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const cond = {
+            
+            // Agrega más campos aquí para otros datos
+
+            pendiente: parseFloat(document.getElementById("pendiente").value),
+            erosion: document.getElementById("erosion").value,
+            movimientosEnMasa: document.getElementById("movimientosEnMasa").value,
+            drenajeNatural: document.getElementById("drenajeNatural").value,
+            inundaciones: document.getElementById("inundaciones").value,
+            encharcamientos: document.getElementById("encharcamientos").value,
+            profundidadEfectiva: parseFloat(document.getElementById("profundidadEfectiva").value),
+            familia_textura: document.getElementById("familia_textura").value,
+            grupo_textural: document.getElementById("grupo_textural").value,
+            fragmentosEnElSuelo: parseFloat(document.getElementById("fragmentosEnElSuelo").value),
+            pedregosidadSuperficial: parseFloat(document.getElementById("pedregosidadSuperficial").value),
+            afloramientoRocoso: parseFloat(document.getElementById("afloramientoRocoso").value),
+            fertilidad: document.getElementById("fertilidad").value,
+            contenidoDeSales: document.getElementById("contenidoDeSales").value,
+            contenidoDeSodio: document.getElementById("contenidoDeSodio").value,
+            Na_intercambiable_sales_y_sodio: document.getElementById("Na_intercambiable_sales_y_sodio").value,
+            salesYSodio_area_afectada: document.getElementById("salesYSodio_area_afectada").value,
+            profundidadDeNa: parseFloat(document.getElementById("profundidadDeNa").value),
+            caMg: document.getElementById("caMg").value,
+            saturacionDeAluminio: parseFloat(document.getElementById("saturacionDeAluminio").value),
+            distribucionDeLluvias: parseFloat(document.getElementById("distribucionDeLluvias").value),
+            pisoTermico: document.getElementById("pisoTermico").value,
+            condicionDeHumedad: document.getElementById("condicionDeHumedad").value,
+            temperaturaHeladas: parseFloat(document.getElementById("temperaturaHeladas").value),
+            heladas: document.getElementById("heladas").value,
+        };
+
+        // Llama a la función para determinar la clase de suelo y muestra el resultado
+        function determinarClaseDeSuelo(cond) {
+                // Verificar las cond comunes a todas las clases
+                if (
+                    cond.pendiente >= 0 && cond.pendiente <= 3 &&
+                    cond.erosion === "No hay" &&
+                    cond.movimientosEnMasa === "No hay" &&
+                    cond.drenajeNatural === "Bien drenado" &&
+                    cond.inundaciones === "No se presentan" &&
+                    cond.encharcamientos === "No hay" &&
+                    cond.profundidadEfectiva > 100 &&
+                    cond.familia_textura === "Francosa fina" &&
+                    cond.grupo_textural === "Moderadamente finos" &&
+                    cond.fragmentosEnElSuelo < 3 &&
+                    cond.pedregosidadSuperficial < 0.1 &&
+                    cond.afloramientoRocoso < 0.1 &&
+                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+                    cond.contenidoDeSales === "No se presentan" &&
+                    cond.contenidoDeSodio === "No se presenta" &&
+                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
+                    cond.salesYSodio_area_afectada === "No hay" &&
+                    cond.profundidadDeNa > 100 &&
+                    cond.caMg === "Normal" &&
+                    cond.saturacionDeAluminio < 15 &&
+                    cond.distribucionDeLluvias === 1 &&
+                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+                    cond.condicionDeHumedad === "Húmedo seco" &&
+                    cond.temperaturaHeladas > 12 &&
+                    cond.heladas === "No hay"
+                ) {
+                    return "Clase 1. Las tierras de la clase 1 no presentan o tienen muy pocas limitaciones para el uso agropecuario, siendo éstas de grado ligero, fácilmente corregibles. Son aptas para una amplia diversidad de cultivos adaptados a las condiciones ecológicas, así como para ganadería intensiva con pastos de corte.";
+                } else if (
+                    cond.pendiente >= 0 && cond.pendiente <= 7 &&
+                    (cond.erosion === "No hay" || cond.erosion === "Ligero") &&
+                    cond.movimientosEnMasa === "No hay" &&
+                    (cond.drenajeNatural === "Bien drenado" || cond.drenajeNatural === "Moderado") &&
+                    (cond.inundaciones === "No se presentan" || cond.inundaciones === "Raras" || cond.inundaciones === "Extremadamente cortas" || cond.inundaciones === "Muy cortas") &&
+                    (cond.encharcamientos === "No se presentan" || cond.encharcamientos === "Raros" || cond.encharcamientos === "Extremadamente cortos" || cond.encharcamientos === "Muy cortos") &&
+                    cond.profundidadEfectiva > 75 &&
+                    (cond.familia_textura === "Francosa fina" || cond.familia_textura === "Limosa fina" || cond.familia_textura === "Contrastadas") &&
+                    cond.grupo_textural === "Moderadamente finos" &&
+                    cond.fragmentosEnElSuelo < 3 &&
+                    cond.pedregosidadSuperficial < 0.1 &&
+                    (cond.afloramientoRocoso >= 0.1 && cond.afloramientoRocoso <= 2) &&
+                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
+                    (cond.contenidoDeSales === "No se presentan" || cond.contenidoDeSales === "Ligero") &&
+                    cond.contenidoDeSodio === "No se presenta" &&
+                    cond.salesYSodio === "No hay" &&
+                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
+                    cond.salesYSodio_area_afectada < 5 &&
+                    cond.profundidadDeNa > 100 &&
+                    (cond.caMg === "Normal" || cond.caMg === "Estrecha >50") &&
+                    cond.saturacionDeAluminio < 15 &&
+                    (cond.distribucionDeLluvias === 1 || cond.distribucionDeLluvias === 2) &&
+                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
+                    cond.condicionDeHumedad === "Húmedo a seco" &&
+                    cond.temperaturaHeladas > 12 && 
+                    cond.heladas === "baja frecuencia"
+                ) 
+                {
+                    return "Clase 2. Las tierras de la Clase 2 presentan limitaciones ligeras que pueden reducir la posibilidad de elección de plantas para cultivo y requieren prácticas de manejo fáciles de aplicar, incluyendo las de conservación, para prevenir su degradación o para mejorar la relación agua-aire";
+                } else {
+                    return "No se puede determinar la clase de suelo";
+                }
+            }
+            
+
+        const claseSuelo = determinarClaseDeSuelo(cond);
+        document.getElementById('resultado').textContent = `El suelo ha sido identificado como suelo de ${claseSuelo}`;
+    });
+</script>
 
 </body>
 
