@@ -1,4 +1,4 @@
-   function getTexture(arena, limo, arcilla) {
+   function familaTextura(arena, limo, arcilla) {
         // Verifica que los porcentajes sean válidos
         if (arena < 0 || arena > 100) {
             throw new Error("El porcentaje de arena debe ser un valor entre 0 y 100");
@@ -51,7 +51,7 @@
         const limo = parseInt(document.querySelector("#limo").value);
         const arcilla = parseInt(document.querySelector("#arcilla").value);
 
-        const texture = getTexture(arena, limo, arcilla);
+        const texture = familaTextura(arena, limo, arcilla);
 
         document.querySelector("#resultado_textura").value = texture;
         // Llamar a la función color cuando el valor cambie

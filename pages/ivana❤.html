@@ -1,0 +1,22 @@
+<input type="text" id="resultadoInput" />
+
+<script>
+function grupoTextura() {
+    const texture = "Arcillosa"; // Reemplaza esto con tu valor real de 'texture'.
+    
+    if (texture === "Arcillosa") {
+        return "Muy finos";
+    } else {
+        return "Otro valor por defecto si texture no es Arcillosa";
+    }
+}
+
+// Obtén el elemento de input por su ID.
+const resultadoInput = document.getElementById('resultadoInput');
+
+// Llama a la función y obtén el resultado.
+const resultado = grupoTextura();
+
+// Establece el valor del input igual al resultado.
+resultadoInput.value = resultado;
+</script>

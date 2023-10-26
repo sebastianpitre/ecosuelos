@@ -197,6 +197,20 @@
             html: '<div class="text-start"><p><span>●</span> Debe completar todos los campos para poder realizar de manera satisfactoria el calculo.</p><p><span>●</span> Los campos con relleno oscuro, como este ejemplo:<div class="input-group mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control bg-gray-200" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo" readonly></div></p><p>Estos se llenan automáticamente después de hacer el proceso desde otra ventana, para entrar a esas ventanas hay un icono como este:<i class="material-icons">open_in_new</i> Que abrirá otra pagina o una ventana emergente. </p><p>Las ventanas emergentes se utilizan para procesos simples y están identificadas con el mismo icono pero de color verde: <i class="material-icons text-success">open_in_new</i></p><p>En cambio Los procesos mas complejos abrirán una pagina nueva y están identificados con los iconos de color azul: <i class="material-icons text-info">open_in_new</i></p><p>Existen procesos donde solo tendrás que llenar el campo manual, ya que estos datos no necesitan de un proceso mecanizado, estos están sin ninguna decoración y se ven de esta manera:<div class="input-group  mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control" placeholder="complete este campo" id="drenajeNatural" aria-label="complete este campo"  readonly></div></p><p>Luego de llenar todos los campos correctamente, debes dar clic en el botón inferior llamado:<div class="col-12"><button class="btn btn-success  mt-n6 mb-n6">Calcular proceso</button></div></p><p>Asi obtendrás un estudio completo de tu suelo y para que es acto.</p></div> ',
             })
         }
+
+        function openClase_1(){
+          Swal.fire({
+            title: 'Intrucciones',
+            html: 'alerta de clase 1',
+            })
+        }
+
+        function openGrupo_1(){
+          Swal.fire({
+            title: 'Intrucciones',
+            html: 'alerta de Grupo 1',
+            })
+        }
       </script>
         <div class="container-fluid">
           <div class="row">
@@ -412,19 +426,17 @@
     
     </section>
 
-    <section class="card opacity-9">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-10 mx-auto border-radius-lg my-3">
-            
-            <div class="row">
-              <h3 class="text-center mt-2">Resultado de la Clase de Suelo</h4>
-            </div>
-            
-            <!-- resultado -->
-            <div id="resultado" class="justify-content-center text-center"></div>
+    <section class="card blur">
 
-          </div>
+      <div class="container">
+        <div class="row pb-4">
+          <h3 class="text-center mt-2">Resultado de estudio del Suelo</h4>
+          <!-- resultado -->
+          <div class="col-lg-4 mt-4" id="Rclase"></div>
+
+          <div class="col-lg-4 mt-4" id="Rgrupo"></div>
+          
+
         </div>
       </div>
     </section>  
@@ -513,117 +525,13 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-  <script src="../assets/js/calculos/calcular-proceso.js"></script>
   <script src="../assets/js/calculos/procesos_simples.js"></script>
 
   <script src="../assets/js/modal.js"></script>
   <script src="../assets/js/localstorage.js"></script>
   <script src="../assets/js/config.js"></script>
-  <script>
-    document.getElementById('sueloForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const cond = {
-            
-            // Agrega más campos aquí para otros datos
-
-            pendiente: parseFloat(document.getElementById("pendiente").value),
-            erosion: document.getElementById("erosion").value,
-            movimientosEnMasa: document.getElementById("movimientosEnMasa").value,
-            drenajeNatural: document.getElementById("drenajeNatural").value,
-            inundaciones: document.getElementById("inundaciones").value,
-            encharcamientos: document.getElementById("encharcamientos").value,
-            profundidadEfectiva: parseFloat(document.getElementById("profundidadEfectiva").value),
-            familia_textura: document.getElementById("familia_textura").value,
-            grupo_textural: document.getElementById("grupo_textural").value,
-            fragmentosEnElSuelo: parseFloat(document.getElementById("fragmentosEnElSuelo").value),
-            pedregosidadSuperficial: parseFloat(document.getElementById("pedregosidadSuperficial").value),
-            afloramientoRocoso: parseFloat(document.getElementById("afloramientoRocoso").value),
-            fertilidad: document.getElementById("fertilidad").value,
-            contenidoDeSales: document.getElementById("contenidoDeSales").value,
-            contenidoDeSodio: document.getElementById("contenidoDeSodio").value,
-            Na_intercambiable_sales_y_sodio: document.getElementById("Na_intercambiable_sales_y_sodio").value,
-            salesYSodio_area_afectada: document.getElementById("salesYSodio_area_afectada").value,
-            profundidadDeNa: parseFloat(document.getElementById("profundidadDeNa").value),
-            caMg: document.getElementById("caMg").value,
-            saturacionDeAluminio: parseFloat(document.getElementById("saturacionDeAluminio").value),
-            distribucionDeLluvias: parseFloat(document.getElementById("distribucionDeLluvias").value),
-            pisoTermico: document.getElementById("pisoTermico").value,
-            condicionDeHumedad: document.getElementById("condicionDeHumedad").value,
-            temperaturaHeladas: parseFloat(document.getElementById("temperaturaHeladas").value),
-            heladas: document.getElementById("heladas").value,
-        };
-
-        // Llama a la función para determinar la clase de suelo y muestra el resultado
-        function determinarClaseDeSuelo(cond) {
-                // Verificar las cond comunes a todas las clases
-                if (
-                    cond.pendiente >= 0 && cond.pendiente <= 3 &&
-                    cond.erosion === "No hay" &&
-                    cond.movimientosEnMasa === "No hay" &&
-                    cond.drenajeNatural === "Bien drenado" &&
-                    cond.inundaciones === "No se presentan" &&
-                    cond.encharcamientos === "No hay" &&
-                    cond.profundidadEfectiva > 100 &&
-                    cond.familia_textura === "Francosa fina" &&
-                    cond.grupo_textural === "Moderadamente finos" &&
-                    cond.fragmentosEnElSuelo < 3 &&
-                    cond.pedregosidadSuperficial < 0.1 &&
-                    cond.afloramientoRocoso < 0.1 &&
-                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
-                    cond.contenidoDeSales === "No se presentan" &&
-                    cond.contenidoDeSodio === "No se presenta" &&
-                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
-                    cond.salesYSodio_area_afectada === "No hay" &&
-                    cond.profundidadDeNa > 100 &&
-                    cond.caMg === "Normal" &&
-                    cond.saturacionDeAluminio < 15 &&
-                    cond.distribucionDeLluvias === 1 &&
-                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
-                    cond.condicionDeHumedad === "Húmedo seco" &&
-                    cond.temperaturaHeladas > 12 &&
-                    cond.heladas === "No hay"
-                ) {
-                    return "Clase 1. Las tierras de la clase 1 no presentan o tienen muy pocas limitaciones para el uso agropecuario, siendo éstas de grado ligero, fácilmente corregibles. Son aptas para una amplia diversidad de cultivos adaptados a las condiciones ecológicas, así como para ganadería intensiva con pastos de corte.";
-                } else if (
-                    cond.pendiente >= 0 && cond.pendiente <= 7 &&
-                    (cond.erosion === "No hay" || cond.erosion === "Ligero") &&
-                    cond.movimientosEnMasa === "No hay" &&
-                    (cond.drenajeNatural === "Bien drenado" || cond.drenajeNatural === "Moderado") &&
-                    (cond.inundaciones === "No se presentan" || cond.inundaciones === "Raras" || cond.inundaciones === "Extremadamente cortas" || cond.inundaciones === "Muy cortas") &&
-                    (cond.encharcamientos === "No se presentan" || cond.encharcamientos === "Raros" || cond.encharcamientos === "Extremadamente cortos" || cond.encharcamientos === "Muy cortos") &&
-                    cond.profundidadEfectiva > 75 &&
-                    (cond.familia_textura === "Francosa fina" || cond.familia_textura === "Limosa fina" || cond.familia_textura === "Contrastadas") &&
-                    cond.grupo_textural === "Moderadamente finos" &&
-                    cond.fragmentosEnElSuelo < 3 &&
-                    cond.pedregosidadSuperficial < 0.1 &&
-                    (cond.afloramientoRocoso >= 0.1 && cond.afloramientoRocoso <= 2) &&
-                    (cond.fertilidad === "Muy alta" || cond.fertilidad === "Alta" || cond.fertilidad === "Media") &&
-                    (cond.contenidoDeSales === "No se presentan" || cond.contenidoDeSales === "Ligero") &&
-                    cond.contenidoDeSodio === "No se presenta" &&
-                    cond.salesYSodio === "No hay" &&
-                    cond.Na_intercambiable_sales_y_sodio === "No hay" &&
-                    cond.salesYSodio_area_afectada < 5 &&
-                    cond.profundidadDeNa > 100 &&
-                    (cond.caMg === "Normal" || cond.caMg === "Estrecha >50") &&
-                    cond.saturacionDeAluminio < 15 &&
-                    (cond.distribucionDeLluvias === 1 || cond.distribucionDeLluvias === 2) &&
-                    (cond.pisoTermico === "Cálido" || cond.pisoTermico === "Templado" || cond.pisoTermico === "Frío") &&
-                    cond.condicionDeHumedad === "Húmedo a seco" &&
-                    cond.temperaturaHeladas > 12 && 
-                    cond.heladas === "baja frecuencia"
-                ) 
-                {
-                    return "Clase 2. Las tierras de la Clase 2 presentan limitaciones ligeras que pueden reducir la posibilidad de elección de plantas para cultivo y requieren prácticas de manejo fáciles de aplicar, incluyendo las de conservación, para prevenir su degradación o para mejorar la relación agua-aire";
-                } else {
-                    return "No se puede determinar la clase de suelo";
-                }
-            }
-            
-
-        const claseSuelo = determinarClaseDeSuelo(cond);
-        document.getElementById('resultado').textContent = `El suelo ha sido identificado como suelo de ${claseSuelo}`;
-    });
-</script>
+  <script src="../assets/js/calculos/calcular-proceso.js"></script>
+  
 
 </body>
 
