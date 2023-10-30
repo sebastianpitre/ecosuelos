@@ -8479,7 +8479,9 @@ fieldset:disabled .btn {
 }
 
 .opacity-10 {
-  opacity: 1 !important;
+  background-image: url("../img/SVG/cuadriculas.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .overflow-auto {

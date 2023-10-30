@@ -51,8 +51,8 @@
   
 </head>
 
-<body class="blog-author " style="background-image: url('../../assets/img/fondobg.png'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
-  <video id="miVideo" src="../../assets/img/video (1).mp4"  autoplay="true" muted="true" loop="true" poster="../../assets/img/fondobg.png"></video>
+<body class="blog-author " style="background-image: url('../../assets/img/fondo.jpg'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
+  <!-- <video id="miVideo" src="../../assets/img/video (1).mp4"  autoplay="true" muted="true" loop="true" poster="../../assets/img/fondobg.png"></video>
   <style>
     video {
     position: fixed;
@@ -62,7 +62,7 @@
     transform: translateX(calc((100% - 100vw) / 2));
     z-index: -2;
   }
-</style>
+</style> -->
 
   <!-- Navbar -->
   <div class="container position-sticky z-index-sticky top-0">
@@ -187,7 +187,7 @@
     <!-- CARD -->
 
 
-    <section class="row card opacity-9">
+    <section class="row card">
       <div class="container-fluid">
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
@@ -273,23 +273,39 @@
         <!-- CARD NUMERO 1 -->
         
           <div class="mt-4 col-lg-4">
-            <div class="col p-5 card opacity-9">
+            <div class="col-md p-5 card">
               <div class="container">
-                <div class="mt-n6 w-5" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
-                <div class="mt-n6 w-5" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+                <img src="../../assets/img/SVG/anillado.svg" class="mt-n6 " style="height: 45px; min-height: 45px; float: left;">
+                <img src="../../assets/img/SVG/anillado.svg" class="mt-n6" style="height: 45px; min-height: 45px; float: right;">
               </div>
               <h3 class=" text-center">Resultado de la Textura</h2>
 
-              <div class=" container">
-                <div class="col-lg">
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control" id="resultado_textura" readonly>
-                  </div>
-                  <div class="input-group input-group-static">
-                    <input type="text" class="form-control" id="grupoTexturaInput" readonly>
+              <div class="row mt-3">
+                <div class="col-md">
+                  <label class="text-dark font-weight-bold">Familia</label>
+                  <div class="input-group mt-n2 input-group-static">
+                    <input type="text" class="form-control bg-gray-200 ps-1" id="resultado_textura" readonly>
                   </div>
                 </div>
+                  
+                <div class="col">
+                  <label class="text-dark font-weight-bold">Grupo textural</label>
+                  <div class="input-group mt-n2 input-group-static">
+                    <input type="text" class="form-control bg-gray-200 ps-1" id="grupoTexturaInput" readonly>
+                  </div>
+                </div>
+                
               </div>
+
+            </div>
+            <div class="col-md p-5 mt-4 card">
+              <div class="container">
+                <img src="../../assets/img/SVG/anillado.svg" class="mt-n6 " style="height: 45px; min-height: 45px; float: left;">
+                <img src="../../assets/img/SVG/anillado.svg" class="mt-n6" style="height: 45px; min-height: 45px; float: right;">
+              </div>
+              <h3 class=" text-center">Resultado de la Textura</h2>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste mollitia aut totam perferendis et, corrupti ut velit dignissimos voluptate amet obcaecati nulla repellendus voluptatibus culpa explicabo illum eius! Eligendi.
 
             </div>
             
@@ -333,16 +349,16 @@
 
         <!-- CARD NUMERO 2 -->
         <div class="mt-4 col-lg-8 ">
-          <div class="col card opacity-9">
+          <div class="card">
             <div class="container">
-              <div class="mt-n3 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: left; border-radius: 7px;"></div>
-              <div class="mt-n3 w-2" style="background-color: #cccccc;height: 40px; border: 1px solid rgb(0, 0, 0); float: right; border-radius: 7px;"></div>  
+              <img src="../../assets/img/SVG/anillado.svg" class="mt-n3 w-3 ms-6" style="height: 45px; min-height: 45px; float: left;">
+              <img src="../../assets/img/SVG/anillado.svg" class="mt-n3 w-3 me-6" style="height: 45px; min-height: 45px; float: right;">
             </div>
             <h3 class=" text-center mt-2">Representación en el triangulo de texturas</h2>
             <div class="">
               <div class="card border-2 border-radius-sm border-dark mx-3 mx-md-4 mb-4">
 
-                <div class="table-responsive-xxl bg-gray-200" >
+                <div class="table-responsive bg-gray-200" >
                   <div class="col-12 mt-4 row justify-content-center">
                     
                     <div class="mind-map mb-n6">
@@ -433,7 +449,7 @@
 
 
   <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
-  <footer class="footer card bg-white opacity-9 mx-3 mx-md-8">
+  <footer class="footer card bg-white mx-3 mx-md-8">
     <div class="container">
       <div class="mt-4 row">
         <div class="col-md-3 ms-auto">

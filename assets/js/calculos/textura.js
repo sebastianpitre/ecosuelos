@@ -90,5 +90,29 @@
         });
     }
 
+
+    function grupoTexture() {
+        const resultado_textura = document.querySelector("#resultado_textura");
+        const grupoTexturaInput = document.querySelector("#grupoTexturaInput");
+    
+        const selectedTexture = resultado_textura.value;
+    
+        // Cambiar el valor del campo de texto según la condición
+        if (selectedTexture === "Arcillosa") {
+            grupoTexturaInput.value = "Muy finos";
+        } else {
+            grupoTexturaInput.value = "none";
+        }
+    }
+    
+    
+
+    document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        grupoTexture();
+        // Almacenar los datos en localStorage
+        localStorage.setItem('Grupo texture', encodeURIComponent("selectedTexture"));
+    });
     // Llama a la función color cuando se carga la página para establecer el color inicial
     color();
