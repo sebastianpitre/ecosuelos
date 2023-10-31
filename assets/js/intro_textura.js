@@ -3,7 +3,7 @@ function intro_calcular() {
     intro.setOptions({
             steps: [
                 { element: document.getElementById(''),
-                intro: 'Hola, soy tu eco-asistente de voz <audio autoplay class="w-100 mt-3" controls><source src="../assets/mp3/intro1.mp3" type="audio/mpeg"></audio>presiona Next para avanzar',
+                intro: 'Hola, soy tu eco-asistente de voz <audio autoplay class="w-100 mt-3" controls><source src="../../assets/mp3/intro1.mp3" type="audio/mpeg"></audio>presiona Next para avanzar',
                 step: 0,
                  position: 'right',
                  x: 100, // Coordenada X
@@ -18,7 +18,7 @@ function intro_calcular() {
                  { element: document.getElementById('intro4'),
                  intro: 'Luego de llenar todos los campos presiona "CALCULAR PROCESO" para que el sistema verifique la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="" type="audio/mpeg"></audio>presiona Next para avanzar', step: 4 },
                  { element: document.getElementById('intro5'),
-                 intro: 'El sistema arrojará el resultado con la información de como están clasificado tu suelo, según la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="" type="audio/mpeg"></audio>presiona Next para avanzar', step: 4 },
+                 intro: 'El sistema arrojará el resultado con la información de como están clasificado tu suelo, según la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="" type="audio/mpeg"></audio>presiona Next para avanzar', step: 5 },
                  ]
            });
            intro.start();

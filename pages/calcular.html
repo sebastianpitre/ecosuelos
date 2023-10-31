@@ -41,7 +41,7 @@
    <link href="lib/animate/animate.min.css" rel="stylesheet">
    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css">
+   <link rel="stylesheet" href="../assets/css/intro.css">
    
 
    <!-- Customized Bootstrap Stylesheet -->
@@ -54,8 +54,8 @@
   </script>
 </head>
 <body class="blog-author"
-  style="background-image: url('../assets/img/fondobg.jpg'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
-  <video src="../assets/img/video (1).mp4" autoplay="true" muted="true" loop="true" poster="../assets/img/fondobg.jpg"></video>
+  style="background-image: url('../assets/img/fondocampo.jpg'); background-size: cover; background-repeat: no-repeat;background-attachment: fixed">
+  <!-- <video src="../assets/img/video (1).mp4" autoplay="true" muted="true" loop="true" poster="../assets/img/fondobg.jpg"></video>
 
   <style>
     video {
@@ -67,7 +67,7 @@
     transform: translateX(calc((100% - 100vw) / 2));
     z-index: -2;
   }
-</style>
+</style> -->
 
 <!-- Navbar -->
 <div class="container position-sticky z-index-sticky top-0">
@@ -184,18 +184,17 @@
         <iframe class="iframe_calculo" id="modalFrameErosion" ></iframe>
       </div>
     </div>
-
     
     <!-- CARD -->
     <section  class="mb-4 card-body card opacity-9">
-      <div class="card bg-gray-400 container pt-3" style="width: 60px; position: absolute; right: -30px; top: 10px;">
-        <div  onclick="openInstrucciones()">
-          <button class="btn bg-gradient-success btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style=" border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Instrucciones de uso">
+      <div class=" container pt-3" style="height: 60px; width: 110px; position: absolute; right: 10px; top: 10px;">
+        <div onclick="openInstrucciones()">
+          <button class="btn bg-gradient-success btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Instrucciones de uso">
             <i class="fas fa-info p-1 mt-2" aria-hidden="true"></i>
           </button>
         </div>
-        <div onclick="iniciarRecorrido()">
-        <button class="btn bg-gradient-success btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style=" border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
+        <div onclick="intro_calcular()">
+        <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; left: 60px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
           <i class="fas fa-play mt-2 pt-1 mx-auto" aria-hidden="true"></i>
         </button>
       </div>
@@ -206,7 +205,7 @@
         function openInstrucciones(){
           Swal.fire({
             title: 'Instrucciones',
-            html: '<div class="text-start"><p><span>●</span> Debe completar todos los campos para poder realizar de manera satisfactoria el calculo.</p><p><span>●</span> Los campos con relleno oscuro, como este ejemplo:<div class="input-group mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control bg-gray-200" id="resultadoPendiente" placeholder="complete este campo" aria-label="complete este campo" readonly></div></p><p>Estos se llenan automáticamente después de hacer el proceso desde otra ventana, para entrar a esas ventanas hay un icono como este:<i class="material-icons">open_in_new</i> Que abrirá otra pagina o una ventana emergente. </p><p>Las ventanas emergentes se utilizan para procesos simples y están identificadas con el mismo icono pero de color verde: <i class="material-icons text-success">open_in_new</i></p><p>En cambio Los procesos mas complejos abrirán una pagina nueva y están identificados con los iconos de color azul: <i class="material-icons text-info">open_in_new</i></p><p>Existen procesos donde solo tendrás que llenar el campo manual, ya que estos datos no necesitan de un proceso mecanizado, estos están sin ninguna decoración y se ven de esta manera:<div class="input-group  mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control" placeholder="complete este campo" id="drenajeNatural" aria-label="complete este campo"  readonly></div></p><p>Luego de llenar todos los campos correctamente, debes dar clic en el botón inferior llamado:<div class="col-12"><button class="btn btn-success  mt-n6 mb-n6">Calcular proceso</button></div></p><p>Asi obtendrás un estudio completo de tu suelo y para que es acto.</p></div> ',
+            html: '<div class="text-start"><p><span>●</span> Debe completar todos los campos para poder realizar de manera satisfactoria el calculo.</p><p><span>●</span> Los campos con relleno oscuro, como este ejemplo:<div class="input-group mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control bg-gray-200" id="resultadoPendiente" placeholder="complete este campo"  readonly></div></p><p>Estos se llenan automáticamente después de hacer el proceso desde otra ventana, para entrar a esas ventanas hay un icono como este:<i class="material-icons">open_in_new</i> Que abrirá otra pagina o una ventana emergente. </p><p>Las ventanas emergentes se utilizan para procesos simples y están identificadas con el mismo icono pero de color verde: <i class="material-icons text-success">open_in_new</i></p><p>En cambio Los procesos mas complejos abrirán una pagina nueva y están identificados con los iconos de color azul: <i class="material-icons text-info">open_in_new</i></p><p>Existen procesos donde solo tendrás que llenar el campo manual, ya que estos datos no necesitan de un proceso mecanizado, estos están sin ninguna decoración y se ven de esta manera:<div class="input-group  mt-n3 mb-n3 w-50 input-group-static"><input type="text" class="form-control" placeholder="complete este campo" id="drenajeNatural"   readonly></div></p><p>Luego de llenar todos los campos correctamente, debes dar clic en el botón inferior llamado:<div class="col-12"><button class="btn btn-success  mt-n6 mb-n6">Calcular proceso</button></div></p><p>Asi obtendrás un estudio completo de tu suelo y para que es acto.</p></div> ',
             })
         }
 
@@ -234,21 +233,21 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Pendiente <span class="text-dark opacity-6">(%)</span></label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="pendiente" value="2" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="pendiente" value="2" placeholder="complete este campo" >
                     </div>
                   </div>
 
                   <!-- .....Erosion hídrica ✔..... -->
-                  <div  class="col-lg-3 ms-3 me-3 mt-5">
+                  <div id="intro2" class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Erosion hídrica
-                      <span class="input-group-addon"><a id="openModalErosion"><i class="material-icons text-success">open_in_new</i></a></span>
+                      <span class="input-group-addon"><a id="openModalErosion"><i id="intro3" class="material-icons text-success">open_in_new</i></a></span>
                     </label>
                     <div class="row">
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo"  readonly>
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="erosion" value="No hay" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="text" class="form-control" id="erosion" value="No hay" placeholder="complete este campo" >
                       </div>
                     </div>
                   </div>
@@ -260,10 +259,10 @@
                     </label>
                     <div class="row">
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control bg-gray-200" id="resultadoMovMasa" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="text" class="form-control bg-gray-200" id="resultadoMovMasa" placeholder="complete este campo"  readonly>
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="movimientosEnMasa" value="No hay" placeholder="complete este campo" aria-label="complete este campo" >
+                        <input type="text" class="form-control" id="movimientosEnMasa" value="No hay" placeholder="complete este campo"  >
                       </div>
                     </div>
                   </div>
@@ -271,28 +270,28 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Drenaje natural</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="drenajeNatural" value="Bien drenado" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="drenajeNatural" value="Bien drenado" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Inundaciones</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="inundaciones" value="No se presentan" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="inundaciones" value="No se presentan" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Encharcamientos</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="encharcamientos" value="No hay" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="encharcamientos" value="No hay" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .....Profundidad efectiva ✔..... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold"> Profundidad efectiva <span class="text-dark opacity-6">(cm)</span></label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="profundidadEfectiva" value="120" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="profundidadEfectiva" value="120" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
@@ -302,13 +301,13 @@
                     </label>
                     <div class="row">
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control bg-gray-200" id="resultado_textura" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="text" class="form-control bg-gray-200" id="resultado_textura" placeholder="complete este campo"  readonly>
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="familia_textura" value="Francosa fina" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="text" class="form-control" id="familia_textura" value="Francosa fina" placeholder="complete este campo" >
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="grupo_textural" value="Moderadamente finos" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="text" class="form-control" id="grupo_textural" value="Moderadamente finos" placeholder="complete este campo" >
                       </div>
                     </div>
                   </div>
@@ -316,21 +315,21 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Fragmentos en el suelo</label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="fragmentosEnElSuelo" value="2" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="fragmentosEnElSuelo" value="2" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Pedregosidad superficial</label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="pedregosidadSuperficial" value="0.05" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="pedregosidadSuperficial" value="0.05" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold"> Afloramiento rocoso</label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="afloramientoRocoso" value="0.05" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="afloramientoRocoso" value="0.05" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .....Fertilidad ✔..... -->
@@ -340,10 +339,10 @@
                     </label>
                     <div class="row">
                       <div class="input-group col form-group input-group-static">
-                        <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="number" id="resultadoFertilidad" class="form-control bg-gray-200" placeholder="complete este campo"  readonly>
                       </div>  
                       <div class="input-group col form-group input-group-static">
-                        <input type="text" id="fertilidad" value="Muy alta" class="form-control" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="text" id="fertilidad" value="Muy alta" class="form-control" placeholder="complete este campo" >
                       </div>
                     </div>
                   </div>
@@ -351,14 +350,14 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold"> Contenido de sales</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="contenidoDeSales" value="No se presentan" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="contenidoDeSales" value="No se presentan" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Contenido de sodio(Na)</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="contenidoDeSodio" value="No se presenta" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="contenidoDeSodio" value="No se presenta" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
@@ -380,21 +379,21 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Ca/Mg</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="caMg" value="Normal" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="caMg" value="Normal" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold"> Saturacion de aluminio</label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="saturacionDeAluminio" value="10" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="saturacionDeAluminio" value="10" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Distribucion de lluvia</label>
                     <div class="input-group input-group-static">
-                      <input type="number" class="form-control" id="distribucionDeLluvias" value="1" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="number" class="form-control" id="distribucionDeLluvias" value="1" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .....Pisos termicos ✔..... -->
@@ -404,10 +403,10 @@
                     </label>
                     <div class="row">
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control bg-gray-200" id="resultadoPisosTermicos" placeholder="complete este campo" aria-label="complete este campo" readonly>
+                        <input type="text" class="form-control bg-gray-200" id="resultadoPisosTermicos" placeholder="complete este campo"  readonly>
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="pisoTermico" value="Cálido" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="text" class="form-control" id="pisoTermico" value="Cálido" placeholder="complete este campo" >
                       </div>
                     </div>
                   </div>
@@ -415,7 +414,7 @@
                   <div class="col-lg-3 ms-3 me-3 mt-5">
                     <label class="text-dark font-weight-bold">Condicion de humedad</label>
                     <div class="input-group input-group-static">
-                      <input type="text" class="form-control" id="condicionDeHumedad" value="Húmedo seco" placeholder="complete este campo" aria-label="complete este campo">
+                      <input type="text" class="form-control" id="condicionDeHumedad" value="Húmedo seco" placeholder="complete este campo" >
                     </div>
                   </div>
                   <!-- .......... -->
@@ -423,10 +422,10 @@
                     <label class="text-dark font-weight-bold">Temperatura heladera</label>
                     <div class="row">
                       <div class="input-group col input-group-static">
-                        <input type="number" class="form-control" id="temperaturaHeladas" value="15" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="number" class="form-control" id="temperaturaHeladas" value="15" placeholder="complete este campo" >
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="heladas" value="No hay" placeholder="complete este campo" aria-label="complete este campo">
+                        <input type="text" class="form-control" id="heladas" value="No hay" placeholder="complete este campo" >
                       </div>
                     </div>
                   </div>
@@ -443,7 +442,7 @@
                   </div> -->
 
                   <div class="col-12 mt-2 p-4 text-center">
-                    <button class="btn btn-success" type="submit">Calcular proceso</button>
+                    <button id="intro4" class="btn btn-success" type="submit">Calcular proceso</button>
                   </div>      
 
                 </div>
@@ -454,9 +453,9 @@
     
     </section>
 
-    <section class="card opacity-10 blur">
+    <section id="intro5" class="card opacity-10 blur">
 
-      <div class="container">
+      <div  class="container">
         <div class="container">
           <img src="../assets/img/SVG/anillado.svg" class="mt-n3 " style="height: 45px; min-height: 45px; float: left;">
           <img src="../assets/img/SVG/anillado.svg" class="mt-n3" style="height: 45px; min-height: 45px; float: right;">
