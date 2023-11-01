@@ -219,10 +219,17 @@
         function openGrupo_1(){
           Swal.fire({
             title: 'Intrucciones',
-            html: 'alerta de Grupo 1',
+            html: 'Grupo de tierras con capacidad para ser utilizadas en agricultura y ganadería tecnificada de tipo intensivo y semi intensivo (clases 1 a 4). <br> tienen capacidad para ser en agricultura y ganadería en sistemas de producción cuya intensidad de manejo y variedad de especies vegetales varía desde muy intensiva en la clase 1 hasta muy restringida en la clase 4; en ese mismo sentido se incrementan las prácticas de manejo y conservación. <br> se consideran con capacidad para ser utilizadas en agricultura y ganadería en forma amplia e intensiva (clase 1) a fuertemente restringida (clase 4); en ese sentido se incrementan las prácticas de manejo y conservación. Las tierras de la clase 4 pueden ser usadas en agroforestería.',
+            })
+        }
+        function openSubclasePendiente(){
+          Swal.fire({
+            title: 'Subclase (P)',
+            html: 'Se refiere al grado de inclinación de la pendiente expresada en porcentaje. La pendiente del suelo y la forma de la superficie de la tierra, son componentes de la configuración de la superficie de la tierra.<br>El factor pendiente interviene en la escorrentía, el drenaje natural, la infiltración, la clase y grado de erosión y en el uso y el manejo de los suelos. Incluye las variables, gradiente, longitud, forma, complejidad y exposición. En este sistema de clasificación únicamente se tiene en cuenta el gradiente, expresado en porcentaje (%).',
             })
         }
       </script>
+
         <div  class="container-fluid">
           <div  class="row">
             <div id="intro1" class="col-10 mx-auto ms-auto border-radius-lg">
@@ -247,7 +254,7 @@
                         <input type="text" class="form-control bg-gray-200" id="resultadoErosion" placeholder="complete este campo"  readonly>
                       </div>
                       <div class="input-group col input-group-static">
-                        <input type="text" class="form-control" id="erosion" value="No hay" placeholder="complete este campo" >
+                        <input type="text" class="form-control" id="erosion" value="No hay" placeholder="complete este campo" required>
                       </div>
                     </div>
                   </div>
@@ -461,9 +468,11 @@
           <img src="../assets/img/SVG/anillado.svg" class="mt-n3" style="height: 45px; min-height: 45px; float: right;">
         </div>
         <div class="row pb-4">
-          <h3 class="text-center mt-2">Resultado de estudio del Suelo</h4>
+          <h4 class="text-center mt-2">Resultado de estudio del suelo según su capacidad de úso</h4>
           <!-- resultado -->
           <div class="col-lg-4 mt-4" id="Rclase"></div>
+
+          <div class="col-lg-4 mt-4" id="Rsubclase"></div>
 
           <div class="col-lg-4 mt-4" id="Rgrupo"></div>
           
