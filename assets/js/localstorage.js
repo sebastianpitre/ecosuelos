@@ -55,11 +55,11 @@ const inputFields = [
 // MOSTRAR DATOS LOCALES DE EROSIÓN⭐
 
     // Recuperar el resultado almacenado en localStorage
-    const erosion = localStorage.getItem('erosion');
+    const R_erosion = localStorage.getItem('R_erosion');
 
     // Mostrar el resultado en la página
     const resultadoErosion = document.getElementById('resultadoErosion');
-    resultadoErosion.value = decodeURIComponent(erosion);
+    resultadoErosion.value = decodeURIComponent(R_erosion);
 
     // MOSTRAR DATOS LOCALES DE TEXTURA⭐
 

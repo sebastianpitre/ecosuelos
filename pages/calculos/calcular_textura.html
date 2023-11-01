@@ -188,9 +188,9 @@
 
 
     <section class="card">
-      <div class=" container pt-3" style="height: 60px; width: 50px; position: absolute; right: 10px; top: 10px;">
+      <div class="container">
         <div onclick="intro_calcular()">
-          <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; left: 0px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
+          <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: -10px; right: -10px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
             <i class="fas fa-play mt-2 pt-1 mx-auto" aria-hidden="true"></i>
           </button>
         </div>
@@ -369,7 +369,7 @@
                 <div class="table-responsive bg-gray-200" >
                   <div class="col-12 mt-4 row justify-content-center">
                     
-                    <div class="mind-map mb-n6">
+                    <div class="mind-map">
                       <div class="base">
                         <img src="../../assets/img/SVG/GUIA.svg" alt="">
                       </div>
@@ -454,7 +454,10 @@
     <!-- END CARD -->
   </div>
 
-
+  <div id="popup" style="width: 100px; position: fixed; right: 15px;bottom: 10px;">
+    <img class="mt-n1 border-radius-2xl" src="../../assets/img/ecologo.png" alt="" style="width: 100%;">
+   </div>
+   
 
   <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
   <footer class="footer card bg-white mx-3 mx-md-8">
@@ -518,7 +521,7 @@
 
         <div class="col-md-3 col-sm-6 col-6 mb-4 d-flex flex-column justify-content-center align-items-center">
           <h6 class="text-sm text-success">Eres usuario o administrador</h6>
-          <a href="{{ route('login') }}" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">Iniciar
+          <a href="" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">Iniciar
             Sesion</a>
         </div>
 
@@ -541,7 +544,34 @@
  
   <script src="../../assets/js/localstorage.js"></script>
   <script src="../../assets/js/config.js"></script>
-  <script src="../../assets/js/intro_textura.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
+  <script src="../../assets/js/instrucciones/intro_textura.js"></script>
+  <script>
+    // Función para mostrar el div durante 4 segundos
+    function mostrarDivTemporal() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'block';
+
+      setTimeout(function() {
+        popup.style.display = 'none';
+
+        // Programar la ocultación del div durante 5 segundos
+        setTimeout(ocultarDivTemporal, 7000);
+      }, 7000); // 4000 ms (4 segundos)
+    }
+
+    // Función para ocultar el div durante 5 segundos
+    function ocultarDivTemporal() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'none';
+
+      // Programar la aparición del div nuevamente después de 5 segundos
+      setTimeout(mostrarDivTemporal, 7000); // 5000 ms (5 segundos)
+    }
+
+    // Llamar a la función para mostrar el div inicialmente
+    mostrarDivTemporal();
+  </script>
 
 </body>
 

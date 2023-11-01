@@ -117,20 +117,20 @@ function calcularErosion() {
     let perdidaSuelo = parseFloat(document.getElementById('perdidaSuelo').value);
     let resultadoErosion = document.getElementById('resultadoErosion');
 
-    let erosion = "";
+    let R_erosion = "";
 
     if (perdidaSuelo <=24 ) {
-        erosion = "Sin erosión";
+        R_erosion = "Sin erosión";
     } else if (perdidaSuelo == 25 ) {
-        erosion = "Ligera";
+        R_erosion = "Ligera";
     } else if (perdidaSuelo > 25 && perdidaSuelo <= 74 ) {
-        erosion = "Moderada";
+        R_erosion = "Moderada";
     } else if (perdidaSuelo >= 75 && perdidaSuelo < 100  ) {
-        erosion = "Severa";
+        R_erosion = "Severa";
     } else if (perdidaSuelo == 100) {
-        erosion = "Muy Severa";
+        R_erosion = "Muy Severa";
     } else {
-        erosion = "¡Datos no validos!";
+        R_erosion = "¡Datos no validos!";
     }
 
     Swal.fire({
@@ -141,11 +141,11 @@ function calcularErosion() {
 
         })
     // Almacenar los datos en localStorage
-    localStorage.setItem('erosion', encodeURIComponent(erosion));
+    localStorage.setItem('R_erosion', encodeURIComponent(R_erosion));
     localStorage.setItem('perdidaSuelo', perdidaSuelo);
 
     // Mostrar el resultado en la página actual
-    resultadoErosion.value = erosion;
+    resultadoErosion.value = R_erosion;
     
 
 }

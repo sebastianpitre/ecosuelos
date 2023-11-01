@@ -47,6 +47,7 @@
   <link href="
   https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css
   " rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/intro.css">
   
 </head>
 
@@ -187,7 +188,15 @@
     <!-- CARD -->
 
 
-    <section class="row card opacity-9">
+    <section class="card opacity-9">
+      <div class="container">
+        <div onclick="intro_calcular()">
+          <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: -10px; right: -10px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
+            <i class="fas fa-play mt-2 pt-1 mx-auto" aria-hidden="true"></i>
+          </button>
+        </div>
+      
+      </div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
@@ -234,13 +243,13 @@
     
     
 
-    <section class="row mb-4">
-      <div class="row col-md-12 mx-auto">
+    <section class="mb-4">
+      <div id="intro1" class="row col-md-12 mx-auto">
 
         <!-- CARD NUMERO 1 -->
         
-          <div class="tambaleo mt-4 col-lg-6">
-            <div class="col p-5 card opacity-9">
+          <div class="mt-4 col-lg-6">
+            <div id="intro2" class="col p-5 card opacity-9">
               <div class="container">
                 <img src="../../assets/img/SVG/anillado.svg" class="mt-n6 " style="height: 45px; min-height: 45px; float: left;">
                 <img src="../../assets/img/SVG/anillado.svg" class="mt-n6" style="height: 45px; min-height: 45px; float: right;">
@@ -349,7 +358,7 @@
 
         <!-- CARD NUMERO 2 -->
         <div class="tambaleo mt-4 col-lg-6 ">
-          <div class="col p-5 card opacity-9">
+          <div id="intro3" class="col p-5 card opacity-9">
             <div class="container">
               <img src="../../assets/img/SVG/anillado.svg" class="mt-n6 " style="height: 45px; min-height: 45px; float: left;">
               <img src="../../assets/img/SVG/anillado.svg" class="mt-n6" style="height: 45px; min-height: 45px; float: right;">
@@ -490,7 +499,7 @@
       </div>
     </section>
 
-    <section class="tambaleo row card opacity-9">
+    <section id="intro4" class="tambaleo row card opacity-9">
       <div class="container-fluid">
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg my-3">
@@ -504,7 +513,7 @@
               <div class="row fila">
                 <div id="idboton">
                   <!-- boton principal -->
-                  <a href="../calcular.html"><button class="btn btn-outline-success ">volver</button></a>
+                  <a href="../calcular.html"><button id="intro5" class="btn btn-outline-success ">volver</button></a>
                   <input type="button" value="Calcular fertilidad" class="btn bg-gradient-success justify-content-center" onclick="calcularFT()">
                 </div>
               </div>
@@ -524,7 +533,10 @@
     <!-- END CARD -->
   </div>
 
-
+  <div id="popup" style="width: 100px; position: fixed; right: 15px;bottom: 10px;">
+    <img class="mt-n1 border-radius-2xl" src="../../assets/img/ecologo.png" alt="" style="width: 100%;">
+   </div>
+   <script src="../../assets/js/config.js"></script>
 
   <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
   <footer class="footer card bg-white opacity-9 mx-3 mx-md-8">
@@ -617,15 +629,16 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-  <script src="../../assets/js/sugerencias/sug_analisis.js"></script>
   <script src="../../assets/js/menu_global.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
+  <script src="../../assets/js/instrucciones/intro_textura.js"></script>
 
   <!-- FUNCIONES CALCULO -->
 
   <script src="../../assets/js/calculos/fertilidad.js"></script>
   <script src="../../assets/js/animaciones/tambaleo.js"></script>
   <script src="../../assets/js/localstorage.js"></script>
-  <script src="../../assets/js/config.js"></script>
+  
 
 </body>
 
