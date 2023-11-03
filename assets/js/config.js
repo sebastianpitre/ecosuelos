@@ -11,6 +11,17 @@ numberInputs.forEach(input => {
 });
 
 
+// Función para borrar todos los datos del localStorage
+function clear_localStorage() {
+  // Limpia todo el localStorage
+  localStorage.clear();
+  Swal.fire({
+    title: 'Datos borrados',
+    html: '<p>Todos los datos del Local Storage han sido borrados.</p>',
+    })
+}
+
+
 // ------------------------------------------------- //
 // Función para mostrar el div durante 4 segundos
 function mostrarDivTemporal() {

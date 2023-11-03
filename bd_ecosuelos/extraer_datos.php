@@ -18,5 +18,5 @@ if ($result->num_rows > 0) {
 
 $conexion->close();
 
-echo json_encode($usuarios); // Devuelve los datos como JSON
+echo json_encode($usuarios); // Devuelve los datos como JSON 🤫
 ?>

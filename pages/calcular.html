@@ -187,17 +187,22 @@
     
     <!-- CARD -->
     <section  class="mb-4 card-body card opacity-9">
-      <div class=" container pt-3" style="height: 60px; width: 110px; position: absolute; right: 10px; top: 10px;">
+      <div class=" container pt-3" style="height: 60px; width: 110px; position: absolute; right: 50px; top: 10px;">
         <div onclick="openInstrucciones()">
           <button class="btn bg-gradient-success btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Instrucciones de uso">
             <i class="fas fa-info p-1 mt-2" aria-hidden="true"></i>
           </button>
         </div>
         <div onclick="intro_calcular()">
-        <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; left: 60px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
-          <i class="fas fa-play mt-2 pt-1 mx-auto" aria-hidden="true"></i>
-        </button>
-      </div>
+          <button class="btn bg-gradient-info btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; left: 60px; border: 2px solid white;" aria-label="Instrucciones de uso" data-bs-original-title="Iniciar recorrido">
+            <i class="fas fa-play mt-2 pt-1 mx-auto" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div onclick="clear_localStorage()">
+          <button class="btn bg-gradient-danger btn-icon-only btn-rounded pt-0 btn-outline-success btn-xxl" data-bs-toggle="tooltip" data-bs-placement="left" style="position: absolute; top: 10px; left: 105px; border: 2px solid white;" aria-label="Borrar datos guardados" data-bs-original-title="Iniciar recorrido">
+            <i class="fas fa-trash mt-2 pt-1 mx-auto" aria-hidden="true"></i>
+          </button>
+        </div>
       
       </div>
       
