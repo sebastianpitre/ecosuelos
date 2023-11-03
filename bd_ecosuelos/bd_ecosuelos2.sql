@@ -18,3 +18,4 @@ CREATE TABLE pedidos (
 );
 
 INSERT INTO usuarios (id, nombre, correo) VALUES (1, 'usuario1', 'sapitre@gmail.com');
+INSERT INTO usuarios (id, nombre, correo) VALUES (2, 'medasjopo', 'sapitre@gmail.com');
