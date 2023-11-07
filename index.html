@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo-ct-dark.png">
   <link rel="icon" type="image/png" href="assets/img/logo-ct-dark.png">
   <title>
-      <span class="text-dark font-weight-bold"><span class="text-success">Eco</span>suelos
+      Ecosuelos
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -62,6 +62,7 @@
             <img src="assets/img/logo-ct-dark.png" alt="">
           <span class="text-xxl">  <span class="text-dark font-weight-bold"><span class="text-success">Eco</span>suelos</span> 
           </a>
+          <a href="pages/calcular.html" class="btn btn-sm  bg-gradient-success  mb-0 ms-auto d-lg-none d-block">Ingresar</a>
           <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
               <span class="navbar-toggler-bar bar1"></span>
@@ -100,32 +101,48 @@
               </li>
       
               <li class="nav-item dropdown dropdown-hover mx-2">
-                <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="material-icons opacity-6 me-2 text-md"> </i>
-                  Grupo de Capacidad
-                  <img src= "assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Grupos
+                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow"
+                    class="arrow ms-1 d-lg-none d-block ms-auto">
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg"
+                  aria-labelledby="dropdownMenuDocs">
                   <div class="d-none d-lg-block">
                     <ul class="list-group">
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a  href="pages/grupo1.html"  class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 1</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo1.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo I</h6>
                         </a>
                       </li>
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a href="pages/grupo2.html" class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 2</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo2.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo II</h6>
                         </a>
                       </li>
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a href="pages/grupo3.html" class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 3</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo3.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo III</h6>
                         </a>
                       </li>
                     </ul>
                   </div>
-                </ul>
+                  <div class="row d-lg-none">
+                    <div class="col-md-12 g-0">
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo1.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo I</h6>
+                      </a>
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo2.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo II</h6>
+                      </a>
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="pages/grupo3.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo III</h6>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="nav-item ms-lg-auto">
                 <a class="nav-link nav-link-icon me-2" href="pages/calcular.html">
@@ -463,73 +480,72 @@
 
   
 
-  <footer class="footer pt-5 mt-5">
-    <div class="container">
-      <div class="mt-4 row">
-        <div class="col-md-3 ms-auto">
-          <div>
-            <!-- <a href="index.html">
-              <img src="../assets/img/logo_maiz.png" class="mb-4" alt="main_logo" style="width:40px; margin-left:32px">
-            </a> -->
-            <h5 class="font-weight-bolder mt-5 ms-6 mb-4"><span class="text-dark font-weight-bold"><span
-                  class="text-success">ECO</span>suelos</span></h5>
-          </div>
-        </div>
+<footer class="footer opacity-9">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3  col-sm-6 col-6 my-auto">
+        <a href="../index.html">
+          <h5 class="font-weight-bolder mb-4">
+            <img src="../assets/img/logo-ct-dark.png" alt="">
+            <span class="text-dark font-weight-bold"><span class="text-success">Eco</span>suelos</span>
+          </h5>
+        </a>
+      </div>
 
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Paginas</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                  Suelo
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/muestras.html">
-                  Clase
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">
-                  Subclases
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="col-md-3 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Páginas</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="suelo.html">
+                Suelo
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clases.html">
+                Clase
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="subclases.html">
+                Subclases
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="col-md-4 col-sm-5 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Contacto</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link">
-                  Centro Biotecnológico del Caribe (CBC).
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">
-                  Km 7 via la paz
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">
-                  Valledupar - Cesar
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="col-md-3 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Contacto</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a id="cambio41" class="nav-link">
+                Centro Biotecnológico del Caribe (CBC).
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="cambio42" class="nav-link"> Km 7 via la paz </a>
+            </li>
+            <li class="nav-item">
+              <a id="cambio43" class="nav-link"> Valledupar - Cesar </a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="col-md-3 col-sm-6 col-6 mb-4 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="text-sm text-success">Eres usuario o administrador</h6>
-          <a href="{{ route('login') }}" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">Iniciar
-            Sesion</a>
-        </div>
-
+      
+      <div class="col-md-3 col-sm-6 col-6 mb-4 d-flex flex-column mx-auto align-items-center">
+        <i class="material-icons opacity-6 me-2 text-success" style="font-size: 50px;">android</i>
+        <h6 class="text-sm text-dark">PRUEBA NUESTRA APP MOVIL</h6>
+        <a href="https://apk.e-droid.net/apk/app2899003-eyqk47.apk?v=2" class="btn btn-sm bg-gradient-success mb-0 me-1 mt-2 mt-md-0">
+          <i class="material-icons opacity-6 me-2 text-md">download</i>
+          <span>descargar</span>
+        </a>
       </div>
     </div>
+  </div>
+
 </footer>
 
 

@@ -75,10 +75,11 @@
     <div class="col-12">
       <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
         <div class="container-fluid px-0">
-          <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="/index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
             <img src="../assets/img/logo-ct-dark.png" alt="">
           <span class="text-xxl">  <span class="text-dark font-weight-bold"><span class="text-success">Eco</span>suelos</span> 
           </a>
+          <a href="calcular.html" class="btn btn-sm  bg-gradient-success  mb-0 ms-auto d-lg-none d-block">Ingresar</a>
           <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
               <span class="navbar-toggler-bar bar1"></span>
@@ -117,42 +118,59 @@
               </li>
       
               <li class="nav-item dropdown dropdown-hover mx-2">
-                <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="material-icons opacity-6 me-2 text-md"> </i>
-                  Grupo de Capacidad
-                  <img src= "../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Grupos
+                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow"
+                    class="arrow ms-1 d-lg-none d-block ms-auto">
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg"
+                  aria-labelledby="dropdownMenuDocs">
                   <div class="d-none d-lg-block">
                     <ul class="list-group">
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a  href="grupo1.html"  class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 1</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo1.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo I</h6>
                         </a>
                       </li>
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a href="grupo2.html" class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 2</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo2.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo II</h6>
                         </a>
                       </li>
                       <li class="nav-item list-group-item border-0 p-0">
-                        <a href="grupo3.html" class="dropdown-item py-2 ps-3 border-radius-md">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo 3</h6>
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo3.html">
+                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo III</h6>
                         </a>
                       </li>
                     </ul>
                   </div>
-                </ul>
+                  <div class="row d-lg-none">
+                    <div class="col-md-12 g-0">
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo1.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo I</h6>
+                      </a>
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo2.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo II</h6>
+                      </a>
+                      <a class="dropdown-item py-2 ps-3 border-radius-md" href="grupo3.html">
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grupo III</h6>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="nav-item ms-lg-auto">
                 <a class="nav-link nav-link-icon me-2" href="calcular.html">
                   <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Calcular">Calcular Proceso</p>
                 </a>
               </li>
-              <li class="nav-item my-auto ms-3 ms-lg-0">
-                
-                <a href="calcular.html" class="btn btn-sm  bg-gradient-success  mb-0 me-1 mt-2 mt-md-0">Ingresar</a>
-                
+            
+            </ul>
+            <ul class="navbar-nav d-lg-block d-none">
+              <li class="nav-item">
+                <a href="calcular.html" class="btn btn-sm bg-gradient-success mb-0" >Ingresar</a>
               </li>
             </ul>
           </div>

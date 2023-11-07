@@ -22010,7 +22010,7 @@ body.dark-version {
   }
 
   .dropdown.nav-item .dropdown-menu-animation.show {
-    height: 250px;
+    height: auto;
     opacity: 1;
   }
 }
