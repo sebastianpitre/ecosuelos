@@ -19,6 +19,8 @@ function clear_localStorage() {
     title: 'Datos borrados',
     html: '<p>Todos los datos del Local Storage han sido borrados.</p>',
     })
+    // Actualizar la página
+    window.location.reload();   
 }
 
 
