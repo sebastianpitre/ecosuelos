@@ -20,6 +20,8 @@ function intro_calcular() {
                  intro: 'Luego de llenar todos los campos presiona "CALCULAR PROCESO" para que el sistema verifique la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="../assets/mp3/example.mp3" type="audio/mpeg"></audio>presiona Next para avanzar', step: 4 },
                  { element: document.getElementById('intro5'),
                  intro: 'El sistema arrojará el resultado con la información de como están clasificado tu suelo, según la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="../assets/mp3/example.mp3" type="audio/mpeg"></audio>presiona Next para avanzar', step: 4 },
+                 { element: document.getElementById('intro6'),
+                 intro: 'El sistema arrojará el resultado con la información de como están clasificado tu suelo, según la información digitada <br> <audio autoplay class="w-100 mt-3" controls><source src="../assets/mp3/example.mp3" type="audio/mpeg"></audio>presiona Next para avanzar', step: 5 },
                  ]
            });
            intro.start();
